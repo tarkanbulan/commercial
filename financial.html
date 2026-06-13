@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>III. Financial Audit — UK Sector Intelligence</title>
+<title>III. Financial Audit — UK Bribery Act Compliance Scanner</title>
 <style>
 :root{--ink:#0f1a2e;--paper:#f7f4ec;--gold:#c9a84c;--navy:#1a2a4a}
 *{margin:0;padding:0;box-sizing:border-box}
@@ -10,32 +10,74 @@ body{background:var(--ink);color:#eaeaea;font-family:Georgia,'Times New Roman',s
 h1{color:var(--gold);font-size:28px;border-bottom:3px solid var(--gold);padding-bottom:12px}
 h2{color:var(--gold);margin:30px 0 15px;border-bottom:1px solid var(--navy);padding-bottom:6px}
 h3{color:#00d9ff;margin:20px 0 10px}
+h4{color:var(--gold);margin:15px 0 8px}
 p{margin:8px 0;line-height:1.8}
 .kutu{background:var(--navy);padding:14px;border-radius:6px;border-left:4px solid var(--gold);margin:12px 0}
-table{width:100%;border-collapse:collapse;margin:12px 0}
+.kutu.r{border-left-color:#e94560}
+table{width:100%;border-collapse:collapse;margin:12px 0;font-size:13px}
 th{background:var(--navy);color:var(--gold);padding:8px;text-align:left;font-size:10px;letter-spacing:1px}
 td{padding:6px 8px;border-bottom:1px solid rgba(26,42,74,0.5);font-size:12px}
-.tag{display:inline-block;padding:2px 8px;border-radius:3px;font-size:11px}
-.tag.g{background:#1a4a1a;color:#4caf50}.tag.b{background:#1a3a5a;color:#00d9ff}
-a{color:var(--gold)}.back{display:block;margin:20px 0;color:#6b7280;font-family:monospace;font-size:12px}
+.tag{display:inline-block;padding:2px 8px;border-radius:3px;font-size:11px;font-family:monospace}
+.tag.g{background:#1a4a1a;color:#4caf50}.tag.r{background:#4a1a1a;color:#e94560}.tag.b{background:#1a3a5a;color:#00d9ff}
+a{color:var(--gold);text-decoration:none}
+.back{display:block;margin:20px 0;color:#6b7280;font-family:monospace;font-size:12px}
 ul{margin:8px 0;padding-left:20px}li{margin:4px 0}
+.code{background:#0a0f1a;padding:12px;border-radius:4px;color:#4caf50;font-family:monospace;font-size:12px;margin:10px 0;white-space:pre-wrap}
 footer{text-align:center;margin-top:40px;padding-top:20px;border-top:1px solid var(--navy);color:#6b7280;font-size:11px}
 </style></head>
 <body><div class="page">
 <a class="back" href="index.html">⬅ Back to Matrix</a>
+
 <h1>III. Financial Audit & Anti-Corruption</h1>
-<p><strong>UK Bribery Act Compliance, Offshore Asset Tracing & Forensic Accounting</strong></p>
-<p>UK Bribery Act enforcement reached record fines of £1.2B in 2025. The Economic Crime and Corporate Transparency Act 2023, Register of Overseas Entities (revealing £90B in previously undisclosed property), and Unexplained Wealth Orders create a dense regulatory environment. This is the highest-probability sector in the matrix at 75%.</p>
+<p><strong>UK Bribery Act 2010 Compliance Scanner</strong></p>
 
-<h2>Agent: Offshore Audit</h2>
-<p>Forensic analysis of trust structures, shell company networks, and cross-border fund movements. UK's Register of Overseas Entities (2022) revealed approximately £90B in previously undisclosed foreign property ownership in the UK.</p>
+<div class="kutu r"><p><strong>Regulatory Driver:</strong> UK Bribery Act 2010 — world's strictest anti-bribery legislation. <strong>§7 Strict Liability:</strong> Commercial organisations liable if an "associated person" bribes on their behalf — UNLESS they have "adequate procedures" in place. <strong>Enforcement:</strong> UK Serious Fraud Office (SFO), National Crime Agency (NCA). <strong>Market:</strong> All FTSE 350 + any company "carrying on business" in the UK (extraterritorial).</p></div>
 
-<h2>Agent: Physical Asset Audit</h2>
-<p>Physical asset verification for anti-corruption: verifying government procurement, infrastructure project delivery, and asset registers. UK's National Audit Office estimates £4-6B annual fraud in public procurement.</p>
+<h2>1. Mission</h2>
+<p>Structural audit of UK Bribery Act §7 compliance. Not document review — behavioral signature analysis of procurement networks, payment flows, and supplier relationships. Detects bribery risk without whistleblower testimony or email evidence.</p>
 
-<h2>UK Bribery Act Compliance</h2>
-<p>Section 7 creates strict liability for commercial organisations that fail to prevent bribery. Adequate procedures defence requires demonstrable forensic controls including cross-border due diligence, third-party risk assessment, and transaction monitoring.</p>
+<h2>2. Detection Architecture</h2>
 
+<h3>2.1 Ghost Supplier Detection</h3>
+<ul>
+<li><strong>G1 — Cash Flow Purpose Ratio:</strong> Internal purchasing/payment traffic — cash outflows with no rational economic purpose</li>
+<li><strong>G2 — Supplier Longevity Anomaly:</strong> Companies created days before first invoice, dissolved after payment</li>
+<li><strong>G3 — Address Clustering:</strong> Multiple "suppliers" at same registered address (shell farm)</li>
+</ul>
+
+<h3>2.2 Reciprocity / Quid Pro Quo Testing</h3>
+<ul>
+<li><strong>R1 — Procurement-Decision Benefit Lag:</strong> Time between a procurement decision and a benefit to the decision-maker</li>
+<li><strong>R2 — Third-Party Intermediary Detection:</strong> Benefits routed through consultants, agents, or family members</li>
+<li><strong>R3 — Hospitality Pattern Analysis:</strong> Gifts, travel, entertainment frequency vs. contract value correlation</li>
+</ul>
+
+<h3>2.3 Section 7 Adequate Procedures Assessment</h3>
+<ul>
+<li><strong>P1 — Procedure Existence vs. Operation:</strong> Written policy exists but behavioral indicators show non-compliance</li>
+<li><strong>P2 — Due Diligence Gap:</strong> Supplier vetting process vs. actual supplier risk profile</li>
+<li><strong>P3 — Tone-from-Top Testing:</strong> Board-level risk awareness vs. operational reality gap</li>
+<li><strong>P4 — Whistleblower Channel Effectiveness:</strong> Reported concerns vs. actual investigation rate</li>
+</ul>
+
+<h2>3. Proprietary Indicators</h2>
+<table>
+<tr><th>Indicator</th><th>Formula</th><th>Threshold</th></tr>
+<tr><td>GHOST_P</td><td>purpose_ratio of unexplained outflows</td><td><span class="tag r">>0.25 = HIGH_RISK</span></td></tr>
+<tr><td>RECIP_D</td><td>decision-to-benefit time lag distribution</td><td><span class="tag r"><7d OR >90d = PATTERN</span></td></tr>
+<tr><td>ADEQUACY_G</td><td>written_policy - operational_reality</td><td><span class="tag r">>0.4 = SECTION_7_RISK</span></td></tr>
+<tr><td>SUPPLIER_L</td><td>supplier_age_at_first_invoice</td><td><span class="tag r"><30d = SHELL</span></td></tr>
+</table>
+
+<h2>4. UK Data Sources</h2>
+<ul>
+<li><strong>Companies House API:</strong> Company registry, PSC register, filing history</li>
+<li><strong>UK Contracts Finder:</strong> Public procurement awards</li>
+<li><strong>SFO Prosecution Database:</strong> Historical enforcement patterns</li>
+<li><strong>Charity Commission:</strong> Third-sector intermediary analysis</li>
+</ul>
+
+<h2>5. Market Vectors</h2>
 <table>
 <tr><th>Vector</th><th>Market Size</th><th>Probability</th><th>Timeframe</th></tr>
 <tr><td>UK Bribery Act enforcement</td><td>£1.2B</td><td><span class="tag g">82%</span></td><td>2026-2027</td></tr>
@@ -43,6 +85,9 @@ footer{text-align:center;margin-top:40px;padding-top:20px;border-top:1px solid v
 <tr><td>Money laundering detection</td><td>£1.1B</td><td><span class="tag g">74%</span></td><td>2026</td></tr>
 <tr><td>Public procurement audit</td><td>£780M</td><td><span class="tag g">71%</span></td><td>2026-2028</td></tr>
 </table>
+
+<h2>6. Example Detection Scenario</h2>
+<div class="kutu r"><p><em>"A FTSE 250 engineering firm wins a £50M Middle East contract through a local 'consultant.' AGENT scans Companies House — consultant was incorporated 6 days before the contract, dissolved 3 months after payment. Address matches 47 other shell entities. Reciprocity test shows the procurement director's brother is a director of the consultancy. Report: 'SECTION_7_RISK HIGH — no adequate procedures defence available under UK Bribery Act.'"</em></p></div>
 
 <footer><p>UK Sector Intelligence · III. Financial Audit · 2026</p></footer>
 </div></body></html>
