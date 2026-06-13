@@ -1,1 +1,369 @@
-<!doctype html><html lang="tr"><head><meta charset="utf-8"><title>IV. Savunma ve Güvenlik — BK Sektör Istihbaratı</title><style>:root{--ink:#0f1a2e;--paper:#f7f4ec;--gold:#c9a84c}*{margin:0;padding:0;box-sizing:border-box}body{background:var(--ink);color:#eaeaea;font-family:Georgia,'Times New Roman',serif;padding:20px;font-size:15px;line-height:1.8}.page{max-width:1100px;margin:0 auto;padding:30px}h1{color:var(--gold);font-size:28px;border-bottom:3px solid var(--gold);padding-bottom:12px}h2{color:var(--gold);margin:30px 0 15px}p{margin:8px 0;line-height:1.8}a{color:var(--gold)}.back{display:block;margin:20px 0;color:#6b7280;font-family:monospace;font-size:12px}footer{text-align:center;margin-top:40px;padding-top:20px;border-top:1px solid #1a2a4a;color:#6b7280;font-size:11px}</style></head><body><div class="page"><a class="back" href="index.html">⬅ Ana Sayfaya Dön</a><h1>IV. Savunma ve Güvenlik</h1><p><strong>Savaş Oyunu, Sınır Olayları, Deniz Alanı</strong></p><p>BK savunma harcamaları GSYH'nin %2.5'ine ulasti (£65 milyar). Stratejik Caydırıcılık, siber operasyonlar ve sınır güvenliği öncelikli alanlardır.</p><p>Kapsamlı pazar büyüklüğü, düzenleyici haritalama, hizmet tanımları ve adli vektörler ile analiz hazırdır.</p><footer><p>BK Sektör Istihbaratı · IV. Savunma ve Güvenlik · 2026</p></footer></div></body></html>
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><title>IV. Savunma ve Güvenlik — BK Sektör Istihbaratı</title><style>:root{--ink:#0f1a2e;--paper:#f7f4ec;--gold:#c9a84c}*{margin:0;padding:0;box-sizing:border-box}body{background:var(--ink);color:#eaeaea;font-family:Georgia,'Times New Roman',serif;padding:20px;font-size:15px;line-height:1.8}.page{max-width:1100px;margin:0 auto;padding:30px}h1{color:var(--gold);font-size:28px;border-bottom:3px solid var(--gold);padding-bottom:12px}h2{color:var(--gold);margin:30px 0 15px}p{margin:8px 0;line-height:1.8}a{color:var(--gold)}.back{display:block;margin:20px 0;color:#6b7280;font-family:monospace;font-size:12px}footer{text-align:center;margin-top:40px;padding-top:20px;border-top:1px solid #1a2a4a;color:#6b7280;font-size:11px}</style></head><body><div class="page"><a class="back" href="index.html">⬅ Ana Sayfaya Dön</a><h1>IV. Savunma ve Güvenlik</h1><p><strong>Savaş Oyunu, Sınır Olayları, Deniz Alanı</strong></p><p>BK savunma harcamaları GSYH'nin %2.5'ine ulasti (£65 milyar). Stratejik Caydırıcılık, siber operasyonlar ve sınır güvenliği öncelikli alanlardır.</p><p>Kapsamlı pazar büyüklüğü, düzenleyici haritalama, hizmet tanımları ve adli vektörler ile analiz hazırdır.</p>
+<!-- 04_DEFENSE_SECURITY_agent-border-incident-forensics.html -->
+<div class="page">
+
+<h1>AGENT_BORDER — Sınır İhlali ve Sürtüşme Kayıtları Analiz Modülü</h1>
+<p><strong>Kaynak:</strong> T2SAIM Commercialization Framework v03 (§9.4 — Drone Ecosystem and Border Security, §9.1 Naval Forces)
+<strong>Kapsam:</strong> Hava sahası ihlalleri, kara sınırı geçişleri, deniz yetki alanı (Münhasır Ekonomik Bölge/MEB) ihlalleri, angajman kuralları uyumu, sınır sürtüşmeleri
+<strong>Sensör Türleri:</strong> Radar (ASR/PSR/SSR), Akustik (SOSUS/SUV), Sismik, Termal/IR, Optik/Görsel, AIS (Gemi Otomatik Tanımlama), ADS-B (Uçak), IFF (Dost-Düşman Tanıma)</p>
+<h2>1. Misyon</h2>
+<p>Sınır ihlali ve sürtüşme olaylarında kaydedilen sensör verilerinin yapısal bütünlüğünü test etmek. Resmî makamların olay anlatımı (narrative) ile sensör kayıtları arasındaki <strong>yapısal tutarsızlıkları</strong> tespit etmek. Tarafların iddialarını fiziksel veriyle doğrulamak veya çürütmek.</p>
+<h2>2. Analiz Mimarisi</h2>
+<h3>2.1 Radar Kaydı Bütünlük ve Manipülasyon Testi (Radar Record Integrity)</h3>
+<ul>
+<li><strong>R1 — Track Sürekliliği Testi</strong>: Radar izlerinin (tracks) zamansal sürekliliği. Ani kopmalar, atlamalar veya eksik segmentler = potansiyel silme/manipülasyon</li>
+<li><strong>R2 — Çoklu Radar Çapraz Doğrulama</strong>: Aynı hedefin farklı radar istasyonlarındaki izlerinin uyumu. Bir radar görüp diğeri görmüyorsa = kapsama boşluğu veya susturma</li>
+<li><strong>R3 — IFF/SSR Mod Yanıtı</strong>: Dost-düşman tanıma kodlarının kayıtlardaki varlığı/yokluğu. Angajman öncesi IFF sorgulaması yapılmış mı?</li>
+<li><strong>R4 — Secondary Radar (ADS-B) Uyumu</strong>: Askeri radar ile sivil ADS-B kayıtlarının çapraz karşılaştırması. Sivil takip varsa ama askeri yoksa veya tersi = anomali</li>
+</ul>
+<h3>2.2 Akustik ve Sismik Sensör Analizi (Acoustic &amp; Seismic)</h3>
+<ul>
+<li><strong>A1 — Akustik İmza Eşleştirme</strong>: Ses dalgası imzasının (silah sesi, patlama, motor) bildirilen olay tipiyle uyumu</li>
+<li><strong>A2 — Sismik-Vurum Zaman Farkı</strong>: Patlama anının akustik ve sismik sensörler arasındaki zaman farkından mesafe hesaplama. Bildirilen konumla uyum testi</li>
+<li><strong>A3 — Ses Propagasyon Modeli</strong>: Hava koşulları, rüzgar, sıcaklık inversiyonu gibi faktörlerin duyulabilirliğe etkisi. "Duyulmadı" iddiasının fiziksel doğrulaması</li>
+</ul>
+<h3>2.3 Zamansal Olay Rekonstrüksiyonu (Temporal Reconstruction)</h3>
+<ul>
+<li><strong>T1 — Çoklu Sensör Zaman Hizalaması</strong>: Radar, akustik, termal, optik kayıtlarının ortak zaman eksenine oturtulması</li>
+<li><strong>T2 — Olay Kronolojisi Çıkarımı</strong>: Sensör tetiklenme sırasından olay akışının yeniden kurulması</li>
+<li><strong>T3 — Boşluk Tespiti</strong>: Bir sensörün kaydettiği ancak diğerinin kaydetmediği zaman pencereleri. "Neden bu aralık boş?" sorusu</li>
+</ul>
+<h3>2.4 Resmî Anlatı (Narrative) ile Sensör Verisi Karşılaştırması (Narrative-Data Cross-Validation)</h3>
+<ul>
+<li><strong>N1 — İddia-Edilen Zaman vs. Kayıt Zamanı</strong>: Resmî açıklamadaki olay zamanı ile sensör kaydı arasındaki fark</li>
+<li><strong>N2 — Angajman Kuralı Uyum Testi</strong>: Bildirilen angajman şeklinin (uyarı ateşi, angajman, takip) sensör verisiyle uyumu</li>
+<li><strong>N3 — Koordinat Doğrulama</strong>: İhlalin bildirilen koordinatı ile sensör kaydı arasındaki mesafe</li>
+<li><strong>N4 — Tarafların Çelişen İddiaları</strong>: İki tarafın farklı anlatılarının hangisi sensör verisiyle uyumlu?</li>
+</ul>
+<h3>2.5 İhlal Türü Sınıflandırması (Incident Classification)</h3>
+<table>
+<thead>
+<tr>
+<th>İhlal Türü</th>
+<th>Sensör Seti</th>
+<th>Kritik Gösterge</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hava Sahası İhlali</td>
+<td>Radar + ADS-B + IFF</td>
+<td>Track giriş zamanı, IFF yanıtı, uyarı süresi</td>
+</tr>
+<tr>
+<td>Kara Sınırı Geçişi</td>
+<td>Sismik + Termal + Optik</td>
+<td>Geçiş noktası, grup büyüklüğü, hız profili</td>
+</tr>
+<tr>
+<td>Deniz/MEB İhlali</td>
+<td>Radar + AIS + Akustik</td>
+<td>Rota değişikliği, AIS kapama, balıkçı deseni</td>
+</tr>
+<tr>
+<td>Angajman/Çatışma</td>
+<td>Tüm sensörler</td>
+<td>Silah sesi, füze izi, hasar değerlendirme</td>
+</tr>
+<tr>
+<td>Sivil-Gösteri/Baskın</td>
+<td>Optik + Akustik</td>
+<td>Ses şiddeti, kalabalık yoğunluğu, müdahale zamanı</td>
+</tr>
+</tbody>
+</table>
+<h3>2.6 Düşman Kızıl Bayrak Tespiti (Hostile Red Flag)</h3>
+<ul>
+<li><strong>H1 — Elektronik Harp (EW) İzleri</strong>: Radar kilidi, karıştırma (jamming), aldatma (spoofing) sinyalleri</li>
+<li><strong>H2 — Anormal Manevra Deseni</strong>: Sivil gemi/uçak deseninden sapma, rota kırılması, hız anormalliği</li>
+<li><strong>H3 — İletişim Susturma</strong>: Radyo sessizliği, AIS/ADS-B kapatma, IFF transponder susturma</li>
+</ul>
+<h2>3. Proprietary Indicators</h2>
+<table>
+<thead>
+<tr>
+<th>İndikatör</th>
+<th>Tanım</th>
+<th>Eşik</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TRACK_C</td>
+<td>radar iz süreklilik skoru</td>
+<td>&lt;0.8 = GAP_ANOMALY</td>
+</tr>
+<tr>
+<td>MULTI_R</td>
+<td>çoklu radar uyum skoru</td>
+<td>&lt;0.7 = INCONSISTENT</td>
+</tr>
+<tr>
+<td>NARRATIVE_D</td>
+<td>anlatı-zaman farkı (saniye)</td>
+<td>&gt;300sn = MISMATCH</td>
+</tr>
+<tr>
+<td>ENGAGE_R</td>
+<td>angajman kuralı uyum skoru</td>
+<td>&lt;0.6 = RULE_VIOLATION</td>
+</tr>
+<tr>
+<td>EW_SCORE</td>
+<td>elektronik harp aktivite skoru</td>
+<td>&gt;0.7 = EW_PRESENT</td>
+</tr>
+<tr>
+<td>DECLASS_R</td>
+<td>bildirilen koordinat - sensör koordinatı (km)</td>
+<td>&gt;5km = LOCATION_MISMATCH</td>
+</tr>
+</tbody>
+</table>
+<h2>4. Vaka Analizi Formatı (Case Report Template)</h2>
+<div class="codehilite"><pre><span></span><code><span class="nl">OLAY</span><span class="p">:</span><span class="w"> </span><span class="o">[</span><span class="n">Tarih</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">Saat</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">Bölge</span><span class="o">]</span>
+<span class="n">İDDİA</span><span class="w"> </span><span class="p">(</span><span class="n">Taraf</span><span class="w"> </span><span class="n">A</span><span class="p">)</span><span class="err">:</span><span class="w"> </span><span class="p">...</span>
+<span class="n">İDDİA</span><span class="w"> </span><span class="p">(</span><span class="n">Taraf</span><span class="w"> </span><span class="n">B</span><span class="p">)</span><span class="err">:</span><span class="w"> </span><span class="p">...</span>
+
+<span class="n">SENSÖR</span><span class="w"> </span><span class="n">VERİSİ</span><span class="w"> </span><span class="nl">ANALİZİ</span><span class="p">:</span>
+<span class="w">  </span><span class="nl">Radar</span><span class="p">:</span><span class="w"> </span><span class="o">[</span><span class="n">TRACK_C: 0.92</span><span class="o">]</span><span class="w"> </span><span class="err">✓</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="o">[</span><span class="n">MULTI_R: 0.45</span><span class="o">]</span><span class="w"> </span><span class="err">✗</span>
+<span class="w">  </span><span class="nl">Akustik</span><span class="p">:</span><span class="w"> </span><span class="o">[</span><span class="n">IMZA: EŞLESİYOR</span><span class="o">]</span><span class="w"> </span><span class="err">✓</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="o">[</span><span class="n">MESAFE: 3.2km</span><span class="o">]</span>
+<span class="w">  </span><span class="nl">Optik</span><span class="p">:</span><span class="w"> </span><span class="o">[</span><span class="n">KAYIT: MEVCUT</span><span class="o">]</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="o">[</span><span class="n">COVER: 78%</span><span class="o">]</span>
+
+<span class="n">NARRATIVE</span><span class="o">-</span><span class="k">DATA</span><span class="w"> </span><span class="nl">UYUMU</span><span class="p">:</span>
+<span class="w">  </span><span class="nl">Zaman</span><span class="p">:</span><span class="w"> </span><span class="o">[</span><span class="n">NARRATIVE_D: 45sn</span><span class="o">]</span><span class="w"> </span><span class="err">✓</span>
+<span class="w">  </span><span class="nl">Koordinat</span><span class="p">:</span><span class="w"> </span><span class="o">[</span><span class="n">DECLASS_R: 1.2km</span><span class="o">]</span><span class="w"> </span><span class="err">✓</span>
+<span class="w">  </span><span class="nl">Angajman</span><span class="p">:</span><span class="w"> </span><span class="o">[</span><span class="n">ENGAGE_R: 0.85</span><span class="o">]</span><span class="w"> </span><span class="err">✓</span>
+
+<span class="nl">SONUÇ</span><span class="p">:</span><span class="w"> </span><span class="o">[</span><span class="n">VERIFIED</span><span class="o">]</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="o">[</span><span class="n">INCONCLUSIVE</span><span class="o">]</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="o">[</span><span class="n">CONTRADICTED</span><span class="o">]</span>
+<span class="nl">TAVSİYE</span><span class="p">:</span><span class="w"> </span><span class="o">[</span><span class="n">İleri analiz / Bağımsız doğrulama / Arşiv</span><span class="o">]</span>
+</code></pre></div>
+
+<h2>5. Entegrasyon</h2>
+<ul>
+<li><strong>AGENT_DEFENSE-FUSION</strong>: Platform bazlı sensör bütünlüğü</li>
+<li><strong>AGENT_TEMPORAL</strong>: Zaman damgası ve kronoloji doğrulama</li>
+<li><strong>AGENT_WARGAME</strong>: Olayın stratejik bağlam değerlendirmesi</li>
+<li><strong>AGENT_GEOPOLITICS</strong>: Bölgesel güç dinamiği çerçevesi</li>
+<li><strong>AGENT_MEGAFILE</strong>: Büyük hacimli sınıflandırılmamış kayıt taraması</li>
+</ul>
+<h2>6. Kullanım Senaryosu</h2>
+<p><em>"Ege Denizi'nde bir hava sahası ihlali iddiası. Taraf A 'uçağımız uluslararası hava sahasındaydı' diyor. Taraf B 'Türk radarı ihlali kaydetti' diyor. AGENT_BORDER:</em></p>
+<ul>
+<li><em>Her iki tarafın radar kayıtlarını alır (mevcut olduğu ölçüde veya FOIA/şeffaflık raporlarından)</em></li>
+<li><em>Track sürekliliğini ve IFF mod yanıtını test eder</em></li>
+<li><em>İhlal iddiası ile sensör kaydı arasındaki zaman/konum farkını hesaplar</em></li>
+<li><em>Rapor: 'Track sürekliliği tam, uyarı süresi 4 dakika, IFF sorgulaması yapılmamış. İhlal iddiası sensör verisiyle uyumlu ancak IFF eksikliği angajman kuralı ihlali riski taşıyor.'"</em></li>
+</ul>
+<footer><p>agent-border-incident-forensics · UK Sektor Istihbarati · 2026</p></footer>
+</div>
+
+<!-- 04_DEFENSE_SECURITY_agent-defense-fusion.html -->
+<div class="page">
+
+<h1>AGENT_DEFENSE — Defense Platform Fusion</h1>
+<p><strong>Source:</strong> T2SAIM Commercialization Framework v03 (§9.1-9.6 — Defense Architecture)
+<strong>Context:</strong> DoD "AI-first" warfighting doctrines, zero error margin</p>
+<h2>1. Mission</h2>
+<p>Test structural coherence across defense data blocks: naval operations, air force sorties, drone ecosystems, border security, logistics, personnel security. Does NOT replace command decisions — surfaces high-risk anomaly zones.</p>
+<h2>2. Detection Modules</h2>
+<h3>2.1 Naval Forces: Sensor-Shipyard-Platform Fusion</h3>
+<ul>
+<li><strong>N1 — Maintenance Cycle Coherence</strong>: Platform maintenance history vs. operational tempo</li>
+<li><strong>N2 — Shipyard Schedule Integrity</strong>: Modernization schedule vs. actual platform availability</li>
+<li><strong>N3 — Ordnance Flow Testing</strong>: Critical stock behavior vs. declared mission readiness</li>
+</ul>
+<h3>2.2 Air Forces: Sortie-Ordnance-Alarm Chain</h3>
+<ul>
+<li><strong>A1 — Sortie Planning Integrity</strong>: Planned vs. actual sortie rates</li>
+<li><strong>A2 — Ordnance-Platform-Profile Alignment</strong>: Mission profile vs. ordnance loading match</li>
+<li><strong>A3 — Alarm Chain Coherence</strong>: Early warning → engagement → radar → post-mission report consistency</li>
+</ul>
+<h3>2.3 Drone (UAV/UCAV) Anti-Spoofing</h3>
+<ul>
+<li><strong>D1 — Flight Record Integrity</strong>: GPS, sensor, targeting, post-mission report chain flow</li>
+<li><strong>D2 — Spoofed Signal Detection</strong>: Inconsistent sensor readings indicating signal manipulation</li>
+</ul>
+<h3>2.4 Border Security Multi-Sensor Fusion</h3>
+<ul>
+<li><strong>B1 — Weak Signal Integration</strong>: Smuggling crossings, tunnel activity, irregular clustering surfaced from individually-normal events</li>
+<li><strong>B2 — Cross-Sensor Coherence</strong>: Radar, thermal, seismic, comms intercept alignment testing</li>
+</ul>
+<h2>3. Commercial Packages</h2>
+<table>
+<thead>
+<tr>
+<th>Package</th>
+<th>Scope</th>
+<th>Entry</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Package 1 — Institutional Assurance</td>
+<td>Internal audit, report coherence, personnel</td>
+<td>Lowest resistance</td>
+</tr>
+<tr>
+<td>Package 2 — Operational Continuity</td>
+<td>Maintenance, stock, supplier, delivery</td>
+<td>Fastest ROI</td>
+</tr>
+<tr>
+<td>Package 3 — Multi-Source Intelligence</td>
+<td>Field reports, sensors, OSINT, drone data</td>
+<td>Highest strategic value</td>
+</tr>
+</tbody>
+</table>
+<footer><p>agent-defense-fusion · UK Sektor Istihbarati · 2026</p></footer>
+</div>
+
+<!-- 04_DEFENSE_SECURITY_agent-wargame.html -->
+<div class="page">
+
+<h1>AGENT_WARGAME — Strategic Early Warning &amp; Structural Stress Testing</h1>
+<p><strong>Source:</strong> T2SAIM Commercialization Framework v03 (§9.8 — Strategic Early Warning Systems and Wargaming)
+<strong>Core Philosophy:</strong> Test scenarios not for attractiveness — for structural load-bearing capacity</p>
+<h2>1. Mission</h2>
+<p>Serve as an Early Warning System and structural coherence filter for strategic command and planning. Assess regional conflict dynamics through proprietary multi-phase mapping. Test scenarios against physical, logistical, and institutional constraints.</p>
+<h2>2. Detection Architecture</h2>
+<h3>2.1 Regional Conflict Threshold Mapping</h3>
+<ul>
+<li><strong>R1 — Phase Mapping</strong>: Multi-phase conflict escalation pathway analysis</li>
+<li><strong>R2 — Threshold Detection</strong>: Critical threshold crossing identification (red lines)</li>
+<li><strong>R3 — Constraint-Based Bounding</strong>: What is physically/logistically possible vs. declared intent</li>
+</ul>
+<h3>2.2 Wargaming Support</h3>
+<ul>
+<li><strong>W1 — Structural Load-Bearing Capacity</strong>: Scenario stress testing against real-world constraints</li>
+<li><strong>W2 — Resource Depletion Modeling</strong>: How long before logistics, fuel, munitions exhaustion</li>
+<li><strong>W3 — Epistemic Hygiene Enforcement</strong>: Preventing scenario contamination by propaganda or disinformation</li>
+</ul>
+<h3>2.3 Early Warning Signal Detection</h3>
+<ul>
+<li><strong>E1 — Weak Signal Amplification</strong>: Individually-innocent events forming threatening patterns</li>
+<li><strong>E2 — Historical Analog Matching</strong>: Current situation → historical precedent structural similarity</li>
+<li><strong>E3 — Indicator Basket Monitoring</strong>: Multi-domain leading indicator tracking</li>
+</ul>
+<h2>3. Proprietary Indicators</h2>
+<table>
+<thead>
+<tr>
+<th>Indicator</th>
+<th>Description</th>
+<th>Threshold</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>THRESHOLD_D</td>
+<td>distance to critical red line</td>
+<td>&lt;0.2 = IMMINENT</td>
+</tr>
+<tr>
+<td>LOAD_BEARING</td>
+<td>scenario sustainability score</td>
+<td>&lt;0.5 = INFEASIBLE</td>
+</tr>
+<tr>
+<td>EPI_RISK</td>
+<td>epistemic contamination probability</td>
+<td>&gt;0.6 = UNRELIABLE</td>
+</tr>
+</tbody>
+</table>
+<footer><p>agent-wargame · UK Sektor Istihbarati · 2026</p></footer>
+</div>
+
+<!-- 04_DEFENSE_SECURITY_uk-eez-maritime-domain.html -->
+<div class="page">
+
+<h1>UK EEZ Maritime Domain Awareness Module</h1>
+<p><strong>Geographic Scope:</strong> UK Exclusive Economic Zone (~770,000 km²) + Overseas Territories (Gibraltar, Falklands, BIOT, etc.)
+<strong>Strategic Assets:</strong> Offshore oil &amp; gas platforms, wind farms (world's largest offshore wind), subsea data cables (99% of UK data traffic), fishing stocks
+<strong>Threat Vectors:</strong> Russian naval activity, illegal fishing, sanctions evasion, hybrid warfare (cable cutting), people smuggling</p>
+<h2>1. Mission</h2>
+<p>UK maritime domain structural coherence testing. Cross-references AIS, radar, satellite imagery, port records, fishing licenses, and economic data to detect anomalies in UK waters. Supports Royal Navy, UK Maritime &amp; Coastguard Agency, and Border Force.</p>
+<h2>2. Detection Architecture</h2>
+<h3>2.1 AIS Manipulation Detection</h3>
+<ul>
+<li><strong>A1 — AIS Gap Analysis</strong>: Deliberate transponder shutdown near sensitive areas (platforms, cables, military zones)</li>
+<li><strong>A2 — Identity Spoofing</strong>: MMSI number conflicts, repeated identity changes</li>
+<li><strong>A3 — Dark Ship Detection</strong>: Radar/satellite track without corresponding AIS = deliberate concealment</li>
+</ul>
+<h3>2.2 Fishing Activity Forensics</h3>
+<ul>
+<li><strong>F1 — Licensing Compliance</strong>: Fishing vessel location vs. license zone. Unauthorized fishing = IUU (Illegal, Unreported, Unregulated)</li>
+<li><strong>F2 — Catch vs. Declaration</strong>: Landing data vs. vessel capacity. Systematic under-declaration</li>
+<li><strong>F3 — Transshipment Detection</strong>: Ship-to-ship transfer at sea (common sanctions evasion tactic)</li>
+</ul>
+<h3>2.3 Subsea Cable Integrity</h3>
+<ul>
+<li><strong>C1 — Anchor Interaction Detection</strong>: Vessel track intersecting cable routes at suspiciously low speed</li>
+<li><strong>C2 — Trawling Pattern Analysis</strong>: Fishing gear vs. cable proximity — accidental vs. intentional</li>
+<li><strong>C3 — Repair &amp; Maintenance Forensics</strong>: Cable break chronology vs. vessel tracks</li>
+</ul>
+<h3>2.4 Hydrocarbon Asset Protection</h3>
+<ul>
+<li><strong>H1 — Stand-off Vessel Monitoring</strong>: Foreign vessels loitering near platforms without operational purpose</li>
+<li><strong>H2 — Supply Chain Forensics</strong>: Platform supply vessel patterns, crew rotation anomalies</li>
+<li><strong>H3 — Seismic Survey Analysis</strong>: Unauthorized survey activity in UK waters</li>
+</ul>
+<h3>2.5 Port State Control Forensics</h3>
+<ul>
+<li><strong>P1 — Port Call Deseasonalization</strong>: Vessel visitation patterns vs. economic cycles. Deviations = risk</li>
+<li><strong>P2 — Crew Change Anomalies</strong>: Crew nationality changes, extended port stays without justification</li>
+<li><strong>P3 — Bunkering / Waste Transfer</strong>: Unusual fueling or waste disposal patterns</li>
+</ul>
+<h2>3. Proprietary Indicators</h2>
+<table>
+<thead>
+<tr>
+<th>Indicator</th>
+<th>Description</th>
+<th>Threshold</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AIS_GAP</td>
+<td>transponder off duration near sensitive area</td>
+<td>&gt;2hrs = DELIBERATE</td>
+</tr>
+<tr>
+<td>DARK_S</td>
+<td>radar_track / ais_track mismatch</td>
+<td>ais=0 radar&gt;0 = SUSPICIOUS</td>
+</tr>
+<tr>
+<td>IUU_RISK</td>
+<td>fishing zone compliance deviation</td>
+<td>&gt;3σ = UNAUTHORIZED</td>
+</tr>
+<tr>
+<td>CABLE_R</td>
+<td>vessel distance to cable route at low speed</td>
+<td>&lt;0.5nm = RISK</td>
+</tr>
+</tbody>
+</table>
+<h2>4. UK Data Sources</h2>
+<ul>
+<li><strong>UKHO (UK Hydrographic Office)</strong>: Charts, tidal data</li>
+<li><strong>Marine Traffic / S-100</strong>: AIS data (paid)</li>
+<li><strong>Satellite Imagery</strong>: ESA Sentinel, UKSA (free/paid)</li>
+<li><strong>MMO (Marine Management Organisation)</strong>: Fishing licenses, landing data</li>
+<li><strong>Northwood HQ</strong>: Royal Navy operations (classified — open source proxy)</li>
+<li><strong>Kongsberg / exactEarth</strong>: Satellite AIS (paid)</li>
+</ul>
+<h2>5. Response Protocol</h2>
+<ul>
+<li><strong>Green</strong>: Normal pattern — no action</li>
+<li><strong>Amber</strong>: Anomaly detected — Coastguard / NCA notification</li>
+<li><strong>Red</strong>: Active threat — Royal Navy tasking recommendation</li>
+</ul>
+<footer><p>uk-eez-maritime-domain · UK Sektor Istihbarati · 2026</p></footer>
+</div>
+
+<footer><p>BK Sektör Istihbaratı · IV. Savunma ve Güvenlik · 2026</p></footer></div></body></html>

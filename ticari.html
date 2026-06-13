@@ -21,7 +21,7 @@ td{padding:6px 8px;border-bottom:1px solid rgba(26,42,74,0.5);font-size:12px}
 .tag.g{background:#1a4a1a;color:#4caf50}.tag.r{background:#4a1a1a;color:#e94560}.tag.b{background:#1a3a5a;color:#00d9ff}
 a{color:var(--gold);text-decoration:none}
 .back{display:block;margin:20px 0;color:#6b7280;font-family:monospace;font-size:12px}
-ul{margin:8px 0;padding-left:20px}li{margin:4px 0}
+ul{margin:8px 0;padding-left:20px}li{margin:4px 0;line-height:1.7}
 .code{background:#0a0f1a;padding:12px;border-radius:4px;color:#4caf50;font-family:monospace;font-size:11px;margin:10px 0;white-space:pre-wrap}
 footer{text-align:center;margin-top:50px;padding-top:25px;border-top:1px solid var(--navy);color:#6b7280;font-size:11px}
 </style></head>
@@ -31,21 +31,35 @@ footer{text-align:center;margin-top:50px;padding-top:25px;border-top:1px solid v
 <h1>I. Ticari Alan</h1>
 <p><strong>ESG Uyumluluğu, Dijital Ürün Pasaportu ve Tedarik Zinciri Bütünlüğü</strong></p>
 
-<div class="kutu r"><p><strong>Düzenleyici Çerçeve:</strong> AB Sürdürülebilir Ürünler için Ekotasarım Yönetmeliği (ESPR), 2026'dan itibaren aşamalı olarak zorunlu hale geliyor. BK, Brexit sonrası kendi Yeşil Taksonomisi'ni geliştiriyor. Bu iki düzenleyik sistem, £2.68 milyarlık bir uyum ekosistemi yaratıyor.</p></div>
+<div class="kutu r"><p><strong>Düzenleyici Çerçeve:</strong> AB Sürdürülebilir Ürünler için Ekotasarım Yönetmeliği (ESPR), 2026'dan itibaren aşamalı olarak zorunlu hale geliyor. BK, Brexit sonrası kendi Yeşil Taksonomisi'ni geliştiriyor. Yapay zeka destekli tedarik zinciri pazarının 2035 yılına kadar $236 milyara ulaşması öngörülüyor.</p></div>
 
-<h2>1. AGENT_DPP — Dijital Ürün Pasaportu ve ESG Uyumu</h2>
-<p>AB Dijital Ürün Pasaportu (DPP) düzenlemesi, ürünlerin tüm yaşam döngüsü boyunca veri bütünlüğünü zorunlu kılıyor. AGENT_DPP, bir veri giriş sistemi değil, bir <strong>denetim aktörüdür</strong>. ESG verilerini ve "yeşil aklama" (greenwashing) iddialarını yapısal analize tabi tutar.</p>
+<!-- ============================================================ -->
+<!-- BÖLÜM 1: AGENT_DPP — EU Digital Product Passport & ESG Module -->
+<!-- ============================================================ -->
 
-<h3>Tespit Mimarisi</h3>
+<h2>1. AGENT_DPP — Dijital Ürün Pasaportu ve ESG Uyum Modülü</h2>
+<p><strong>Kaynak:</strong> T2SAIM Ticarileştirme Çerçevesi v03 (§5.2 — AB Dijital Ürün Pasaportu ve ESG Uyumu)<br>
+<strong>Düzenleyici Dayanak:</strong> AB Sürdürülebilir Ürünler için Ekotasarım Yönetmeliği (ESPR), 2026'dan itibaren aşamalı olarak zorunlu</p>
+
+<h3>1.1 Misyon</h3>
+<p>T2SAIM'in Dijital Ürün Pasaportu denetim aktörü. Yalnızca bir veri giriş sistemi değil — verilerin manipüle edilmediğini doğrulayan bir <strong>denetim aktörü</strong>. ESG verileri ve "yeşil aklama" (greenwashing) iddiaları, fiziksel gerçeklikle uyumsuz sürdürülebilirlik beyanlarını ortaya çıkaran yapısal analize tabi tutulur.</p>
+
+<h3>1.2 Tespit Mimarisi</h3>
+
+<h4>1.2.1 DPP Yapısal Bütünlük Testi</h4>
 <ul>
 <li><strong>D1 — Veri Kaynağı Doğrulama:</strong> DPP girdilerinin otantik üretim sensörlerinden mi yoksa sahte veri enjektörlerinden mi geldiğini test eder</li>
-<li><strong>D2 — Zamansal Üretim Ritmi Testi:</strong> Dijital girdi zaman damgalarını fiziksel üretim hattı hızlarıyla çapraz referanslar. Bir bileşenin fiziksel olarak mümkün olandan daha hızlı "üretilmesi" = müdahale</li>
+<li><strong>D2 — Zamansal Üretim Ritmi Testi:</strong> Dijital girdi zaman damgalarını fiziksel üretim hattı hızlarıyla çapraz referanslar. Bir bileşenin fiziksel olarak mümkün olandan daha hızlı "üretilmesi" = müdahale (tampering) göstergesidir</li>
 <li><strong>D3 — Çoklu Düğüm Tutarlılığı:</strong> Aynı ürünün farklı düğümlerdeki (fabrika, depo, perakende) pasaport girişleri uyumlu olmalıdır. Sapma = manipülasyon</li>
-<li><strong>T1 — Sektörel Sürdürülebilirlik Deseni:</strong> Bir sektördeki ortalama karbon ayak izi beyanlarının istatistiksel dağılımı. Aykırı değerler yeşil aklama göstergesi</li>
-<li><strong>T2 — Fiziksel-Dijital Uyum:</strong> Sürdürülebilirlik iddiaları (ör. "geri dönüştürülmüş %50") ile fiziksel ürün analizi arasındaki uyum</li>
 </ul>
 
-<h3>Özel Göstergeler</h3>
+<h4>1.2.2 ESG / Yeşil Aklama Tespiti</h4>
+<ul>
+<li><strong>T1 — Sektörel Sürdürülebilirlik Deseni:</strong> Bir sektördeki ortalama karbon ayak izi beyanlarının istatistiksel dağılımı. Aykırı değerler yeşil aklama göstergesidir</li>
+<li><strong>T2 — Fiziksel-Dijital Uyum:</strong> Sürdürülebilirlik iddiaları (örneğin "geri dönüştürülmüş %50") ile fiziksel ürün analizi arasındaki uyumu test eder</li>
+</ul>
+
+<h3>1.3 Özel Göstergeler (AGENT_DPP)</h3>
 <table>
 <tr><th>Gösterge</th><th>Formül</th><th>Eşik</th></tr>
 <tr><td>DPP_INTEGRITY</td><td>çoklu_düğüm_tutarlılık_skoru</td><td class="tag r"><0.7 = MANIPULATED</td></tr>
@@ -54,10 +68,86 @@ footer{text-align:center;margin-top:50px;padding-top:25px;border-top:1px solid v
 <tr><td>ESG_COVERAGE</td><td>raporlanan_veri_noktaları / gerekli_veri_noktaları</td><td class="tag r"><0.6 = NON_COMPLIANT</td></tr>
 </table>
 
-<h2>2. AGENT_KNOWPRO — Bilgi Süreç Yönetimi</h2>
+<h3>1.4 Entegrasyon Noktaları</h3>
+<ul>
+<li><strong>EU ESPR Veritabanı:</strong> Dijital ürün pasaportu şeması sorgulama</li>
+<li><strong>GS1 Veritabanı:</strong> Küresel ürün tanımlama ve barkod doğrulama</li>
+<li><strong>EPREL (AB Enerji Etiketi):</strong> Enerji verimliliği beyanı doğrulama</li>
+<li><strong>AGENT_SUPPLY:</strong> Tedarik zinciri bütünlüğü ile çapraz besleme</li>
+<li><strong>AGENT_KNOWPRO:</strong> Bilgi süreç yönetimi entegrasyonu</li>
+</ul>
+
+<h3>1.5 Örnek Tespit Senaryosu</h3>
+<div class="kutu r"><p><em>"Bir BK perakendecisi, tedarik zincirinin %100 sürdürülebilir olduğunu beyan ediyor. AGENT_DPP, dijital ürün pasaportlarını tarar. 3 fabrikadaki zaman damgaları fiziksel üretim hızlarıyla uyuşmuyor. Tedarikçilerden birinin karbon ayak izi beyanı, sektör ortalamasının %40 altında. GREENWASH_T = 0.45. Rapor: 'GREENWASHING TESPİT EDİLDİ — ESG beyanları fiziksel gerçeklikle uyuşmuyor.'"</em></p></div>
+
+<!-- ============================================================ -->
+<!-- BÖLÜM 2: AGENT_SUPPLY — Tedarik Zinciri Sahtecilik Tespiti -->
+<!-- ============================================================ -->
+
+<h2>2. AGENT_SUPPLY — Tedarik Zinciri Sahtecilik ve Siber-Fiziksel Bütünlük</h2>
+<p><strong>Kaynak:</strong> T2SAIM Ticarileştirme Çerçevesi v03 (§5.1 — Sahtecilik Tespiti ve Yapısal Geometri Doğrulaması)<br>
+<strong>Pazar:</strong> Yapay zeka destekli tedarik zinciri pazarının 2035 yılına kadar $236 milyara ulaşması öngörülüyor</p>
+
+<h3>2.1 Misyon</h3>
+<p>Modern sahtecilik, fiziksel parça kopyalamaktan çok, orijinal verileri ve barkodları sistemler içinde manipüle etmeye dayanır. AGENT_SUPPLY, barkod doğrulamasının ötesine geçerek lojistik olayların <strong>yapısal tutarlılığını</strong> özel çok boyutlu yöntemlerle test eder.</p>
+
+<h3>2.2 Tespit Mimarisi</h3>
+
+<h4>2.2.1 Yapısal Geometri Doğrulaması</h4>
+<ul>
+<li><strong>SG1 — Zamansal Boşluk Tespiti:</strong> Dijital giriş zaman damgalarını fiziksel transit süreleri ve üretim hattı işleme hızlarıyla çapraz referanslar. Harici olarak eklenen bir yönlendirilmiş bileşen, fiziksel olarak imkansız bir zamansal boşluk yaratır</li>
+<li><strong>SG2 — Rota Tutarlılığı Testi:</strong> Gerçek nakliye rotaları ile beyan edilen rotaların karşılaştırılması. Doğal varyasyonun ötesindeki sapma = sahtecilik göstergesi</li>
+<li><strong>SG3 — Parti Tutarlılığı:</strong> Aynı parti bileşenler, üretim imzalarını (hız, sıcaklık, kalite metrikleri) paylaşmalıdır</li>
+</ul>
+
+<h4>2.2.2 Veri Zehirleme Tespiti (Data Poisoning Detection)</h4>
+<ul>
+<li><strong>DP1 — Girdi Bütünlüğü:</strong> Tedarikçi ERP verileri, manipülasyon göstergeleri açısından test edilir</li>
+<li><strong>DP2 — Çoklu Kaynak Çapraz Doğrulama:</strong> Aynı lojistik olayın farklı sensörler/kurumlar tarafından raporlanması uyumlu olmalıdır</li>
+</ul>
+
+<h4>2.2.3 Sıfır Hata Endüstrileri (Zero-Defect Industries)</h4>
+<ul>
+<li><strong>Havacılık SaaS:</strong> Abonelik tabanlı siber-fiziksel güvenlik kalkanı — doğal üretim ritmini izler</li>
+<li><strong>Otomotiv:</strong> Güvenlik kritik parçalar için bileşen menşe doğrulaması</li>
+<li><strong>Tıbbi Cihazlar:</strong> Sterilite zinciri ve taşıma kaydı bütünlüğü</li>
+</ul>
+
+<h3>2.3 Özel Göstergeler (AGENT_SUPPLY)</h3>
+<table>
+<tr><th>Gösterge</th><th>Formül</th><th>Eşik</th></tr>
+<tr><td>T_GAP</td><td>entry_timestamp - physical_transit_time</td><td class="tag r">>physical_max = COUNTERFEIT</td></tr>
+<tr><td>ROUTE_C</td><td>declared_path vs gps/sensor_path</td><td class="tag r">>3σ = INVESTIGATE</td></tr>
+<tr><td>BATCH_S</td><td>within-batch variance of production metrics</td><td class="tag r">>5σ = ANOMALY</td></tr>
+</table>
+
+<h3>2.4 Ticari Model</h3>
+<ul>
+<li><strong>Pilot:</strong> Tek tedarik hattı izleme (3 aylık değer kanıtı)</li>
+<li><strong>SaaS:</strong> Tedarik hattı başına aylık abonelik</li>
+<li><strong>Kurumsal:</strong> Çok katmanlı üretici + dağıtıcı ağı</li>
+</ul>
+
+<h3>2.5 Entegrasyon Noktaları</h3>
+<ul>
+<li><strong>GS1 Veritabanı:</strong> Küresel ürün tanımlama ve barkod doğrulama</li>
+<li><strong>ERP Sistemleri:</strong> SAP, Oracle, Microsoft Dynamics ile entegrasyon</li>
+<li><strong>IoT Sensör Ağları:</strong> Gerçek zamanlı üretim ve lojistik verisi</li>
+<li><strong>AGENT_DPP:</strong> Dijital ürün pasaportu bütünlüğü ile çapraz besleme</li>
+<li><strong>AGENT_PHYSAUD:</strong> Fiziksel varlık denetimi entegrasyonu</li>
+</ul>
+
+<h3>2.6 Örnek Tespit Senaryosu</h3>
+<div class="kutu r"><p><em>"Bir havacılık üreticisi, kritik bir motor bileşeninin tedarik zincirini izliyor. AGENT_SUPPLY bileşenin dijital giriş zaman damgasını fiziksel transit süresiyle karşılaştırır. T_GAP = 47 gün — fiziksel olarak imkansız. Rota verisi, bileşenin beyan edilmeyen bir tesise yönlendirildiğini gösteriyor. ROUTE_C = 4.2σ. Rapor: 'COUNTERFEIT TESPİT EDİLDİ — bileşen orijinal tedarik zincirinin dışında üretilmiş olabilir.'"</em></p></div>
+
+<!-- ============================================================ -->
+<!-- BÖLÜM 3: AGENT_KNOWPRO — Bilgi Süreç Yönetimi -->
+<!-- ============================================================ -->
+
+<h2>3. AGENT_KNOWPRO — Bilgi Süreç Yönetimi</h2>
 <p>BK hukuk ve finans firmaları, karmaşık analitik işleri giderek daha fazla uzman araştırma sağlayıcılarına dış kaynak olarak yaptırıyor. Dışarıdan KYC/AML durum tespiti, dava destek araştırması ve düzenleyici raporlama analizi pazarı yıllık %18 büyüyor.</p>
 
-<h3>Hizmet Hatları</h3>
+<h3>3.1 Hizmet Hatları</h3>
 <ul>
 <li><strong>KYC/AML Durum Tespiti:</strong> Müşteri tanıma ve kara para aklamayı önleme analizi</li>
 <li><strong>Dava Destek Araştırması:</strong> Sınır ötesi davalar için adli araştırma</li>
@@ -65,35 +155,18 @@ footer{text-align:center;margin-top:50px;padding-top:25px;border-top:1px solid v
 <li><strong>Rekabet Analizi:</strong> Pazar istihbaratı ve rakip incelemesi</li>
 </ul>
 
-<h2>3. AGENT_SUPPLYCHAIN — Tedarik Zinciri Bütünlüğü</h2>
-<p>BK tedarik zincirleri üç eşzamanlı kesintiyle karşı karşıya: Brexit sonrası gümrük işlemleri, net-sıfır geçiş maliyetleri ve jeopolitik yönlendirme. Bütünlük doğrulaması — hammadde menşeinden son mil teslimatına kadar — £1.1 milyarlık bir fırsat alanıdır.</p>
-
-<h3>Tespit Mimarisi</h3>
-<ul>
-<li><strong>S1 — Kaynak Doğrulama:</strong> Tedarikçi iddialarının bağımsız doğrulaması</li>
-<li><strong>S2 — Rota Tutarlılığı:</strong> Fiziksel lojistik rotalarının beyan edilen rotalarla uyumu</li>
-<li><strong>S3 — Zaman Penceresi Analizi:</strong> Teslimat sürelerinin sektör ortalamalarıyla karşılaştırılması</li>
-<li><strong>S4 — Maliyet Yapısı Anomalisi:</strong> Piyasa dışı fiyatlandırma desenlerinin tespiti</li>
-</ul>
-
-<h3>Özel Göstergeler</h3>
-<table>
-<tr><th>Gösterge</th><th>Formül</th><th>Eşik</th></tr>
-<tr><td>SOURCE_V</td><td>kaynak_belgesi - bağımsız_doğrulama</td><td class="tag r"><0.5 = UNVERIFIED</td></tr>
-<tr><td>ROUTE_C</td><td>beyan_edilen_rota / fiziksel_rota</td><td class="tag r">>1.2 = DIVERSION</td></tr>
-<tr><td>TIMEWIN_R</td><td>gerçek_teslimat - beyan_teslimat</td><td class="tag r">>48h = ANOMALY</td></tr>
-</table>
+<!-- ============================================================ -->
+<!-- PAZAR TABLOSU -->
+<!-- ============================================================ -->
 
 <h2>Pazar Büyüklükleri</h2>
 <table>
 <tr><th>Hizmet Hattı</th><th>Pazar Büyüklüğü</th><th>Olasılık</th><th>Zaman Dilimi</th></tr>
-<tr><td>ESG uyum denetimi</td><td>£850 milyon</td><td><span class="tag g">%72</span></td><td>2026-2027</td></tr>
-<tr><td>Tedarik zinciri bütünlüğü</td><td>£1.1 milyar</td><td><span class="tag g">%68</span></td><td>2026</td></tr>
-<tr><td>KPO hukuk/finans</td><td>£420 milyon</td><td><span class="tag b">%55</span></td><td>2027-2028</td></tr>
+<tr><td>ESG uyum denetimi (DPP)</td><td>£850 milyon</td><td><span class="tag g">%72</span></td><td>2026-2027</td></tr>
+<tr><td>Tedarik zinciri bütünlüğü (Supply)</td><td>£1.1 milyar</td><td><span class="tag g">%68</span></td><td>2026</td></tr>
+<tr><td>KPO hukuk/finans (KnowPro)</td><td>£420 milyon</td><td><span class="tag b">%55</span></td><td>2027-2028</td></tr>
 <tr><td>Karbon kredi doğrulama</td><td>£310 milyon</td><td><span class="tag b">%55</span></td><td>2027-2028</td></tr>
 </table>
 
-<div class="kutu"><p><strong>Örnek Tespit Senaryosu:</strong> "Bir BK perakendecisi, tedarik zincirinin %100 sürdürülebilir olduğunu beyan ediyor. AGENT_DPP, dijital ürün pasaportlarını tarar — 3 fabrikadaki zaman damgaları fiziksel üretim hızlarıyla uyuşmuyor. Tedarikçilerden birinin karbon ayak izi beyanı, sektör ortalamasının %40 altında. GREENWASH_T = 0.45. Rapor: 'GREENWASHING TESPİT EDİLDİ — ESG beyanları fiziksel gerçeklikle uyuşmuyor.'"</p></div>
-
-<footer><p>BK Sektör İstihbaratı · I. Ticari Alan · 2026</p></footer>
+<footer><p>BK Sektör İstihbaratı · I. Ticari Alan · AGENT_DPP + AGENT_SUPPLY + AGENT_KNOWPRO · 2026</p></footer>
 </div></body></html>

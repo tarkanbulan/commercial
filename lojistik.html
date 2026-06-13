@@ -1,1 +1,972 @@
-<!doctype html><html lang="tr"><head><meta charset="utf-8"><title>VI. Lojistik ve Tedarik Zinciri — BK Sektör Istihbaratı</title><style>:root{--ink:#0f1a2e;--paper:#f7f4ec;--gold:#c9a84c}*{margin:0;padding:0;box-sizing:border-box}body{background:var(--ink);color:#eaeaea;font-family:Georgia,'Times New Roman',serif;padding:20px;font-size:15px;line-height:1.8}.page{max-width:1100px;margin:0 auto;padding:30px}h1{color:var(--gold);font-size:28px;border-bottom:3px solid var(--gold);padding-bottom:12px}h2{color:var(--gold);margin:30px 0 15px}p{margin:8px 0;line-height:1.8}a{color:var(--gold)}.back{display:block;margin:20px 0;color:#6b7280;font-family:monospace;font-size:12px}footer{text-align:center;margin-top:40px;padding-top:20px;border-top:1px solid #1a2a4a;color:#6b7280;font-size:11px}</style></head><body><div class="page"><a class="back" href="index.html">⬅ Ana Sayfaya Dön</a><h1>VI. Lojistik ve Tedarik Zinciri</h1><p><strong>11 Alt Alan: Karayolundan Çoklu Taşımacılığa</strong></p><p>BK lojistik sektörü £120 milyar büyüklüğünde, parçalı bir yapıdadır. Gümrük, akaryakıt sahteciliği ve soguk zincir bütünlüğü baslıca dolandırıcılık vektörleridir.</p><p>Kapsamlı pazar büyüklüğü, düzenleyici haritalama, hizmet tanımları ve adli vektörler ile analiz hazırdır.</p><footer><p>BK Sektör Istihbaratı · VI. Lojistik ve Tedarik Zinciri · 2026</p></footer></div></body></html>
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><title>VI. Lojistik ve Tedarik Zinciri — BK Sektör Istihbaratı</title><style>:root{--ink:#0f1a2e;--paper:#f7f4ec;--gold:#c9a84c}*{margin:0;padding:0;box-sizing:border-box}body{background:var(--ink);color:#eaeaea;font-family:Georgia,'Times New Roman',serif;padding:20px;font-size:15px;line-height:1.8}.page{max-width:1100px;margin:0 auto;padding:30px}h1{color:var(--gold);font-size:28px;border-bottom:3px solid var(--gold);padding-bottom:12px}h2{color:var(--gold);margin:30px 0 15px}p{margin:8px 0;line-height:1.8}a{color:var(--gold)}.back{display:block;margin:20px 0;color:#6b7280;font-family:monospace;font-size:12px}footer{text-align:center;margin-top:40px;padding-top:20px;border-top:1px solid #1a2a4a;color:#6b7280;font-size:11px}</style></head><body><div class="page"><a class="back" href="index.html">⬅ Ana Sayfaya Dön</a><h1>VI. Lojistik ve Tedarik Zinciri</h1><p><strong>11 Alt Alan: Karayolundan Çoklu Taşımacılığa</strong></p><p>BK lojistik sektörü £120 milyar büyüklüğünde, parçalı bir yapıdadır. Gümrük, akaryakıt sahteciliği ve soguk zincir bütünlüğü baslıca dolandırıcılık vektörleridir.</p><p>Kapsamlı pazar büyüklüğü, düzenleyici haritalama, hizmet tanımları ve adli vektörler ile analiz hazırdır.</p>
+<!-- 11_LOGISTICS_README.html -->
+<div class="page">
+
+<h1>LOGISTICS — T2SAIM Ticari Modüller (4 Mod, 13 Modül)</h1>
+<p><strong>Oluşturan:</strong> Hermes / Section 31 (DATA - Karargah1)
+<strong>Tarih:</strong> 2026-05-25
+<strong>Kapsam:</strong> Karayolu, Denizyolu, Demiryolu, Havayolu — tüm lojistik modları</p>
+<hr />
+<h2>PAZAR BÜYÜKLÜĞÜ</h2>
+<table>
+<thead>
+<tr>
+<th>Mod</th>
+<th>Global</th>
+<th>UK</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Karayolu</td>
+<td>$3.5-4T</td>
+<td>£60-80B</td>
+</tr>
+<tr>
+<td>Denizyolu</td>
+<td>$2-2.5T</td>
+<td>£20-30B</td>
+</tr>
+<tr>
+<td>Demiryolu</td>
+<td>$250-300B</td>
+<td>£5-8B</td>
+</tr>
+<tr>
+<td>Havayolu</td>
+<td>$150-200B</td>
+<td>£10-15B</td>
+</tr>
+<tr>
+<td><strong>TOPLAM</strong></td>
+<td><strong>$8-10 TRILLION</strong></td>
+<td><strong>£100-130B</strong></td>
+</tr>
+</tbody>
+</table>
+<h2>MODÜLLER (13 adet)</h2>
+<h3>KARAYOLU (5)</h3>
+<table>
+<thead>
+<tr>
+<th>Kod</th>
+<th>Modül</th>
+<th>Uygulama</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AGENT_LOG_ROAD</td>
+<td>agent-logistics-road-fleet</td>
+<td>Tachograph, yakıt, bakım, sürücü</td>
+</tr>
+<tr>
+<td>AGENT_LOG_COLDCHAIN</td>
+<td>agent-logistics-road-coldchain</td>
+<td>Soğuk zincir, reefer, GDP</td>
+</tr>
+<tr>
+<td>AGENT_LOG_LASTMIL</td>
+<td>agent-logistics-road-lastmile</td>
+<td>Son mil, teslimat forensics</td>
+</tr>
+<tr>
+<td>AGENT_LOG_FREIGHT</td>
+<td>agent-logistics-road-freight-fraud</td>
+<td>Double brokering, phantom load</td>
+</tr>
+<tr>
+<td>AGENT_LOG_CROSSB</td>
+<td>agent-logistics-road-crossborder</td>
+<td>Kabotaj, gümrük, akaryakıt vergisi</td>
+</tr>
+</tbody>
+</table>
+<h3>DENİZYOLU (4)</h3>
+<table>
+<thead>
+<tr>
+<th>Kod</th>
+<th>Modül</th>
+<th>Uygulama</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AGENT_LOG_CONT</td>
+<td>agent-logistics-maritime-container</td>
+<td>VGM, konteyner, demurrage</td>
+</tr>
+<tr>
+<td>AGENT_LOG_BUNKER</td>
+<td>agent-logistics-maritime-bunker</td>
+<td>Yakıt, IMO 2020, scrubber</td>
+</tr>
+<tr>
+<td>AGENT_LOG_MARFREIGHT</td>
+<td>agent-logistics-maritime-freight</td>
+<td>Navlun, charter, BOL</td>
+</tr>
+<tr>
+<td>AGENT_LOG_PORT</td>
+<td>agent-logistics-maritime-port</td>
+<td>Gümrük, freeport, PSC</td>
+</tr>
+</tbody>
+</table>
+<h3>DEMİRYOLU (2)</h3>
+<table>
+<thead>
+<tr>
+<th>Kod</th>
+<th>Modül</th>
+<th>Uygulama</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AGENT_LOG_RAIL</td>
+<td>agent-logistics-rail-freight</td>
+<td>Vagon, yük manifestosu, intermodal</td>
+</tr>
+<tr>
+<td>AGENT_LOG_RAILINFRA</td>
+<td>agent-logistics-rail-infrastructure</td>
+<td>Sinyal, SPAD, ERTMS, kaza forensics</td>
+</tr>
+</tbody>
+</table>
+<h3>HAVA KARGO + MULTIMODAL (2)</h3>
+<table>
+<thead>
+<tr>
+<th>Kod</th>
+<th>Modül</th>
+<th>Uygulama</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AGENT_LOG_AIRCARGO</td>
+<td>agent-logistics-air-cargo</td>
+<td>AWB sahteciliği, DG, pharma</td>
+</tr>
+<tr>
+<td>AGENT_LOG_MULTI</td>
+<td>agent-logistics-multimodal</td>
+<td>Freight audit, carbon, FAP</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><em>T2SAIM toplam: 57 eski (22) + yeni ticari (15) + havacilik (10) + lojistik (13) = 60 SKILL</em></p>
+<footer><p>README · UK Sektor Istihbarati · 2026</p></footer>
+</div>
+
+<!-- 11_LOGISTICS_01_ROAD_FLEET_agent-logistics-road-fleet.html -->
+<div class="page">
+
+<h1>AGENT_LOG_ROAD — Road Freight Fleet Integrity Module</h1>
+<p><strong>Market:</strong> Global road freight $3.5-4T. UK £60-80B. ~300M commercial vehicles.
+<strong>Regulatory:</strong> EU Reg 561/2006 (driver hours), UK retained version. DVSA, Traffic Commissioners.
+<strong>Key UK Players:</strong> Eddie Stobart, Wincanton, XPO, DHL Supply Chain, Culina, DX Group</p>
+<h2>1. Mission</h2>
+<p>Detect fleet management fraud: tachograph manipulation, phantom mileage, fuel theft, and maintenance record tampering in HGV/van fleets.</p>
+<h2>2. Detection Architecture</h2>
+<h3>2.1 Tachograph/Driver Hours Manipulation</h3>
+<ul>
+<li>T1 — Driving Time Violation: Actual drive &gt; 4.5h without break (digital tachograph cross-ref)</li>
+<li>T2 — Rest Period Shortening: Reduced daily rest claimed but GPS shows movement</li>
+<li>T3 — Card Manipulation: Driver card insertion/removal anomalies. Missing periods = fraud indicator</li>
+<li>T4 — Company Card Abuse: Company card used to falsify driver records</li>
+</ul>
+<h3>2.2 Phantom Mileage / Fuel Theft</h3>
+<ul>
+<li>M1 — Fuel Consumption Anomaly: MPG deviation from fleet average. &gt;2 sigma = theft/adulteration</li>
+<li>M2 — Route vs. Fuel: GPS-tracked route distance vs. fuel purchased. Excess = diversion</li>
+<li>M3 — Phantom Loads: Miles claimed for loads that don't exist in customer systems</li>
+</ul>
+<h3>2.3 HGV Maintenance Integrity</h3>
+<ul>
+<li>H1 — MOT/Test Manipulation: Annual test pass without physical inspection indicators</li>
+<li>H2 — Brake Test Records: Roller brake test results vs. vehicle capability curve</li>
+<li>H3 — Maintenance Interval: Service interval compliance vs. actual mileage/engine hours</li>
+</ul>
+<h3>2.4 Driver/Fleet Compliance</h3>
+<ul>
+<li>D1 — License Validity: CPC, Driver Qualification Card, medical certificate expiry monitoring</li>
+<li>D2 — O-Licence Compliance: Operator licence undertakings vs. actual practices</li>
+<li>D3 — Insurance Fraud: Claimed incident vs. telematics data cross-reference</li>
+</ul>
+<h2>3. Proprietary Indicators</h2>
+<table>
+<thead>
+<tr>
+<th>Indicator</th>
+<th>Description</th>
+<th>Threshold</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TACHO_V</td>
+<td>drive_time_without_break / 4.5h</td>
+<td>&gt;1.0 = VIOLATION</td>
+</tr>
+<tr>
+<td>FUEL_D</td>
+<td>expected_mpg - actual_mpg</td>
+<td>&gt;15% = THEFT</td>
+</tr>
+<tr>
+<td>PHANTOM_M</td>
+<td>claimed_miles - gps_miles</td>
+<td>&gt;5% = MANIPULATION</td>
+</tr>
+<tr>
+<td>MAINT_G</td>
+<td>service_interval_compliance</td>
+<td>&lt;0.8 = RISK</td>
+</tr>
+</tbody>
+</table>
+<footer><p>agent-logistics-road-fleet · UK Sektor Istihbarati · 2026</p></footer>
+</div>
+
+<!-- 11_LOGISTICS_02_ROAD_COLDCHAIN_agent-logistics-road-coldchain.html -->
+<div class="page">
+
+<h1>AGENT_LOG_COLDCHAIN — Cold Chain &amp; Reefer Integrity Module</h1>
+<p><strong>Market:</strong> Global cold chain logistics $300B+. Pharma cold chain $25B+.
+<strong>Regulatory:</strong> EU GDP (Good Distribution Practice), WHO, HACCP, ATP Agreement</p>
+<h2>1. Mission</h2>
+<p>Detect cold chain breaches, reefer temperature data manipulation, and delivery proof fraud in temperature-sensitive supply chains.</p>
+<h2>2. Detection Architecture</h2>
+<h3>2.1 Temperature Breach Detection</h3>
+<ul>
+<li>T1 — Data Gap: Missing temp readings during transit. Points to intentional sensor disabling</li>
+<li>T2 — Recovery Anomaly: Temperature out of range and rapid recovery (sensor manipulation indicator)</li>
+<li>T3 — Seasonal Correlation: Breach rates vs. external temperature patterns</li>
+</ul>
+<h3>2.2 Reefer Data Integrity</h3>
+<ul>
+<li>R1 — Sensor Comparison: Multiple sensors in same unit showing different readings</li>
+<li>R2 — Door Open Detection: Temperature spike correlating with door open events</li>
+<li>R3 — Pre-Cooling: Unit not pre-cooled before loading (GDP violation)</li>
+</ul>
+<h3>2.3 Delivery Proof Forensics</h3>
+<ul>
+<li>D1 — POD Timestamp: Proof of delivery timestamp vs. GPS location at time</li>
+<li>D2 — Signature Verification: Digital signature consistency across deliveries by same driver</li>
+<li>D3 — Photo Metadata: Delivery photo timestamp/GPS vs. claimed delivery window</li>
+</ul>
+<h2>3. Proprietary Indicators</h2>
+<table>
+<thead>
+<tr>
+<th>Indicator</th>
+<th>Description</th>
+<th>Threshold</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BREACH_T</td>
+<td>time_outside_temp_range / total_transit</td>
+<td>&gt;5% = CRITICAL</td>
+</tr>
+<tr>
+<td>SENSOR_D</td>
+<td>sensor1_temp - sensor2_temp</td>
+<td>&gt;2C = MANIPULATION</td>
+</tr>
+<tr>
+<td>POD_G</td>
+<td>pod_gps - claimed_delivery_location</td>
+<td>&gt;500m = FRAUD</td>
+</tr>
+</tbody>
+</table>
+<footer><p>agent-logistics-road-coldchain · UK Sektor Istihbarati · 2026</p></footer>
+</div>
+
+<!-- 11_LOGISTICS_02_ROAD_COLDCHAIN_agent-logistics-road-lastmile.html -->
+<div class="page">
+
+<h1>AGENT_LOG_LASTMIL — Last-Mile Delivery Forensics Module</h1>
+<p><strong>Market:</strong> Global last-mile delivery $200B+. UK parcel market £15B+.
+<strong>Key Players:</strong> DHL, UPS, FedEx, Royal Mail, Evri, DPD, Amazon Logistics</p>
+<h2>1. Mission</h2>
+<p>Detect last-mile delivery fraud: fake delivery claims, time window violations, package theft, and route manipulation.</p>
+<h2>2. Detection Architecture</h2>
+<h3>2.1 Delivery Proof Manipulation</h3>
+<ul>
+<li>D1 — Geo-Fence Violation: Delivery marked complete but driver GPS outside delivery address</li>
+<li>D2 — Photo Forensics: Delivery photo metadata (timestamp, GPS) vs. claimed delivery</li>
+<li>D3 — Signature Abuse: Recipient signature consistency for same address across deliveries</li>
+</ul>
+<h3>2.2 Time Window Compliance</h3>
+<ul>
+<li>T1 — Slot Adherence: Actual delivery time vs. promised window</li>
+<li>T2 — Failed Delivery Integrity: "Nobody home" claims vs. doorbell/camera data</li>
+<li>T3 — Re-Delivery Fraud: Second delivery attempt billed but first delivery actually succeeded</li>
+</ul>
+<h3>2.3 Driver Performance Forensics</h3>
+<ul>
+<li>P1 — Route Deviation: Planned route vs. actual. Detours = personal errands/time theft</li>
+<li>P2 — Idle Time: Excessive stationary periods during delivery route</li>
+<li>P3 — Package Tampering: Package damage rates by driver vs. route baseline</li>
+</ul>
+<h2>3. Proprietary Indicators</h2>
+<table>
+<thead>
+<tr>
+<th>Indicator</th>
+<th>Description</th>
+<th>Threshold</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GEO_FENCE</td>
+<td>deliver_gps - customer_address_gps</td>
+<td>&gt;100m = FAKE_DELIVERY</td>
+</tr>
+<tr>
+<td>SLOT_D</td>
+<td>actual_delivery - promised_window_end</td>
+<td>&gt;0 = LATE</td>
+</tr>
+<tr>
+<td>ROUTE_D</td>
+<td>planned_route_miles - actual_miles</td>
+<td>&gt;10% = THEFT_OF_TIME</td>
+</tr>
+</tbody>
+</table>
+<footer><p>agent-logistics-road-lastmile · UK Sektor Istihbarati · 2026</p></footer>
+</div>
+
+<!-- 11_LOGISTICS_03_ROAD_FREIGHT_FRAUD_agent-logistics-road-crossborder.html -->
+<div class="page">
+
+<h1>AGENT_LOG_CROSSB — Cross-Border Road Freight Compliance Module</h1>
+<p><strong>Regulatory:</strong> EU Cabotage rules, UK-EU TCA, TIR Convention, ATLAS/ NCTS</p>
+<h2>1. Mission</h2>
+<p>Cross-border road freight compliance: cabotage violations, customs fraud, fuel duty evasion, and transit document manipulation detection.</p>
+<h2>2. Detection Architecture</h2>
+<h3>2.1 Cabotage Compliance</h3>
+<ul>
+<li>C1 — Domestic Trip Count: Non-resident carrier performing &gt;3 domestic trips in 7 days = violation</li>
+<li>C2 — Cool-Off Period: Cabotage trips followed by insufficient cross-border return</li>
+<li>C3 — Load Verification: Cross-border load vs. domestic load pattern analysis</li>
+</ul>
+<h3>2.2 Customs Declaration Integrity</h3>
+<ul>
+<li>T1 — TIR Carnet: Missing stamps, extended transit times, seal manipulation</li>
+<li>T2 — HS Code: Misclassification for duty/tariff advantage</li>
+<li>T3 — Value Manipulation: Under-declared value for customs valuation</li>
+</ul>
+<h3>2.3 Fuel Duty Fraud</h3>
+<ul>
+<li>F1 — Diesel Laundering: Fuel consumption vs. mileage anomalies</li>
+<li>F2 — Red Diesel: Rebated fuel use in road vehicles (UK HMRC fraud)</li>
+<li>F3 — Cross-Border Fuel: Fuel purchased in low-duty jurisdiction vs. consumption geography</li>
+</ul>
+<h2>3. Proprietary Indicators</h2>
+<table>
+<thead>
+<tr>
+<th>Indicator</th>
+<th>Description</th>
+<th>Threshold</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CABOTAGE_N</td>
+<td>domestic_trips_in_7d</td>
+<td>&gt;3 = VIOLATION</td>
+</tr>
+<tr>
+<td>TRANSIT_T</td>
+<td>actual_transit_time - allowed_time</td>
+<td>&gt;20% = INVESTIGATE</td>
+</tr>
+<tr>
+<td>FUEL_J</td>
+<td>fuel_jurisdiction vs. actual_operating_area</td>
+<td>mismatch = DUTY_EVASION</td>
+</tr>
+</tbody>
+</table>
+<footer><p>agent-logistics-road-crossborder · UK Sektor Istihbarati · 2026</p></footer>
+</div>
+
+<!-- 11_LOGISTICS_03_ROAD_FREIGHT_FRAUD_agent-logistics-road-freight-fraud.html -->
+<div class="page">
+
+<h1>AGENT_LOG_FREIGHT — Road Freight Billing &amp; Brokerage Forensics</h1>
+<p><strong>Market:</strong> Freight brokerage $100B+. Invoice fraud estimated 5-10% of transactions.</p>
+<h2>1. Mission</h2>
+<p>Detect billing and brokerage fraud in road freight: double brokering, phantom loads, detention/delay claim manipulation.</p>
+<h2>2. Detection Architecture</h2>
+<h3>2.1 Double Brokering Detection</h3>
+<ul>
+<li>D1 — Carrier Verification: Carrier dispatched vs. carrier who actually picked up (ELD/gate cross-ref)</li>
+<li>D2 — Rate Disparity: Shipper-paid rate vs. carrier-received rate. &gt;20% gap = double broker</li>
+<li>D3 — Authority Check: Carrier MC/DOT/ O-licence authority verification</li>
+</ul>
+<h3>2.2 Phantom Load Detection</h3>
+<ul>
+<li>P1 — Load Tracking: Billed load with no corresponding GPS or pickup record</li>
+<li>P2 — Duplicate Load: Same load billed twice to different customers</li>
+<li>P3 — Weight/Volume Fraud: Billed weight &gt; actual weight (scaled at receiver)</li>
+</ul>
+<h3>2.3 Detention/Delay Claim Verification</h3>
+<ul>
+<li>V1 — Wait Time: Claimed detention vs. facility gate-in/gate-out records</li>
+<li>V2 — Layover: Overnight layover claims vs. driver hours log consistency</li>
+<li>V3 — Lumper Service: Third-party loading/unloading claims vs. facility records</li>
+</ul>
+<h2>3. Proprietary Indicators</h2>
+<table>
+<thead>
+<tr>
+<th>Indicator</th>
+<th>Description</th>
+<th>Threshold</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BROKER_D</td>
+<td>carrier_dispatched - carrier_actual</td>
+<td>mismatch = DOUBLE_BROKER</td>
+</tr>
+<tr>
+<td>PHANTOM_L</td>
+<td>billed_load_exists_in_gps</td>
+<td>FALSE = FRAUD</td>
+</tr>
+<tr>
+<td>DETENTION_V</td>
+<td>claimed_hrs - facility_gate_hrs</td>
+<td>&gt;30min = EXAGGERATED</td>
+</tr>
+</tbody>
+</table>
+<footer><p>agent-logistics-road-freight-fraud · UK Sektor Istihbarati · 2026</p></footer>
+</div>
+
+<!-- 11_LOGISTICS_04_MARITIME_CONTAINER_agent-logistics-maritime-container.html -->
+<div class="page">
+
+<h1>AGENT_LOG_CONT — Container Shipping &amp; Port Integrity Module</h1>
+<p><strong>Market:</strong> ~200M TEU/yr globally. UK ports handle ~10M TEU.
+<strong>Key UK Ports:</strong> Felixstowe, Southampton, London Gateway, Liverpool, Tilbury</p>
+<h2>1. Mission</h2>
+<p>Container shipping integrity: VGM manipulation, container condition forensics, terminal data integrity, and demurrage/detention fraud detection.</p>
+<h2>2. Detection Architecture</h2>
+<h3>2.1 VGM/SOLAS Compliance</h3>
+<ul>
+<li>V1 — Weight Discrepancy: Declared VGM vs. actual weight at terminal. &gt;2T gap = safety/ fraud risk</li>
+<li>V2 — Shipper Pattern: Same shipper's declarations consistently below threshold</li>
+<li>V3 — Overweight: Container weight &gt; maximum gross weight. Structural risk</li>
+</ul>
+<h3>2.2 Container Condition Forensics</h3>
+<ul>
+<li>C1 — Reefer Temp: Temperature log vs. setpoint. Breach detection</li>
+<li>C2 — Shock/Vibration: Impact recorder data vs. handling event claims</li>
+<li>C3 — Tamper Detection: Seal number vs. BOL. Missing/broken = theft indicator</li>
+</ul>
+<h3>2.3 Terminal Operations Integrity</h3>
+<ul>
+<li>T1 — Gate Processing: Truck turn time anomalies (waiting, staging)</li>
+<li>T2 — Crane Productivity: Moves per hour vs. industry benchmark</li>
+<li>T3 — Yard Position: Container location vs. system record matching</li>
+</ul>
+<h3>2.4 Demurrage/Detention Fraud</h3>
+<ul>
+<li>D1 — Free Time Calculation: Claimed vs. contractual free days</li>
+<li>D2 — Gate-In/Gate-Out: Actual container availability vs. demurrage clock</li>
+<li>D3 — Equipment Return: Chassis/reefer return time disputes</li>
+</ul>
+<h2>3. Proprietary Indicators</h2>
+<table>
+<thead>
+<tr>
+<th>Indicator</th>
+<th>Description</th>
+<th>Threshold</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VGM_D</td>
+<td>declared_weight - terminal_weight</td>
+<td>&gt;2T = FRAUD_RISK</td>
+</tr>
+<tr>
+<td>REEFER_B</td>
+<td>time_outside_temp_range</td>
+<td>&gt;30min = BREACH</td>
+</tr>
+<tr>
+<td>SEAL_I</td>
+<td>bol_seal - actual_seal</td>
+<td>mismatch = TAMPERING</td>
+</tr>
+<tr>
+<td>DEMURRAGE_D</td>
+<td>claimed_free_days - actual_available</td>
+<td>&gt;1d = DISPUTE</td>
+</tr>
+</tbody>
+</table>
+<footer><p>agent-logistics-maritime-container · UK Sektor Istihbarati · 2026</p></footer>
+</div>
+
+<!-- 11_LOGISTICS_05_MARITIME_BUNKER_agent-logistics-maritime-bunker.html -->
+<div class="page">
+
+<h1>AGENT_LOG_BUNKER — Marine Fuel (Bunker) Integrity Module</h1>
+<p><strong>Market:</strong> Global bunker fuel market $120B+. IMO 2020 sulphur cap drives compliance costs.
+<strong>Key Hubs:</strong> Singapore, Rotterdam, Fujairah, Houston. UK: Milford Haven, Immingham</p>
+<h2>1. Mission</h2>
+<p>Detect bunker fraud: short delivery, fuel switching, sulphur content manipulation, and scrubber compliance misrepresentation.</p>
+<h2>2. Detection Architecture</h2>
+<h3>2.1 Short Delivery / Quantity Fraud</h3>
+<ul>
+<li>Q1 — MFM Manipulation: Mass Flow Meter reading vs. soundings/sludge comparison</li>
+<li>Q2 — Bunker Delivery Note: BDN figures vs. actual ROB (Remaining On Board) change</li>
+<li>Q3 — Temperature Correction: Volume correction for temperature (fuel expands with heat)</li>
+</ul>
+<h3>2.2 Fuel Quality / Switching</h3>
+<ul>
+<li>F1 — Sulphur Content: Declared %S vs. independent analysis &gt;0.1% IMO limit</li>
+<li>F2 — Fuel Switching: Scrubber claiming compliance but burning high-sulphur fuel</li>
+<li>F3 — Waste Fuel: Used lube oil mixed into fuel oil (torque/power impact)</li>
+</ul>
+<h3>2.3 Scrubber Compliance</h3>
+<ul>
+<li>S1 — Open/Closed Loop: Open loop discharge in restricted waters (ECA compliance)</li>
+<li>S2 — Washwater Monitoring: pH, PAH, turbidity data manipulation</li>
+<li>S3 — EGCS Log: Scrubber operation record vs. actual fuel sulphur content</li>
+</ul>
+<h2>3. Proprietary Indicators</h2>
+<table>
+<thead>
+<tr>
+<th>Indicator</th>
+<th>Description</th>
+<th>Threshold</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BDN_D</td>
+<td>bdn_volume - actual_rob_change</td>
+<td>&gt;2% = SHORT_DELIVERY</td>
+</tr>
+<tr>
+<td>SULPHUR_G</td>
+<td>declared_sulphur - actual_analysis</td>
+<td>&gt;0.05% = VIOLATION</td>
+</tr>
+<tr>
+<td>SCRUBBER_R</td>
+<td>scrubber_on_time - high_s_fuel_time</td>
+<td>mismatch = FALSE_COMPLIANCE</td>
+</tr>
+</tbody>
+</table>
+<footer><p>agent-logistics-maritime-bunker · UK Sektor Istihbarati · 2026</p></footer>
+</div>
+
+<!-- 11_LOGISTICS_06_MARITIME_FREIGHT_agent-logistics-maritime-freight.html -->
+<div class="page">
+
+<h1>AGENT_LOG_MARFREIGHT — Maritime Freight Rate &amp; Chartering Forensics</h1>
+<p><strong>Market:</strong> Dry bulk $50B+, tanker $40B+, container $150B+ freight markets
+<strong>Key UK:</strong> Baltic Exchange (London), Clarksons, Simpson Spence Young</p>
+<h2>1. Mission</h2>
+<p>Detect freight rate manipulation, charter party non-compliance, BOL fraud, and shipping derivatives anomalies.</p>
+<h2>2. Detection Architecture</h2>
+<h3>2.1 Freight Rate Manipulation</h3>
+<ul>
+<li>F1 — Phantom Surcharges: BAF, CAF, PSS charges with no cost basis</li>
+<li>F2 — Spot vs Contract: Spot booking at contract rate or vice versa (profit skimming)</li>
+<li>F3 — Index Manipulation: Self-reported rates to Baltic Exchange vs. actual transactions</li>
+</ul>
+<h3>2.2 Bill of Lading Fraud</h3>
+<ul>
+<li>B1 — Surrender BOL: Original BOL not surrendered at destination (cargo released without title)</li>
+<li>B2 — Switch BOL: Multiple sets of BOL for same cargo (fraudulent sale to multiple buyers)</li>
+<li>B3 — Electronic BOL: Bolero/essDOCS integrity verification</li>
+</ul>
+<h3>2.3 Charter Party Compliance</h3>
+<ul>
+<li>C1 — Laytime Calculation: Demurrage/despatch calculation vs. NOR, SOF, BIMCO clause</li>
+<li>C2 — Speed/Consumption: Charter speed/consumption warranties vs. noon report data</li>
+<li>C3 — Off-Hire: Off-hire events validity vs. vessel technical capability</li>
+</ul>
+<h2>3. Proprietary Indicators</h2>
+<table>
+<thead>
+<tr>
+<th>Indicator</th>
+<th>Description</th>
+<th>Threshold</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SURCHARGE_R</td>
+<td>surcharge_amount - actual_cost_increase</td>
+<td>&gt;20% = PHANTOM</td>
+</tr>
+<tr>
+<td>BOL_SET</td>
+<td>bol_sets_for_same_cargo</td>
+<td>&gt;1 = FRAUD</td>
+</tr>
+<tr>
+<td>SPEED_G</td>
+<td>warranted_speed - actual_speed</td>
+<td>&gt;0.5kt = WARRANTY_BREACH</td>
+</tr>
+</tbody>
+</table>
+<footer><p>agent-logistics-maritime-freight · UK Sektor Istihbarati · 2026</p></footer>
+</div>
+
+<!-- 11_LOGISTICS_07_MARITIME_PORT_agent-logistics-maritime-port.html -->
+<div class="page">
+
+<h1>AGENT_LOG_PORT — Port Operations &amp; Customs Forensics Module</h1>
+<h2>1. Mission</h2>
+<p>Port operations integrity: customs declaration fraud, freeport zone anomalies, cargo exam manipulation, and port state compliance.</p>
+<h2>2. Detection Architecture</h2>
+<h3>2.1 Customs Declaration Fraud</h3>
+<ul>
+<li>C1 — HS Code Misclassification: Systematic miscoding for duty advantage</li>
+<li>C2 — Value Under-declaration: Declared value vs. transaction database</li>
+<li>C3 — Origin Fraud: False origin claims for preferential tariff</li>
+</ul>
+<h3>2.2 Freeport / FTZ Monitoring</h3>
+<ul>
+<li>F1 — Goods Movement: Cargo entered freeport but never exited (domestic diversion)</li>
+<li>F2 — Processing Claims: Manufacturing/processing in freeport vs. actual capability</li>
+<li>C3 — Bond Manipulation: Customs bond expiry, under-bonding</li>
+</ul>
+<h3>2.3 Port State Control Forensics</h3>
+<ul>
+<li>P1 — Inspection Targeting: Vessels with deficiency patterns not inspected</li>
+<li>P2 — Deficiency Correlation: Same deficiencies across fleet/owner/flag</li>
+<li>P3 — Detention Analysis: Port state detention validity</li>
+</ul>
+<h3>2.4 Container Exam Integrity</h3>
+<ul>
+<li>E1 — Screening Rates: Scanner/NII exam rates vs. risk profile</li>
+<li>E2 — Exam Result Manipulation: Positive finding suppressed at local level</li>
+<li>E3 — Selectivity Override: Customs override of system-selected exams</li>
+</ul>
+<h2>3. Proprietary Indicators</h2>
+<table>
+<thead>
+<tr>
+<th>Indicator</th>
+<th>Description</th>
+<th>Threshold</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HS_GAP</td>
+<td>declared_hs - actual_product_hs</td>
+<td>systematic = MISCLASSIFICATION</td>
+</tr>
+<tr>
+<td>FREEPORT_D</td>
+<td>goods_entered - goods_exited</td>
+<td>&gt;10% gap = DIVERSION</td>
+</tr>
+<tr>
+<td>PSC_D</td>
+<td>flagged_deficiencies - actual_condition</td>
+<td>&gt;3 = SYSTEMIC</td>
+</tr>
+</tbody>
+</table>
+<footer><p>agent-logistics-maritime-port · UK Sektor Istihbarati · 2026</p></footer>
+</div>
+
+<!-- 11_LOGISTICS_08_RAIL_FREIGHT_agent-logistics-rail-freight.html -->
+<div class="page">
+
+<h1>AGENT_LOG_RAIL — Rail Freight Operations Integrity Module</h1>
+<p><strong>Market:</strong> Global $250-300B. UK £5-8B, ~85M tonnes/yr.
+<strong>Key UK:</strong> DB Cargo, Freightliner, GB Railfreight, Colas Rail. ORR regulated.
+<strong>Network:</strong> ~10,000 miles, 50+ terminals</p>
+<h2>1. Mission</h2>
+<p>Rail freight operations: wagon maintenance compliance, manifest manipulation, intermodal integrity, and network access charge forensics.</p>
+<h2>2. Detection Architecture</h2>
+<h3>2.1 Wagon Maintenance Compliance</h3>
+<ul>
+<li>W1 — Exam Intervals: TOPS exam record vs. mileage/days. Overdue = safety risk</li>
+<li>W2 — Brake Test: Brake force records vs. wagon type standards</li>
+<li>W3 — Wheel/Rail Wear: Flange thickness, tread profile beyond standards</li>
+</ul>
+<h3>2.2 Load Manifest Integrity</h3>
+<ul>
+<li>L1 — Weight Discrepancy: Declared weight vs. weighbridge at origin/destination</li>
+<li>L2 — Hazmat Declaration: IMDG/RID class vs. actual cargo. Misdeclaration = safety critical</li>
+<li>L3 — Loading Pattern: Wagon load distribution anomalies (overhang, focus)</li>
+</ul>
+<h3>2.3 Intermodal Transfer Integrity</h3>
+<ul>
+<li>I1 — Unit Identification: Container/wagon ID mismatch at transfer point</li>
+<li>I2 — Transfer Time: Road to rail terminal processing time vs. benchmark</li>
+<li>I3 — Damage Transfer: Cargo damage origin (road vs. rail vs. ship attribution)</li>
+</ul>
+<h3>2.4 Network Access Charging</h3>
+<ul>
+<li>N1 — Tonnage Reporting: Declared tonnage for access charges vs. actual</li>
+<li>N2 — Timetable Adherence: Path usage vs. allocated path. Cancellations and whether used</li>
+<li>N3 — Possession Manipulation: Engineering possession scheduling vs. actual work performed</li>
+</ul>
+<h2>3. Proprietary Indicators</h2>
+<table>
+<thead>
+<tr>
+<th>Indicator</th>
+<th>Description</th>
+<th>Threshold</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>WAGON_M</td>
+<td>days_since_last_exam / exam_interval</td>
+<td>&gt;1.0 = OVERDUE</td>
+</tr>
+<tr>
+<td>WEIGHT_D</td>
+<td>declared_wieght - weighbridge_weight</td>
+<td>&gt;5% = MISDECLARATION</td>
+</tr>
+<tr>
+<td>INTERMODAL_T</td>
+<td>terminal_processing_time</td>
+<td>&gt;2x benchmark = INEFFICIENCY</td>
+</tr>
+<tr>
+<td>ACCESS_T</td>
+<td>declared_tonnage - actual_for_access</td>
+<td>&gt;3% = CHARGE_EVASION</td>
+</tr>
+</tbody>
+</table>
+<footer><p>agent-logistics-rail-freight · UK Sektor Istihbarati · 2026</p></footer>
+</div>
+
+<!-- 11_LOGISTICS_09_RAIL_INFRA_agent-logistics-rail-infrastructure.html -->
+<div class="page">
+
+<h1>AGENT_LOG_RAILINFRA — Rail Infrastructure &amp; Safety Forensics Module</h1>
+<h2>1. Mission</h2>
+<p>Rail infrastructure integrity and safety: track geometry anomalies, signal integrity, ERTMS data verification, and accident forensics.</p>
+<h2>2. Detection Architecture</h2>
+<h3>2.1 Track Geometry Integrity</h3>
+<ul>
+<li>T1 — Geometry Car Data: Track recording coach data anomalies (gauge, twist, alignment)</li>
+<li>T2 — Degradation Rate: Track condition worsening faster than modeled = subgrade/infra issue</li>
+<li>T3 — Intervention Timing: Tamping/grinding scheduled vs. actual geometry need</li>
+</ul>
+<h3>2.2 Signal / SPAD Forensics</h3>
+<ul>
+<li>S1 — SPAD Analysis: Signal passed at danger event chain - driver, signal visibility, braking</li>
+<li>S2 — Signal Aspect: Signal aspect sequence anomalies at approach</li>
+<li>S3 — TPWS Activation: Train Protection system activation patterns</li>
+</ul>
+<h3>2.3 ERTMS/ETCS Data Verification</h3>
+<ul>
+<li>E1 — Balise Integrity: Balise telegram data vs. known track parameters</li>
+<li>E2 — Radio Block Centre: RBC communication sequence anomalies</li>
+<li>E3 — Odometry/GPS: Train position vs. balise-based position discrepancy</li>
+</ul>
+<h3>2.4 Accident Investigation Forensics</h3>
+<ul>
+<li>A1 — OTMR Data: On-train monitoring recorder (black box) data integrity</li>
+<li>A2 — Signal Log: Interlocking event log vs. train recorder chronology</li>
+<li>A3 — Sight Distance: Driver sight distance at relevant signal vs. actual stopping distance</li>
+</ul>
+<h2>3. Proprietary Indicators</h2>
+<table>
+<thead>
+<tr>
+<th>Indicator</th>
+<th>Description</th>
+<th>Threshold</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TRACK_D</td>
+<td>geometry_deviation / intervention_threshold</td>
+<td>&gt;1.0 = UNSAFE</td>
+</tr>
+<tr>
+<td>SPAD_R</td>
+<td>spad_events_per_100k_miles</td>
+<td>&gt;0.5 = HIGH_RISK</td>
+</tr>
+<tr>
+<td>ERTMS_O</td>
+<td>train_position - balise_position</td>
+<td>&gt;10m = ODOMETRY_ERROR</td>
+</tr>
+</tbody>
+</table>
+<footer><p>agent-logistics-rail-infrastructure · UK Sektor Istihbarati · 2026</p></footer>
+</div>
+
+<!-- 11_LOGISTICS_10_AIR_CARGO_agent-logistics-air-cargo.html -->
+<div class="page">
+
+<h1>AGENT_LOG_AIRCARGO — Air Cargo Integrity &amp; Compliance Module</h1>
+<p><strong>Market:</strong> Global $150-200B. UK £10-15B. Heathrow #1 EU cargo.
+<strong>Key UK Airports:</strong> LHR (Heathrow), EMA (East Midlands), STN (Stansted), BHX</p>
+<h2>1. Mission</h2>
+<p>Air cargo integrity: AWB fraud, dangerous goods misdeclaration, pharma cold chain, screening compliance, and cargo theft detection.</p>
+<h2>2. Detection Architecture</h2>
+<h3>2.1 Air Waybill Fraud</h3>
+<ul>
+<li>A1 — Phantom AWB: AWB issued but no cargo received/loaded</li>
+<li>A2 — Rate Manipulation: Actual freight rate vs. AWB declared rate (profit skimming)</li>
+<li>A3 — Weight Manipulation: Declared chargeable weight vs. actual. DIM factor manipulation</li>
+</ul>
+<h3>2.2 Dangerous Goods Compliance</h3>
+<ul>
+<li>D1 — Misdeclaration: Shipper declares non-DG but cargo is DG (IATA DGR non-compliance)</li>
+<li>D2 — Packing Instruction: DG packed against relevant packing instruction</li>
+<li>D3 — Hidden DG: Undeclared DG in passenger baggage (UPSC screening)</li>
+</ul>
+<h3>2.3 Pharma / Cold Chain</h3>
+<ul>
+<li>P1 — Temperature Excursion: Active/passive container temp data during air transit</li>
+<li>P2 — Time-Critical: RUSH/priority shipment handling time compliance</li>
+<li>P3 — CEIV Pharma: IATA CEIV certification compliance audit</li>
+</ul>
+<h3>2.4 Screening / Security</h3>
+<ul>
+<li>S1 — ACC3 Compliance: Known consignor / regulated agent screening adherence</li>
+<li>S2 — Piece Count: Security screened pieces vs. loaded pieces reconciliation</li>
+<li>S3 — X-Ray Competency: Screener image evaluation timing and accuracy</li>
+</ul>
+<h2>3. Proprietary Indicators</h2>
+<table>
+<thead>
+<tr>
+<th>Indicator</th>
+<th>Description</th>
+<th>Threshold</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AWB_W</td>
+<td>chargeable_weight - actual_weight</td>
+<td>&gt;10% = MANIPULATION</td>
+</tr>
+<tr>
+<td>DG_RISK</td>
+<td>declared_dg - actual_dg_cargo</td>
+<td>mismatch = CRITICAL</td>
+</tr>
+<tr>
+<td>SCREEN_C</td>
+<td>screened_pieces - loaded_pieces</td>
+<td>&gt;0 = BREACH</td>
+</tr>
+</tbody>
+</table>
+<footer><p>agent-logistics-air-cargo · UK Sektor Istihbarati · 2026</p></footer>
+</div>
+
+<!-- 11_LOGISTICS_11_MULTIMODAL_agent-logistics-multimodal.html -->
+<div class="page">
+
+<h1>AGENT_LOG_MULTI — Multimodal Logistics &amp; Freight Audit Module</h1>
+<p><strong>Market:</strong> Global freight forwarding $200B+. Freight audit market $5B+.
+<strong>Key Players:</strong> Kuehne+Nagel, DHL Global Forwarding, DB Schenker, DSV, Expeditors</p>
+<h2>1. Mission</h2>
+<p>End-to-end multimodal shipment integrity: freight forwarder audit, transit time verification, modal shift claims, carbon reporting, and freight payment auditing.</p>
+<h2>2. Detection Architecture</h2>
+<h3>2.1 Freight Forwarder Performance Audit</h3>
+<ul>
+<li>F1 — Transit Time: Quoted vs. actual door-to-door transit. Systematic over-quoting</li>
+<li>F2 — Mode Selection: Shipper paid for air but goods moved sea (mode arbitrage)</li>
+<li>F3 — Carrier Selection: Forwarder charges premium carrier rate but uses budget carrier</li>
+</ul>
+<h3>2.2 Transit Time Forensics</h3>
+<ul>
+<li>T1 — Segment Breakdown: Each leg (pickup, main, delivery) vs. industry benchmark</li>
+<li>T2 — Dwell Time: Time at facility vs. operational requirement</li>
+<li>T3 — Delay Root Cause: Valid (force majeure) vs. avoidable (forwarder inefficiency)</li>
+</ul>
+<h3>2.3 Modal Shift Verification</h3>
+<ul>
+<li>M1 — Modal Claim: Shipper invoiced for air or sea but actual mode determined from tracking</li>
+<li>M2 — Carbon Impact: Modal shift environmental claims vs. actual emissions</li>
+<li>M3 — Cost-Revenue: Carbon cost vs. modal price differential</li>
+</ul>
+<h3>2.4 Carbon Reporting (Scope 3)</h3>
+<ul>
+<li>C1 — GLEC Compliance: Global Logistics Emissions Council framework adherence</li>
+<li>C2 — Allocation Method: Tonne-km vs. actual fuel-based calculation manipulation</li>
+<li>C3 — Factor Manipulation: Emission factor selection (default vs. actual operator data)</li>
+</ul>
+<h3>2.5 Freight Audit and Payment (FAP)</h3>
+<ul>
+<li>P1 — Duplicate Payment: Same invoice paid twice across different entities</li>
+<li>P2 — Rate Validation: Invoiced rate vs. contract rate. &gt;2% variance = leakage</li>
+<li>P3 — Accessorial: Extra charges (liftgate, residential, inside delivery) validity</li>
+</ul>
+<h2>3. Proprietary Indicators</h2>
+<table>
+<thead>
+<tr>
+<th>Indicator</th>
+<th>Description</th>
+<th>Threshold</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MODE_G</td>
+<td>invoiced_mode - actual_mode</td>
+<td>mismatch = ARBITRAGE</td>
+</tr>
+<tr>
+<td>TRANSIT_Q</td>
+<td>quoted_days - actual_days</td>
+<td>&gt;20% = SYSTEMATIC</td>
+</tr>
+<tr>
+<td>CARBON_D</td>
+<td>reported_emissions - actual_calculation</td>
+<td>&gt;10% = GREENWASH</td>
+</tr>
+<tr>
+<td>FAP_L</td>
+<td>paid_rate - contract_rate</td>
+<td>&gt;2% = LEAKAGE</td>
+</tr>
+</tbody>
+</table>
+<footer><p>agent-logistics-multimodal · UK Sektor Istihbarati · 2026</p></footer>
+</div>
+
+<footer><p>BK Sektör Istihbaratı · VI. Lojistik ve Tedarik Zinciri · 2026</p></footer></div></body></html>

@@ -1,1 +1,739 @@
-<!doctype html><html lang="tr"><head><meta charset="utf-8"><title>V. Sivil Havacılık — BK Sektör Istihbaratı</title><style>:root{--ink:#0f1a2e;--paper:#f7f4ec;--gold:#c9a84c}*{margin:0;padding:0;box-sizing:border-box}body{background:var(--ink);color:#eaeaea;font-family:Georgia,'Times New Roman',serif;padding:20px;font-size:15px;line-height:1.8}.page{max-width:1100px;margin:0 auto;padding:30px}h1{color:var(--gold);font-size:28px;border-bottom:3px solid var(--gold);padding-bottom:12px}h2{color:var(--gold);margin:30px 0 15px}p{margin:8px 0;line-height:1.8}a{color:var(--gold)}.back{display:block;margin:20px 0;color:#6b7280;font-family:monospace;font-size:12px}footer{text-align:center;margin-top:40px;padding-top:20px;border-top:1px solid #1a2a4a;color:#6b7280;font-size:11px}</style></head><body><div class="page"><a class="back" href="index.html">⬅ Ana Sayfaya Dön</a><h1>V. Sivil Havacılık</h1><p><strong>10 Alt Alan: Üretimden Kiralamaya</strong></p><p>BK Sivil Havacılık Otoritesi'nin Brexit sonrası genişletilen rolü, tip sertifikasyonu ve bakim denetimi alanlarında adli talep yaratmaktadır.</p><p>Kapsamlı pazar büyüklüğü, düzenleyici haritalama, hizmet tanımları ve adli vektörler ile analiz hazırdır.</p><footer><p>BK Sektör Istihbaratı · V. Sivil Havacılık · 2026</p></footer></div></body></html>
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><title>V. Sivil Havacılık — BK Sektör Istihbaratı</title><style>:root{--ink:#0f1a2e;--paper:#f7f4ec;--gold:#c9a84c}*{margin:0;padding:0;box-sizing:border-box}body{background:var(--ink);color:#eaeaea;font-family:Georgia,'Times New Roman',serif;padding:20px;font-size:15px;line-height:1.8}.page{max-width:1100px;margin:0 auto;padding:30px}h1{color:var(--gold);font-size:28px;border-bottom:3px solid var(--gold);padding-bottom:12px}h2{color:var(--gold);margin:30px 0 15px}p{margin:8px 0;line-height:1.8}a{color:var(--gold)}.back{display:block;margin:20px 0;color:#6b7280;font-family:monospace;font-size:12px}footer{text-align:center;margin-top:40px;padding-top:20px;border-top:1px solid #1a2a4a;color:#6b7280;font-size:11px}</style></head><body><div class="page"><a class="back" href="index.html">⬅ Ana Sayfaya Dön</a><h1>V. Sivil Havacılık</h1><p><strong>10 Alt Alan: Üretimden Kiralamaya</strong></p><p>BK Sivil Havacılık Otoritesi'nin Brexit sonrası genişletilen rolü, tip sertifikasyonu ve bakim denetimi alanlarında adli talep yaratmaktadır.</p><p>Kapsamlı pazar büyüklüğü, düzenleyici haritalama, hizmet tanımları ve adli vektörler ile analiz hazırdır.</p>
+<!-- 10_CIVIL_AVIATION_README.html -->
+<div class="page">
+
+<h1>CIVIL AVIATION — T2SAIM Ticari Modüller</h1>
+<p><strong>Oluşturan:</strong> Hermes / Section 31 (DATA - Karargah1)
+<strong>Tarih:</strong> 2026-05-25
+<strong>Kapsam:</strong> Bagajdan bakıma, üretimden finansa tüm sivil havacılık değer zinciri</p>
+<hr />
+<h2>PAZAR BÜYÜKLÜĞÜ</h2>
+<ul>
+<li>Global sivil havacılık: $900B+</li>
+<li>MRO (bakım): $80-90B/yr</li>
+<li>Uçak üretimi (OEM): $150B/yr</li>
+<li>Bagaj sistemleri: $25B</li>
+<li>Uçak kiralama: $250B+ varlık</li>
+<li>Havacılık IT/dijital: $30B+</li>
+</ul>
+<h2>MODÜLLER (10 adet)</h2>
+<h3>ÜRETİM (PRODUCTION)</h3>
+<table>
+<thead>
+<tr>
+<th>Modül</th>
+<th>Fonksiyon</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>agent-aviation-production-integrity</td>
+<td>Üretim hızı anomali, FAI bütünlük, kalite sapma forensics</td>
+</tr>
+<tr>
+<td>agent-aviation-cm-counterfeit</td>
+<td>Komponent sahtecilik, parça numarası soyağacı, distribütör zinciri</td>
+</tr>
+</tbody>
+</table>
+<h3>BAKIM (MRO)</h3>
+<table>
+<thead>
+<tr>
+<th>Modül</th>
+<th>Fonksiyon</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>agent-aviation-mro-forensics</td>
+<td>Hayali tamir, gereksiz parça değişimi, bakım kaydı zaman damgası</td>
+</tr>
+<tr>
+<td>agent-aviation-engine-forensics</td>
+<td>Motor shop visit, LLP takibi, boroskop sahteciliği (Rolls-Royce)</td>
+</tr>
+</tbody>
+</table>
+<h3>TEDARİK ZİNCİRİ</h3>
+<table>
+<thead>
+<tr>
+<th>Modül</th>
+<th>Fonksiyon</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>agent-aviation-supply-audit</td>
+<td>Tedarikçi performans denetimi, AOG lojistik forensics</td>
+</tr>
+</tbody>
+</table>
+<h3>OPERASYON</h3>
+<table>
+<thead>
+<tr>
+<th>Modül</th>
+<th>Fonksiyon</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>agent-aviation-crew-forensics</td>
+<td>Pilot yorgunluk, lisans sahteciliği, scheduling manipülasyonu</td>
+</tr>
+<tr>
+<td>agent-aviation-foqa-analytics</td>
+<td>Uçuş verisi (FOQA/FDM) anomali tespiti, yaklaşma stabilitesi</td>
+</tr>
+</tbody>
+</table>
+<h3>BAGAJ &amp; YER HİZMETLERİ</h3>
+<table>
+<thead>
+<tr>
+<th>Modül</th>
+<th>Fonksiyon</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>agent-aviation-baggage-forensics</td>
+<td>RFID takip boşluğu, bagaj hırsızlığı, IATA 753 uyum</td>
+</tr>
+</tbody>
+</table>
+<h3>YOLCU &amp; TİCARİ</h3>
+<table>
+<thead>
+<tr>
+<th>Modül</th>
+<th>Fonksiyon</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>agent-aviation-eu261-compliance</td>
+<td>EU261/UK261 tazminat talebi, extraordinary circumstances testi</td>
+</tr>
+</tbody>
+</table>
+<h3>FİNANS &amp; KİRALAMA</h3>
+<table>
+<thead>
+<tr>
+<th>Modül</th>
+<th>Fonksiyon</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>agent-aviation-lease-forensics</td>
+<td>Kiralama iade koşulları, bakım rezerv manipülasyonu</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>UK EKONOMİSİNE BAĞLANTI</h2>
+<ul>
+<li>Rolls-Royce (Derby, Bristol) — motor MRO modülü</li>
+<li>London Heathrow/Gatwick — bagaj ve yer hizmetleri modülü</li>
+<li>Dublin/London leasing merkezleri — kiralama modülü</li>
+<li>UK CAA regülasyon — tüm uyum modülleri</li>
+<li>British Airways / Virgin Atlantic — operasyon modülleri</li>
+</ul>
+<footer><p>README · UK Sektor Istihbarati · 2026</p></footer>
+</div>
+
+<!-- 10_CIVIL_AVIATION_01_PRODUCTION_agent-aviation-cm-counterfeit.html -->
+<div class="page">
+
+<h1>AGENT_AVIATION_CM — Aviation Component Counterfeit Detection</h1>
+<p><strong>Risk:</strong> FAA estimates 1-2% of aviation parts are counterfeit. Safety-critical: engines, avionics, flight controls.</p>
+<h2>1. Mission</h2>
+<p>Detect counterfeit aircraft components in the supply chain through structural genealogy testing, distributor chain verification, and physical-digital coherence analysis.</p>
+<h2>2. Detection Architecture</h2>
+<h3>2.1 Part Number Genealogy</h3>
+<ul>
+<li>G1 — Part Number Anomaly: Part numbers not matching OEM format or containing typographical variations</li>
+<li>G2 — Serial Number Gap: Serial numbers out of known production range</li>
+<li>G3 — Date Code Inconsistency: Manufacturing date codes inconsistent with part design introduction date</li>
+</ul>
+<h3>2.2 Distributor Chain Verification</h3>
+<ul>
+<li>D1 — Distributor Authorization: Claimed OEM authorization vs. actual OEM distributor list</li>
+<li>D2 — Chain of Custody Gap: Missing intermediary in documented sales chain</li>
+<li>D3 — Cross-Reference Test: Same part tracked through multiple distributor claims</li>
+</ul>
+<h3>2.3 Physical-Digital Coherence</h3>
+<ul>
+<li>P1 — Weight/Dimension: Declared vs. measured physical properties</li>
+<li>P2 — Surface Finish: Manufacturing quality markers inconsistent with OEM standards</li>
+<li>P3 — Documentation Test: Certificate of Conformity format/quality vs. OEM standard</li>
+</ul>
+<h2>3. Proprietary Indicators</h2>
+<table>
+<thead>
+<tr>
+<th>Indicator</th>
+<th>Description</th>
+<th>Threshold</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BOGUS_P</td>
+<td>counterfeiting probability score</td>
+<td>&gt;0.7 = SUSPEND_PART</td>
+</tr>
+<tr>
+<td>CHAIN_G</td>
+<td>supply chain completeness</td>
+<td>&lt;0.8 = INVESTIGATE</td>
+</tr>
+<tr>
+<td>AUTH_C</td>
+<td>OEM-authorization match</td>
+<td>FALSE = HIGH_RISK</td>
+</tr>
+</tbody>
+</table>
+<footer><p>agent-aviation-cm-counterfeit · UK Sektor Istihbarati · 2026</p></footer>
+</div>
+
+<!-- 10_CIVIL_AVIATION_01_PRODUCTION_agent-aviation-production-integrity.html -->
+<div class="page">
+
+<h1>AGENT_AVIATION_PROD — Aircraft Production Integrity Module</h1>
+<p><strong>Market:</strong> Airbus + Boeing combined production ~1,500 aircraft/yr, $150B revenue
+<strong>Key Players:</strong> Airbus (Toulouse), Boeing (Seattle, Charleston), Spirit Aerosystems, Collins, Safran</p>
+<h2>1. Mission</h2>
+<p>Structural integrity testing of aircraft production. Detect quality deviations, production rate manipulation, FAI fraud, and supply chain quality anomalies in aerospace manufacturing.</p>
+<h2>2. Detection Architecture</h2>
+<h3>2.1 Production Rate Anomaly</h3>
+<ul>
+<li>R1 — Rate vs. Capability: Claimed production rate vs. physical factory capacity, headcount, shift hours</li>
+<li>R2 — Quality-Rate Correlation: As rates increase, quality defects should increase. If not reported = suppression</li>
+<li>R3 — Delivery Lag Analysis: Production claim date vs. actual first flight/delivery date gap</li>
+</ul>
+<h3>2.2 FAI (First Article Inspection) Integrity</h3>
+<ul>
+<li>F1 — FAI Completeness: AS9102 FAI form fields vs. actual inspection records</li>
+<li>F2 — Dimensional Compliance: Claimed vs. measured dimensions for critical features</li>
+<li>F3 — Material Certification: Claimed material specs vs. supplier certificates</li>
+</ul>
+<h3>2.3 Deviation/Concession Forensics</h3>
+<ul>
+<li>D1 — Deviation Rate Tracking: Number of engineering deviations per production batch vs. historical baseline</li>
+<li>D2 — Concession Approval Pattern: Same deviations repeatedly approved = systemic quality gap</li>
+<li>D3 — Repair vs. Replace: Structural repairs on production line vs. part replacement ratio</li>
+</ul>
+<h2>3. Proprietary Indicators</h2>
+<table>
+<thead>
+<tr>
+<th>Indicator</th>
+<th>Description</th>
+<th>Threshold</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PROD_RATE</td>
+<td>claimed_rate / physical_capacity</td>
+<td>&gt;0.9 = WARNING, &gt;1.0 = IMPOSSIBLE</td>
+</tr>
+<tr>
+<td>QUALITY_Q</td>
+<td>expected_defects - reported_defects</td>
+<td>&gt;15% = SUPPRESSION</td>
+</tr>
+<tr>
+<td>FAI_C</td>
+<td>completed_fields / required_fields</td>
+<td>&lt;0.95 = INCOMPLETE</td>
+</tr>
+</tbody>
+</table>
+<footer><p>agent-aviation-production-integrity · UK Sektor Istihbarati · 2026</p></footer>
+</div>
+
+<!-- 10_CIVIL_AVIATION_02_MRO_MAINTENANCE_agent-aviation-engine-forensics.html -->
+<div class="page">
+
+<h1>AGENT_AVIATION_ENGINE — Aircraft Engine MRO Forensics Module</h1>
+<p><strong>Market:</strong> Engine MRO ~$30B/yr segment of total $80-90B MRO market
+<strong>UK Connection:</strong> Rolls-Royce (Derby, Bristol) - major UK employer, critical export
+<strong>Key Players:</strong> Rolls-Royce, GE Aviation, Pratt &amp; Whitney, CFM International, IAE, MTU, Lufthansa Technik</p>
+<h2>1. Mission</h2>
+<p>Structural integrity testing of engine shop visit claims, performance restoration verification, and Life Limited Part tracking.</p>
+<h2>2. Detection Architecture</h2>
+<h3>2.1 Shop Visit Claim Verification</h3>
+<ul>
+<li>S1 — Workscope vs. Performed: Contracted workscope vs. actual modules disassembled/inspected</li>
+<li>S2 — Part Replacement Rate: Parts replaced vs. manufacturer recommended limits. Above threshold = overbilling</li>
+<li>S3 — Repair vs. Replace: Repairable parts replaced instead of repaired = revenue optimization fraud</li>
+</ul>
+<h3>2.2 Performance Restoration Claims</h3>
+<ul>
+<li>P1 — EGT Margin Improvement: Claimed exhaust gas temperature margin vs. pre/post shop visit data</li>
+<li>P2 — Fuel Flow Improvement: Specific fuel consumption change vs. workscope</li>
+<li>P3 — Performance Restoration Guarantee: Guarantee vs. actual performance retention</li>
+</ul>
+<h3>2.3 Life Limited Part (LLP) Tracking</h3>
+<ul>
+<li>L1 — Cycle/Time Accuracy: Claimed cycles/hours vs. aircraft utilization records</li>
+<li>L2 — LLP Trace Integrity: Full traceability from birth to retirement</li>
+<li>L3 — LLP Extensions: Unauthorized life extension beyond manufacturer limits</li>
+</ul>
+<h3>2.4 Borescope Fraud Detection</h3>
+<ul>
+<li>B1 — Image Timestamp: Borescope image metadata vs. inspection date</li>
+<li>B2 — Consecutive Inspection Consistency: Same damage progressing vs. appearing suddenly</li>
+<li>B3 — Known Damage Concealment: Critical findings not documented</li>
+</ul>
+<h2>3. Proprietary Indicators</h2>
+<table>
+<thead>
+<tr>
+<th>Indicator</th>
+<th>Description</th>
+<th>Threshold</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SV_WORKSCOPE</td>
+<td>performed_scope / contracted_scope</td>
+<td>&lt;0.9 = INCOMPLETE</td>
+</tr>
+<tr>
+<td>EGT_G</td>
+<td>claimed_egt_improvement - actual</td>
+<td>&gt;10°C = MISREPRESENTED</td>
+</tr>
+<tr>
+<td>LLP_C</td>
+<td>documented_cycles / actual_utilization</td>
+<td>&gt;1.05 = OVERSTATED</td>
+</tr>
+</tbody>
+</table>
+<footer><p>agent-aviation-engine-forensics · UK Sektor Istihbarati · 2026</p></footer>
+</div>
+
+<!-- 10_CIVIL_AVIATION_02_MRO_MAINTENANCE_agent-aviation-mro-forensics.html -->
+<div class="page">
+
+<h1>AGENT_AVIATION_MRO — Aircraft MRO Fraud &amp; Integrity Module</h1>
+<p><strong>Market:</strong> Global MRO market $80-90B/yr (2025)
+<strong>Regulatory:</strong> EASA Part 145, FAA Part 43/145, UK CAA ANO
+<strong>Key Players:</strong> Lufthansa Technik, GE Services, Rolls-Royce, Air France KLM MRO, HAECO, ST Engineering</p>
+<h2>1. Mission</h2>
+<p>Structural integrity testing of aircraft maintenance operations. Detect phantom repairs, billing fraud, unnecessary part replacement, and record tampering in the MRO ecosystem.</p>
+<h2>2. Detection Architecture</h2>
+<h3>2.1 Phantom Repair Detection</h3>
+<ul>
+<li><strong>P1 — Labor Hour Anomaly</strong>: Claimed repair hours vs. industry standard (e.g., "4-engine C-check in 8 hours")</li>
+<li><strong>P2 — Part Consumption Ratio</strong>: Parts billed vs. parts physically consumed. Systematic over-billing = phantom</li>
+<li><strong>P3 — Task Duplication</strong>: Same repair task billed multiple times on different work orders</li>
+</ul>
+<h3>2.2 Unnecessary Part Replacement</h3>
+<ul>
+<li><strong>U1 — Premature Replacement</strong>: LLP/LRU replaced well before manufacturer-recommended limits</li>
+<li><strong>U2 — Batch Pattern Detection</strong>: Same part replaced fleet-wide simultaneously (possible OEM-driven vs. genuine need)</li>
+<li><strong>U3 — Used Part Integrity</strong>: Parts claimed as "new" but exhibiting wear patterns inconsistent with zero hours</li>
+</ul>
+<h3>2.3 Maintenance Record Tampering</h3>
+<ul>
+<li><strong>T1 — Timestamp Integrity</strong>: Work order timestamps vs. actual aircraft availability. Repair claimed while aircraft was flying</li>
+<li><strong>T2 — Signature Chain</strong>: Engineer authorization chain gaps or irregularities</li>
+<li><strong>T3 — Airworthiness Directive Compliance</strong>: AD compliance claimed but part/manual records inconsistent</li>
+</ul>
+<h3>2.4 MRO Pricing Manipulation</h3>
+<ul>
+<li><strong>M1 — Rate Deviation</strong>: Shop rates vs. market benchmark. Systematic overpricing</li>
+<li><strong>M2 — Scope Creep Detection</strong>: "Found during inspection" repairs that follow a pattern</li>
+<li><strong>M3 — Flat Rate Manipulation</strong>: Flat rate vs. actual hour comparison per task type</li>
+</ul>
+<h2>3. Proprietary Indicators</h2>
+<table>
+<thead>
+<tr>
+<th>Indicator</th>
+<th>Description</th>
+<th>Threshold</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PHANTOM_H</td>
+<td>claimed_hrs - industry_std_hrs</td>
+<td>&gt;2σ = PHANTOM</td>
+</tr>
+<tr>
+<td>PART_C</td>
+<td>billed_parts - consumed_parts</td>
+<td>&gt;5% = INVESTIGATE</td>
+</tr>
+<tr>
+<td>PREMATURE_R</td>
+<td>replacement_ts - mfr_limit_ts</td>
+<td>&lt;0.7 = PREMATURE</td>
+</tr>
+<tr>
+<td>TIMESTAMP_D</td>
+<td>work_ts - aircraft_available_ts</td>
+<td>negative = FABRICATED</td>
+</tr>
+</tbody>
+</table>
+<h2>4. UK Connection</h2>
+<ul>
+<li>UK CAA regulatory alignment</li>
+<li>Rolls-Royce engine MRO (Derby, Bristol)</li>
+<li>London Heathrow / Gatwick line maintenance</li>
+<li>UK MRO providers: Monarch Aircraft Engineering, Marshall Aerospace</li>
+</ul>
+<footer><p>agent-aviation-mro-forensics · UK Sektor Istihbarati · 2026</p></footer>
+</div>
+
+<!-- 10_CIVIL_AVIATION_03_SUPPLY_CHAIN_agent-aviation-supply-audit.html -->
+<div class="page">
+
+<h1>AGENT_AVIATION_SUPPLY — Aviation Supply Chain Integrity Module</h1>
+<h2>1. Mission</h2>
+<p>Structural audit of aerospace supply chain performance. Detect delivery manipulation, supplier quality degradation, financial distress indicators, and logistics fraud in AOG (Aircraft on Ground) situations.</p>
+<h2>2. Detection Architecture</h2>
+<h3>2.1 Supplier Performance Structural Audit</h3>
+<ul>
+<li>S1 — OTD Integrity: On-Time Delivery claims vs. actual production line need dates</li>
+<li>S2 — Quality Escapement: Supplier quality defects vs. claimed defect rates. Escapement pattern analysis</li>
+<li>S3 — Financial Health: Supplier financial statements vs. delivery reliability correlation</li>
+</ul>
+<h3>2.2 AOG Logistics Forensics</h3>
+<ul>
+<li>A1 — AOG Classification: Genuine AOG vs. routine demand classified as emergency</li>
+<li>A2 — Emergency Pricing: AOG part pricing vs. standard pricing markup analysis</li>
+<li>A3 — Rotable Pool Integrity: Rotable parts dispatched vs. returned ratio anomalies</li>
+</ul>
+<h3>2.3 Dual-Source Integrity</h3>
+<ul>
+<li>D1 — Source Verification: Parts sourced from approved vs. unapproved sources</li>
+<li>D2 — Alternate Part Certification: PMA/STC parts vs. OEM part performance comparison</li>
+</ul>
+<h2>3. Proprietary Indicators</h2>
+<table>
+<thead>
+<tr>
+<th>Indicator</th>
+<th>Description</th>
+<th>Threshold</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OTD_R</td>
+<td>claimed_otd - actual_otd</td>
+<td>&gt;5% = MISREPRESENTATION</td>
+</tr>
+<tr>
+<td>AOG_F</td>
+<td>genuine_aog / total_aog_claims</td>
+<td>&lt;0.8 = ABUSE</td>
+</tr>
+<tr>
+<td>SUPPLIER_H</td>
+<td>financial_distress_zscore</td>
+<td>&lt;1.8 = WARNING</td>
+</tr>
+</tbody>
+</table>
+<footer><p>agent-aviation-supply-audit · UK Sektor Istihbarati · 2026</p></footer>
+</div>
+
+<!-- 10_CIVIL_AVIATION_04_OPERATIONS_agent-aviation-crew-forensics.html -->
+<div class="page">
+
+<h1>AGENT_AVIATION_CREW — Airline Crew Integrity Module</h1>
+<h2>1. Mission</h2>
+<p>Detect crew scheduling manipulation, fatigue risk hiding, qualification fraud, and duty time compliance violations.</p>
+<h2>2. Detection Architecture</h2>
+<h3>2.1 Fatigue Risk Detection</h3>
+<ul>
+<li>F1 — FTL Compliance: Actual duty hours vs. regulated limits (EASA FTL, CAP 371)</li>
+<li>F2 — Circadian Disruption: Pattern of early starts, late finishes, and time zone crossings</li>
+<li>F3 — Cumulative Fatigue: Consecutive duty days without adequate rest period</li>
+</ul>
+<h3>2.2 Qualification/Training Fraud</h3>
+<ul>
+<li>Q1 — License Validity: License check cycle vs. regulatory requirements</li>
+<li>Q2 — Training Record: Simulator session timestamps vs. operator availability</li>
+<li>Q3 — Medical Certificate: Medical expiration and restrictions tracking</li>
+</ul>
+<h3>2.3 Scheduling Manipulation</h3>
+<ul>
+<li>S1 — Pairing Construction: Pairings designed to circumvent rest requirements</li>
+<li>S2 — Reserve Abuse: Reserve called at maximum legal duty to minimize pay</li>
+<li>S3 — Bid Line Manipulation: Seniority-based bid system integrity</li>
+</ul>
+<h2>3. Proprietary Indicators</h2>
+<table>
+<thead>
+<tr>
+<th>Indicator</th>
+<th>Description</th>
+<th>Threshold</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FTL_R</td>
+<td>actual_duty / legal_max</td>
+<td>&gt;0.95 = FATIGUE_RISK</td>
+</tr>
+<tr>
+<td>CIRCADIAN</td>
+<td>early_starts + late_finishes in 7d</td>
+<td>&gt;3 = HIGH_RISK</td>
+</tr>
+<tr>
+<td>LICENSE_G</td>
+<td>license_valid_days_remaining</td>
+<td>&lt;30 = EXPIRING</td>
+</tr>
+</tbody>
+</table>
+<footer><p>agent-aviation-crew-forensics · UK Sektor Istihbarati · 2026</p></footer>
+</div>
+
+<!-- 10_CIVIL_AVIATION_04_OPERATIONS_agent-aviation-foqa-analytics.html -->
+<div class="page">
+
+<h1>AGENT_AVIATION_FOQA — Flight Data Monitoring Analytics Module</h1>
+<h2>1. Mission</h2>
+<p>Deep structural analysis of flight data recorder (FDR/QAR) data. Detect exceedance concealment, fuel fraud, approach instability patterns, and safety culture from aggregate flight data.</p>
+<h2>2. Detection Architecture</h2>
+<h3>2.1 Exceedance Pattern Analysis</h3>
+<ul>
+<li>E1 — Exceedance Concealment: Exceedances in raw data not logged in pilot reports</li>
+<li>E2 — Recurring Non-Compliance: Same aircraft/pilot/captain repeating same exceedance type</li>
+<li>E3 — Trending: Exceedance rates increasing over time = safety culture indicator</li>
+</ul>
+<h3>2.2 Approach/Landing Analysis</h3>
+<ul>
+<li>A1 — Unstable Approach: Speed, altitude, configuration deviations from stabilized approach criteria</li>
+<li>A2 — Hard Landing Detection: Vertical acceleration + sink rate cross-reference</li>
+<li>A3 — Go-Around Analysis: Go-around decision timing and altitude</li>
+</ul>
+<h3>2.3 Fuel Efficiency Forensics</h3>
+<ul>
+<li>F1 — APU Usage Anomaly: APU run time vs. ground power availability</li>
+<li>F2 — Fuel Tankering: Fuel loaded beyond needed for sector</li>
+<li>F3 — Optimum Altitude Deviation: Cruising altitude vs. optimum for weight/conditions</li>
+</ul>
+<h2>3. Proprietary Indicators</h2>
+<table>
+<thead>
+<tr>
+<th>Indicator</th>
+<th>Description</th>
+<th>Threshold</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EXCEED_C</td>
+<td>raw_exceedances - reported_exceedances</td>
+<td>&gt;0 = CONCEALMENT</td>
+</tr>
+<tr>
+<td>STABLE_R</td>
+<td>unstable_approaches / total_approaches</td>
+<td>&gt;5% = RISK</td>
+</tr>
+<tr>
+<td>FUEL_D</td>
+<td>actual_fuel_burn - expected_burn</td>
+<td>&gt;5% = ANOMALY</td>
+</tr>
+</tbody>
+</table>
+<footer><p>agent-aviation-foqa-analytics · UK Sektor Istihbarati · 2026</p></footer>
+</div>
+
+<!-- 10_CIVIL_AVIATION_05_BAGGAGE_GROUND_agent-aviation-baggage-forensics.html -->
+<div class="page">
+
+<h1>AGENT_AVIATION_BAG — Baggage Handling Integrity Module</h1>
+<p><strong>Market:</strong> 4.5B bags checked annually, 0.5% mishandled (~22M bags), $2.5B annual cost
+<strong>Regulatory:</strong> IATA Resolution 753 (bag tracking at 4 key points), Montreal Convention (liability)
+<strong>Key Players:</strong> SITA, Amadeus, Vanderlande, Daifuku, BCS Group</p>
+<h2>1. Mission</h2>
+<p>Baggage handling system structural integrity testing. Detect tracking gaps, mishandling root causes, theft, and systemic failures in baggage operations.</p>
+<h2>2. Detection Architecture</h2>
+<h3>2.1 RFID Tracking Integrity</h3>
+<ul>
+<li>R1 — Scan Gap Detection: Missing scan at any of IATA 753 mandatory points (check-in, load, transfer, arrival)</li>
+<li>R2 — Timing Anomaly: Bag scanned at implausible speed between points</li>
+<li>R3 — Handoff Failure: Bag transferred between carriers but scan chain breaks at handoff</li>
+</ul>
+<h3>2.2 Mishandling Root Cause Analysis</h3>
+<ul>
+<li>M1 — Transfer Time: Connection time vs. minimum connection time (MCT) gap</li>
+<li>M2 — Flight-Specific: Particular flights with higher mishandling rates = systemic problem</li>
+<li>M3 — Station-Correlated: Particular airports/stations with chronic failure patterns</li>
+</ul>
+<h3>2.3 Baggage Theft/Tampering</h3>
+<ul>
+<li>T1 — Weight Change: Bag weight at check-in vs. arrival. Difference = tampering indicator</li>
+<li>T2 — Route Deviation: Bag traveled through non-standard path</li>
+<li>T3 — Access Pattern: Unauthorized baggage system access correlated with loss</li>
+</ul>
+<h2>3. Proprietary Indicators</h2>
+<table>
+<thead>
+<tr>
+<th>Indicator</th>
+<th>Description</th>
+<th>Threshold</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SCAN_C</td>
+<td>completed_scans / required_scans</td>
+<td>&lt;1.0 = GAP</td>
+</tr>
+<tr>
+<td>TIMING_D</td>
+<td>actual_transfer_time - min_required</td>
+<td>&lt;MCT = RISK</td>
+</tr>
+<tr>
+<td>WEIGHT_D</td>
+<td>arrival_weight - checkin_weight</td>
+<td>&gt;1kg = TAMPERING</td>
+</tr>
+</tbody>
+</table>
+<footer><p>agent-aviation-baggage-forensics · UK Sektor Istihbarati · 2026</p></footer>
+</div>
+
+<!-- 10_CIVIL_AVIATION_06_PASSENGER_COMMERCIAL_agent-aviation-eu261-compliance.html -->
+<div class="page">
+
+<h1>AGENT_AVIATION_EU261 — Passenger Compensation Integrity Module</h1>
+<p><strong>Market:</strong> EU261 claims market estimated at €1-2B/yr. UK261 (retained) same framework.
+<strong>Regulatory:</strong> EC 261/2004, UK retained version (CAP 1396), CAA enforcement</p>
+<h2>1. Mission</h2>
+<p>Verify passenger compensation claim integrity. Distinguish genuine claims from fraudulent ones. Validate airline "extraordinary circumstances" defenses using operational data.</p>
+<h2>2. Detection Architecture</h2>
+<h3>2.1 Delay/Cancellation Claim Verification</h3>
+<ul>
+<li>D1 — Operational Data Cross-Reference: Claimed delay vs. actual operational data (ACARS, OOOI)</li>
+<li>D2 — Passenger Identity: Duplicate claimant across multiple flights on same date</li>
+<li>D3 — Flight Leg Matching: Claimed flight actually operated on claimed date</li>
+</ul>
+<h3>2.2 Extraordinary Circumstances Testing</h3>
+<ul>
+<li>E1 — Weather Claim Validation: Claimed weather event vs. historical METAR for airport</li>
+<li>E2 — ATC Restriction Validation: Claimed ATC restriction vs. Eurocontrol/NATS data</li>
+<li>E3 — Bird Strike Claim: Bird strike claimed vs. wildlife strike database cross-reference</li>
+</ul>
+<h3>2.3 Compensation Fraud Detection</h3>
+<ul>
+<li>F1 — Pattern Detection: Same passenger filing multiple claims across different airlines</li>
+<li>F2 — Document Integrity: Boarding pass/document forgery detection</li>
+<li>F3 — Law Firm/Agent Fraud: Third-party claim management company patterns</li>
+</ul>
+<h2>3. Proprietary Indicators</h2>
+<table>
+<thead>
+<tr>
+<th>Indicator</th>
+<th>Description</th>
+<th>Threshold</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DELAY_V</td>
+<td>claimed_delay - actual_delay</td>
+<td>&gt;15min = VERIFY</td>
+</tr>
+<tr>
+<td>EXTRAORDINARY_R</td>
+<td>weather_validity / metar_data</td>
+<td>&lt;0.8 = QUESTIONABLE</td>
+</tr>
+<tr>
+<td>DUPLICATE_P</td>
+<td>passenger on N&gt;1 flights same time</td>
+<td>&gt;1 = FRAUD_INDICATOR</td>
+</tr>
+</tbody>
+</table>
+<footer><p>agent-aviation-eu261-compliance · UK Sektor Istihbarati · 2026</p></footer>
+</div>
+
+<!-- 10_CIVIL_AVIATION_07_FINANCE_LEASING_agent-aviation-lease-forensics.html -->
+<div class="page">
+
+<h1>AGENT_AVIATION_LEASE — Aircraft Leasing Integrity Module</h1>
+<p><strong>Market:</strong> $250B+ assets under management, 50%+ of global fleet leased
+<strong>UK Connection:</strong> Dublin + London are global leasing hubs (AerCap, SMBC, GECAS, Avolon are top lessors)
+<strong>Key Players:</strong> AerCap, SMBC Aviation Capital, Avolon, BOC Aviation, CDB Aviation</p>
+<h2>1. Mission</h2>
+<p>Structural audit of aircraft lease lifecycle - from contract to redelivery. Detect maintenance reserve manipulation, redelivery condition fraud, and lessee performance anomalies.</p>
+<h2>2. Detection Architecture</h2>
+<h3>2.1 Lease Return (Redelivery) Forensics</h3>
+<ul>
+<li>R1 — Return Condition Gap: Contractual return condition vs. actual aircraft status</li>
+<li>R2 — Maintenance Reserve Balance: Reserve payments vs. actual maintenance performed</li>
+<li>R3 — Records Transfer: Technical records completeness at redelivery</li>
+</ul>
+<h3>2.2 Lessee Performance Audit</h3>
+<ul>
+<li>L1 — Covenant Compliance: Financial covenant structural testing</li>
+<li>L2 — Maintenance Program Adherence: Lessee's actual maintenance vs. approved maintenance program</li>
+<li>L3 — Utilization Monitoring: Cycles/hours flown vs. lease agreement limits</li>
+</ul>
+<h3>2.3 Asset Valuation Integrity</h3>
+<ul>
+<li>V1 — Appraisal Manipulation: Independent appraiser vs. submitted valuation patterns</li>
+<li>V2 — Half-Life Manipulation: Engine/APU half-life claims vs. actual shop visit records</li>
+<li>V3 — Damage History: Undisclosed damage events on asset during lease term</li>
+</ul>
+<h2>3. Proprietary Indicators</h2>
+<table>
+<thead>
+<tr>
+<th>Indicator</th>
+<th>Description</th>
+<th>Threshold</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RETURN_G</td>
+<td>actual_condition - contractual_return</td>
+<td>&gt;$1M gap = RISK</td>
+</tr>
+<tr>
+<td>RESERVE_B</td>
+<td>reserve_paid - maint_performed</td>
+<td>&gt;15% = MISMATCH</td>
+</tr>
+<tr>
+<td>COVENANT_R</td>
+<td>actual_financial - covenant_limit</td>
+<td>&lt;5% margin = WARNING</td>
+</tr>
+</tbody>
+</table>
+<footer><p>agent-aviation-lease-forensics · UK Sektor Istihbarati · 2026</p></footer>
+</div>
+
+<footer><p>BK Sektör Istihbaratı · V. Sivil Havacılık · 2026</p></footer></div></body></html>
