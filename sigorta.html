@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="tr">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>XII. Sigorta ve Risk Denetimi — BK Sektör İstihbaratı</title>
+<style>
+:root{--ink:#0f1a2e;--paper:#f7f4ec;--gold:#c9a84c;--navy:#1a2a4a}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--ink);color:#eaeaea;font-family:Georgia,'Times New Roman',serif;padding:20px;font-size:14px;line-height:1.7}
+.page{max-width:1100px;margin:0 auto;padding:30px}
+h1{color:var(--gold);font-size:28px;border-bottom:3px solid var(--gold);padding-bottom:12px}
+h2{color:var(--gold);margin:35px 0 15px;border-bottom:2px solid var(--navy);padding-bottom:8px}
+h3{color:#00d9ff;margin:25px 0 12px;font-size:17px}
+h4{color:var(--gold);margin:15px 0 8px}
+p{margin:8px 0;line-height:1.8;text-align:justify}
+.kutu{background:var(--navy);padding:14px;border-radius:6px;border-left:4px solid var(--gold);margin:12px 0}
+.kutu.r{border-left-color:#e94560}.kutu.b{border-left-color:#00d9ff}.kutu.g{border-left-color:#4caf50}
+table{width:100%;border-collapse:collapse;margin:12px 0;font-size:12px}
+th{background:var(--navy);color:var(--gold);padding:8px;text-align:left;font-size:10px;letter-spacing:1px}
+td{padding:6px 8px;border-bottom:1px solid rgba(26,42,74,0.5);font-size:12px}
+.tag{display:inline-block;padding:2px 8px;border-radius:3px;font-size:10px;font-family:monospace}
+.tag.g{background:#1a4a1a;color:#4caf50}.tag.r{background:#4a1a1a;color:#e94560}.tag.b{background:#1a3a5a;color:#00d9ff}
+a{color:var(--gold);text-decoration:none}
+.back{display:block;margin:20px 0;color:#94a3b8;font-family:monospace;font-size:12px}
+ul{margin:8px 0;padding-left:20px}li{margin:4px 0;line-height:1.7}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:16px 0}
+.kart{background:var(--navy);padding:16px;border-radius:6px;border-top:3px solid var(--gold)}
+.kart h4{color:var(--gold);margin:0 0 8px;font-size:15px}
+.kart p{font-size:12px;color:#b8c4d0;margin:0}
+.skor{font-size:22px;color:var(--gold);text-align:center;margin:20px 0;padding:16px;border:1px solid rgba(201,168,76,0.3);border-radius:8px}
+footer{text-align:center;margin-top:50px;padding-top:25px;border-top:1px solid var(--navy);color:#94a3b8;font-size:11px}
+</style>
+<link rel="stylesheet" href="style.css"></head>
+<body><div class="page">
+<a class="back" href="index.html">⬅ Ana Sayfaya Dön</a>
+
+<h1>XII. Sigorta ve Risk Denetimi</h1>
+<p><strong>Lloyd's Syndicate Denetimi · Hasar Doğrulama · Aktüeryal Model Bütünlüğü · Kredi Riski Analizi</strong></p>
+
+<div class="kutu r">
+<p><strong>Neden BK Sigortası?</strong> Londra, 1688'den bu yana küresel sigorta ve reasürans piyasasının merkezidir. Lloyd's of London, dünyanın en karmaşık ve yüksek tutarlı risklerinin sigortalandığı tek özel piyasa olma özelliğini korumaktadır. BK sigorta sektörünün toplam prim hacmi £270 milyarı aşmaktadır ve sigorta sahteciliğinin yıllık maliyeti £3,5 milyar olarak tahmin edilmektedir. Hem hasar hem de aktüeryal veri bütünlüğü yapısal bir denetim alanı oluşturmaktadır.</p>
+</div>
+
+<div class="skor">
+Sektör Olasılık Endeksi: <strong>%69</strong><br>
+<span style="font-size:14px;color:#94a3b8">Pazarlanabilir Hacim: £385 milyon (2026-2030) · Lloyd's Prim Hacmi: £52 milyar (2024)</span>
+</div>
+
+<h2>Sektörü Anlama Kılavuzu</h2>
+
+<p>Sigorta sektörü, prensipte basit bir fikre dayanır: çok sayıda kişi veya kurum küçük prim öder, büyük bir kaza veya kayıp yaşandığında tazminat ödenir. Ancak bu basit fikrin arkasında son derece karmaşık bir veri ve risk yönetimi altyapısı yatmaktadır.</p>
+
+<p>Risk değerlendirme (aktüerya), hasar yönetimi ve reasürans zincirinin her halkasında veri bütünlüğü kritik öneme sahiptir. Bir hasar dosyasında yer alan bilgilerin doğruluğu, aktüeryal modellerin dayandığı geçmiş verinin kalitesi ve reasürans anlaşmalarında beyan edilen risk profillerinin gerçekliği — bunların her biri hem ticari hem de hukuki açıdan hassas alanlardır.</p>
+
+<div class="grid2">
+<div class="kart">
+<h4>⚖️ Hasar Sahteciliği</h4>
+<p>BK'da en yaygın sigorta sahteciliği biçimleri: şişirilmiş araç hasarı talepleri, hayali tıbbi iddialar, organize "whiplash" ağları ve yanmış gayrimenkul vakaları. Sektörün yıllık sahteciliğe bağlı kaybı £3,5 milyarı aşmaktadır.</p>
+</div>
+<div class="kart">
+<h4>📐 Aktüeryal Model Riski</h4>
+<p>Aktüeryal modeller yanlış veri veya hatalı varsayımlara dayandığında, prim fiyatlaması yanlış yapılır. Bu, sigorta şirketinin beklenen karını eritir ya da piyasada rekabetçi olmayan fiyatlara yol açar. Model bütünlüğü denetimi bu riski önceden tespit eder.</p>
+</div>
+<div class="kart">
+<h4>🏦 Kredi ve Temerrüt Riski</h4>
+<p>Bankalar ve finans kuruluşları, kredi portföylerini sigortalatmaktadır. Bu sigortanın fiyatı, borçlu risk profiline bağlıdır. Borçlunun risk profilini belirleyen verilerin tutarlılığı doğrudan sigorta primini ve dolayısıyla banka sermaye gereksinimini etkiler.</p>
+</div>
+<div class="kart">
+<h4>🌐 Reasürans Zinciri</h4>
+<p>Lloyd's syndicate'leri ve diğer büyük sigorta grupları, risklerini reasürans yoluyla dağıtır. Bu zincirde yanlış risk beyanı — kasıtlı ya da kazara — hem birincil sigorta şirketi hem de reasürör açısından ciddi mali sonuçlar doğurur.</p>
+</div>
+</div>
+
+<h2>1. Hasar Doğrulama ve Sahtecilik Tespiti</h2>
+
+<p>Hasar sahteciliğinin iki ana biçimi vardır: <strong>içten sahtecilik</strong> (gerçek olmayan hasarın baştan uydurulması) ve <strong>dıştan şişirme</strong> (gerçek bir olayın abartılarak talep edilmesi). İkinci tür çok daha yaygın olup geleneksel denetim sistemlerini atlatmaya daha yatkındır.</p>
+
+<div class="kutu b">
+<p><strong>Ne yapılır?</strong> Hasar dosyasındaki verilerin birbirileriyle ve dış referans kaynaklarıyla yapısal tutarlılığı analiz edilir. Zamansal tutarsızlıklar, coğrafi imkânsızlıklar, tekrar eden örüntüler ve birbiriyle ilişkili davranış kümeleri belirlenir. Asıl değer, tek tek şüpheli vakaları tespit etmekten değil, sistematik sahtecilik ağlarını yapısal analiz aracılığıyla ortaya çıkarmaktan gelir.</p>
+</div>
+
+<h3>Hasar Kategorileri ve Risk Profili</h3>
+<table>
+<tr><th>Hasar Kategorisi</th><th>Yıllık Sahtecilik Kaybı (Tahmin)</th><th>Başlıca Yöntem</th><th>Tespit Zorluğu</th></tr>
+<tr><td>Motorlu taşıt hasarı</td><td>£850 milyon</td><td>Şişirilmiş onarım faturası, hayali kaza</td><td>Orta</td></tr>
+<tr><td>Kişisel yaralanma (whiplash)</td><td>£700 milyon</td><td>Organize ağlar, sahte tanıklık</td><td>Yüksek</td></tr>
+<tr><td>Mülk (yangın/su hasarı)</td><td>£450 milyon</td><td>Kasıtlı hasar, değer şişirme</td><td>Orta-Yüksek</td></tr>
+<tr><td>Özel sağlık sigortası</td><td>£320 milyon</td><td>Sahte fatura, gereksiz prosedür</td><td>Orta</td></tr>
+<tr><td>İş durması / ticari</td><td>£280 milyon</td><td>Abartılmış gelir kaybı</td><td>Yüksek</td></tr>
+<tr><td>Denizcilik ve havacılık</td><td>£200 milyon</td><td>Kasıtlı kaza, sefer manipülasyonu</td><td>Çok yüksek</td></tr>
+</table>
+
+<h3>Özel Sektör: Lloyd's Denizcilik Sigortası</h3>
+
+<p>Lloyd's of London, küresel denizcilik sigortasının yaklaşık %20'sini tek başına yazmaktadır. Bu alanda sahtecilik; kasıtlı batırma (yüklü bir geminin sigorta için batırılması), yanlış manifesto beyanı ve sahte hasar belgesi biçiminde görülür. Bu tür vakalar hem sigorta hem de denizcilik hukuku perspektifinden değerlendirilmektedir.</p>
+
+<h2>2. Aktüeryal Model Bütünlüğü Denetimi</h2>
+
+<p>Aktüerya, geçmiş verilerden geleceğe dair risk tahminleri üretme disiplinidir. Bu tahminler, sigorta primlerini, şirket sermaye gereksinimlerini (Solvency II / UK Solvency Reform) ve reasürans maliyetlerini doğrudan belirler. Model bütünlüğü ise modelin doğru veriye, doğru metodolojiye ve tutarlı varsayımlara dayandığını doğrulama sürecidir.</p>
+
+<div class="kutu g">
+<p><strong>Örnek:</strong> Bir sigorta şirketi, iklim değişikliğinin sel riskine etkisini aktüeryal modeline dahil ettiğini beyan ediyor. Ancak kullandığı iklim senaryosu, IPCC'nin en güncel projeksiyon setinin yerine eski bir veri setine dayanıyor. Bu durum, gerçek riskten %30 daha düşük prim hesaplanmasına ve dolayısıyla geleceğe dönük hafızimata yol açıyor. Model bütünlüğü denetimi bu farklılığı erken tespit eder.</p>
+</div>
+
+<h3>Denetim Alanları</h3>
+<ul>
+<li><strong>Veri Kalitesi Denetimi:</strong> Aktüeryal modellere girdi sağlayan tarihsel hasar, prim ve maruziyet verilerinin bütünlük ve tutarlılık analizi</li>
+<li><strong>Varsayım Tutarlılığı:</strong> Farklı ürün hatlarında kullanılan aktüeryal varsayımların (ölüm oranı, enflasyon, talepte bulunma eğilimi) birbiriyle ve piyasa gözlemleriyle uyumu</li>
+<li><strong>Model Doğrulama:</strong> Kullanılan istatistiksel modelin geçmiş tahmin doğruluğu — "geriye dönük test" kalitesi</li>
+<li><strong>Solvency II / UK Reform Uyumu:</strong> PRA tarafından talep edilen sermaye yeterliliği hesaplamalarının metodolojik sağlamlığı</li>
+</ul>
+
+<h2>3. Kredi Riski Modelleme ve PD/LGD Analizi</h2>
+
+<p>Kredi riski iki temel parametreyle ölçülür: <strong>PD (Probability of Default)</strong> — bir borçlunun temerrüde düşme olasılığı — ve <strong>LGD (Loss Given Default)</strong> — temerrüt gerçekleştiğinde kurtarılamayan kayıp oranı. Bu parametreler hem banka sermaye gereksinimlerini hem de kredi sigortası primlerini belirler.</p>
+
+<p>BK'da aktif kredi sigortası piyasası (Euler Hermes, Coface, Atradius gibi oyuncuların yanı sıra Lloyd's syndicate'leri), kurumsal alacakları karşı taraf temerrüdüne karşı sigortalamaktadır. Bu alacakların gerçek risk profilini belirleyen verinin kalitesi, sigorta fiyatlamasının doğruluğunu doğrudan etkiler.</p>
+
+<h3>Hizmet Hatları</h3>
+<ul>
+<li><strong>Borçlu Risk Profili Doğrulaması:</strong> Kredi sigortası başvurularında beyan edilen borçlu finansal durumunun kamuya açık ve ticari veri kaynaklarıyla çapraz doğrulaması</li>
+<li><strong>Temerrüt Örüntü Analizi:</strong> Bir portföydeki temerrütlerin zamansal ve sektörel dağılımını modelleyen aktüeryal tahminlerin fiilî temerrüt gerçekleşmesiyle karşılaştırması</li>
+<li><strong>"Zombi" Borçlu Tespiti:</strong> Düşük faiz ortamında ayakta kalan ancak faiz artışı veya ekonomik yavaşlama karşısında temerrüt riski taşıyan şirket portföylerinin erken uyarı analizi</li>
+<li><strong>Teminat Değerleme Denetimi:</strong> Kredi yapılandırmalarında kullanılan teminat varlık değerlemelerinin bağımsız doğrulaması</li>
+</ul>
+
+<h2>4. Lloyd's Syndicate ve MGA Denetimi</h2>
+
+<p>Lloyd's piyasası, <strong>syndicate</strong> adı verilen risk taşıma gruplarından oluşur. Her syndicate belirli risk kategorilerini sigortalayan uzman bir yapıdır. Syndicate'ler arasındaki risk dağılımının şeffaflığı ve beyan edilen risk profillerinin doğruluğu, Lloyd's Corporation tarafından periyodik olarak denetlenmektedir.</p>
+
+<p><strong>MGA'lar (Managing General Agents)</strong>, sigorta şirketleri adına politika yazan yetkili aracılardır. MGA'ların üstlendikleri risklerin gerçek profili ile raporladıkları profil arasındaki tutarsızlıklar, özellikle specialty sigorta segmentinde önemli bir denetim alanı oluşturmaktadır.</p>
+
+<h3>Lloyd's Denetim Kapsamı</h3>
+<ul>
+<li><strong>Underwriting Kalitesi Değerlendirmesi:</strong> Yazılan risklerin syndicate'in beyan ettiği iştah profiliyle uyumu</li>
+<li><strong>Reasürans Kurtarma Bütünlüğü:</strong> Reasüransçılara iletilen hasar bildirimlerinin orijinal poliçe koşullarıyla tutarlılığı</li>
+<li><strong>MGA Portföy Kalitesi:</strong> MGA tarafından yazılan ve capacity sağlayıcısına devredilen risklerin beyan edildiği biçimde olup olmadığı</li>
+<li><strong>Run-off Portföy Analizi:</strong> Kapatılmış veya devredilmiş sigorta portföylerindeki gizli yükümlülüklerin erken tespiti</li>
+</ul>
+
+<h2>Pazar Büyüklüğü ve Müşteri Matrisi</h2>
+<table>
+<tr><th>Hizmet Hattı</th><th>Pazar Büyüklüğü</th><th>Olasılık</th><th>Birincil Müşteri</th></tr>
+<tr><td>Hasar doğrulama ve sahtecilik tespiti</td><td>£145 milyon</td><td><span class="tag g">%74</span></td><td>Genel sigortacılar, sağlık sigortası</td></tr>
+<tr><td>Aktüeryal model bütünlüğü denetimi</td><td>£95 milyon</td><td><span class="tag g">%68</span></td><td>Lloyd's syndicate'leri, büyük sigorta grupları</td></tr>
+<tr><td>Kredi riski PD/LGD doğrulama</td><td>£85 milyon</td><td><span class="tag b">%62</span></td><td>Kredi sigortası, bankalar, fon yöneticileri</td></tr>
+<tr><td>MGA/Syndicate portföy denetimi</td><td>£60 milyon</td><td><span class="tag b">%58</span></td><td>Lloyd's, MGA'lar, reasürörlüer</td></tr>
+</table>
+
+<div class="kutu b">
+<p><strong>BK'nın Küresel Avantajı:</strong> Londra sigorta piyasasında yazılan her politika, küresel standartların en karmaşık test alanından geçer. BK sigorta denetim altyapısı; PRA (Prudential Regulation Authority), FCA ve Lloyd's'un ortak gözetiminden oluşur. Bu üçlü denetim yapısı, BK'da geliştirilen denetim çözümlerinin küresel ölçekte en yüksek standartlara hitap ettiğinin göstergesidir.</p>
+</div>
+
+<footer>
+<p>BK Sektör İstihbaratı · XII. Sigorta ve Risk Denetimi · USS Verity · 2026</p>
+<p>⚠️ SINIFLANDIRMA: TİCARİ GİZLİ · ÖZEL METODOLOJİ</p>
+</footer>
+</div></body></html>

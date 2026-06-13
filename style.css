@@ -1,0 +1,126 @@
+/* ============================================================
+   UK Sektör İstihbaratı — Global Visual Enhancement Layer
+   Readability & depth improvements on top of inline styles
+   ============================================================ */
+
+/* ── Google Fonts ── */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Space+Grotesk:wght@400;500;600&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* ── Font assignments ── */
+body {
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  font-weight: 400;
+  line-height: 1.75;
+  letter-spacing: 0.01em;
+}
+
+h1, h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+h3, h4 {
+  font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.topbar, .topbar a, .tag, .back, .code, pre, code {
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  font-size: 11px;
+}
+
+.sektor h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+}
+
+table, td, th {
+  font-family: 'Inter', sans-serif;
+}
+
+th {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
+}
+
+.skor {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+p {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.8;
+}
+
+/* ── Topbar ── */
+.topbar a { color: #94a3b8; }
+.topbar a:hover { color: #d4a843; }
+
+/* ── Back link ── */
+.back { color: #94a3b8 !important; }
+.back:hover { color: #d4a843; }
+
+/* ── Footer ── */
+footer p { color: #94a3b8; }
+
+/* ── Card descriptions ── */
+.kart p { color: #b8c4d0 !important; }
+.sektor p { color: #b8c4d0 !important; }
+
+/* ── Subtitle / secondary spans ── */
+.skor span,
+p[style*="color:#94a3b8"],
+span[style*="color:#94a3b8"] { color: #94a3b8; }
+
+/* ── Kutu / info boxes — add depth ── */
+.kutu {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
+  border-radius: 6px;
+}
+
+/* ── Sector cards — lift them off the background ── */
+.sektor {
+  box-shadow: 0 3px 14px rgba(0, 0, 0, 0.5);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.sektor:hover {
+  transform: translateX(6px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.65);
+}
+
+/* ── Kart (grid cards) — add shadow ── */
+.kart {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.15s ease;
+}
+.kart:hover { transform: translateY(-2px); }
+
+/* ── Tables — alternating row color for readability ── */
+tr:nth-child(even) td {
+  background: rgba(30, 54, 96, 0.35);
+}
+td { color: #d8e0ec; }
+th { font-size: 11px; letter-spacing: 0.5px; }
+
+/* ── Score box — more visual weight ── */
+.skor {
+  box-shadow: 0 2px 16px rgba(201, 168, 76, 0.12);
+}
+
+/* ── Tags — slightly more padding for readability ── */
+.tag { font-size: 11px; padding: 3px 9px; }
+
+/* ── Body text — a touch brighter ── */
+body { color: #dde6f2; }
+
+/* ── Section dividers — h2 border more visible ── */
+h2 { border-bottom-color: rgba(26, 42, 74, 0.9) !important; padding-bottom: 9px; }
+
+/* ── Inline code ── */
+.code {
+  background: rgba(0,0,0,0.35) !important;
+  border-left: 3px solid rgba(201,168,76,0.5) !important;
+  box-shadow: inset 0 1px 4px rgba(0,0,0,0.3);
+}
