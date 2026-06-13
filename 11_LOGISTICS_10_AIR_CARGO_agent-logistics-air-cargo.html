@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="tr">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>agent-logistics-air-cargo</title>
+<style>:root{--ink:#0f1a2e;--paper:#f7f4ec;--gold:#c9a84c;--navy:#1a2a4a}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--ink);color:#eaeaea;font-family:Georgia,'Times New Roman',serif;padding:20px;font-size:14px;line-height:1.7}
+.page{max-width:1100px;margin:0 auto;padding:30px}
+h1{color:var(--gold);border-bottom:3px solid var(--gold);padding-bottom:12px}
+h2{color:var(--gold);margin:30px 0 15px;border-bottom:1px solid var(--navy);padding-bottom:6px}
+h3{color:#00d9ff;margin:20px 0 10px}
+p{margin:8px 0;line-height:1.8}
+a{color:var(--gold)}
+table{width:100%;border-collapse:collapse;margin:12px 0}
+th{background:var(--navy);color:var(--gold);padding:8px;text-align:left}
+td{padding:6px 8px;border-bottom:1px solid rgba(26,42,74,0.5);font-size:12px}
+code{background:#0a0f1a;padding:2px 6px;border-radius:3px;color:#4caf50;font-family:monospace;font-size:12px}
+pre{background:#0a0f1a;padding:12px;border-radius:4px;color:#4caf50;font-family:monospace;font-size:12px;overflow-x:auto}
+ul{margin:8px 0;padding-left:20px}
+.back{display:block;margin:20px 0;color:#6b7280;font-family:monospace;font-size:12px}
+footer{text-align:center;margin-top:40px;padding-top:20px;border-top:1px solid var(--navy);color:#6b7280;font-size:11px}</style></head>
+<body><div class="page">
+<a class="back" href="index.html">Ana Sayfaya Don</a>
+<h1>AGENT_LOG_AIRCARGO — Air Cargo Integrity &amp; Compliance Module</h1>
+<p><strong>Market:</strong> Global $150-200B. UK £10-15B. Heathrow #1 EU cargo.
+<strong>Key UK Airports:</strong> LHR (Heathrow), EMA (East Midlands), STN (Stansted), BHX</p>
+<h2>1. Mission</h2>
+<p>Air cargo integrity: AWB fraud, dangerous goods misdeclaration, pharma cold chain, screening compliance, and cargo theft detection.</p>
+<h2>2. Detection Architecture</h2>
+<h3>2.1 Air Waybill Fraud</h3>
+<ul>
+<li>A1 — Phantom AWB: AWB issued but no cargo received/loaded</li>
+<li>A2 — Rate Manipulation: Actual freight rate vs. AWB declared rate (profit skimming)</li>
+<li>A3 — Weight Manipulation: Declared chargeable weight vs. actual. DIM factor manipulation</li>
+</ul>
+<h3>2.2 Dangerous Goods Compliance</h3>
+<ul>
+<li>D1 — Misdeclaration: Shipper declares non-DG but cargo is DG (IATA DGR non-compliance)</li>
+<li>D2 — Packing Instruction: DG packed against relevant packing instruction</li>
+<li>D3 — Hidden DG: Undeclared DG in passenger baggage (UPSC screening)</li>
+</ul>
+<h3>2.3 Pharma / Cold Chain</h3>
+<ul>
+<li>P1 — Temperature Excursion: Active/passive container temp data during air transit</li>
+<li>P2 — Time-Critical: RUSH/priority shipment handling time compliance</li>
+<li>P3 — CEIV Pharma: IATA CEIV certification compliance audit</li>
+</ul>
+<h3>2.4 Screening / Security</h3>
+<ul>
+<li>S1 — ACC3 Compliance: Known consignor / regulated agent screening adherence</li>
+<li>S2 — Piece Count: Security screened pieces vs. loaded pieces reconciliation</li>
+<li>S3 — X-Ray Competency: Screener image evaluation timing and accuracy</li>
+</ul>
+<h2>3. Proprietary Indicators</h2>
+<table>
+<thead>
+<tr>
+<th>Indicator</th>
+<th>Description</th>
+<th>Threshold</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AWB_W</td>
+<td>chargeable_weight - actual_weight</td>
+<td>&gt;10% = MANIPULATION</td>
+</tr>
+<tr>
+<td>DG_RISK</td>
+<td>declared_dg - actual_dg_cargo</td>
+<td>mismatch = CRITICAL</td>
+</tr>
+<tr>
+<td>SCREEN_C</td>
+<td>screened_pieces - loaded_pieces</td>
+<td>&gt;0 = BREACH</td>
+</tr>
+</tbody>
+</table>
+<footer><p>agent-logistics-air-cargo · UK Sektor Istihbarati · 2026</p></footer>
+</div></body></html>

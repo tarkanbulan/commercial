@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="tr">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>agent-dpp-esg</title>
+<style>:root{--ink:#0f1a2e;--paper:#f7f4ec;--gold:#c9a84c;--navy:#1a2a4a}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--ink);color:#eaeaea;font-family:Georgia,'Times New Roman',serif;padding:20px;font-size:14px;line-height:1.7}
+.page{max-width:1100px;margin:0 auto;padding:30px}
+h1{color:var(--gold);border-bottom:3px solid var(--gold);padding-bottom:12px}
+h2{color:var(--gold);margin:30px 0 15px;border-bottom:1px solid var(--navy);padding-bottom:6px}
+h3{color:#00d9ff;margin:20px 0 10px}
+p{margin:8px 0;line-height:1.8}
+a{color:var(--gold)}
+table{width:100%;border-collapse:collapse;margin:12px 0}
+th{background:var(--navy);color:var(--gold);padding:8px;text-align:left}
+td{padding:6px 8px;border-bottom:1px solid rgba(26,42,74,0.5);font-size:12px}
+code{background:#0a0f1a;padding:2px 6px;border-radius:3px;color:#4caf50;font-family:monospace;font-size:12px}
+pre{background:#0a0f1a;padding:12px;border-radius:4px;color:#4caf50;font-family:monospace;font-size:12px;overflow-x:auto}
+ul{margin:8px 0;padding-left:20px}
+.back{display:block;margin:20px 0;color:#6b7280;font-family:monospace;font-size:12px}
+footer{text-align:center;margin-top:40px;padding-top:20px;border-top:1px solid var(--navy);color:#6b7280;font-size:11px}</style></head>
+<body><div class="page">
+<a class="back" href="index.html">Ana Sayfaya Don</a>
+<h1>AGENT_DPP — EU Digital Product Passport &amp; ESG Compliance Module</h1>
+<p><strong>Source:</strong> T2SAIM Commercialization Framework v03 (§5.2 — EU Digital Product Passport and ESG Compliance)
+<strong>Regulatory Driver:</strong> EU Ecodesign for Sustainable Products Regulation (ESPR), progressively mandatory from 2026</p>
+<h2>1. Mission</h2>
+<p>T2SAIM's Digital Product Passport audit actor. Not merely a data entry system — an <strong>audit actor</strong> verifying data has not been manipulated. ESG data and "greenwashing" claims are subjected to structural analysis exposing sustainability declarations misaligned with physical reality.</p>
+<h2>2. Detection Architecture</h2>
+<h3>2.1 DPP Structural Integrity Testing</h3>
+<ul>
+<li><strong>D1 — Data Origin Verification</strong>: Tests whether DPP entries originate from authenticated production sensors vs. fabricated data injectors</li>
+<li><strong>D2 — Temporal Production Rhythm Testing</strong>: Cross-references digital entry timestamps against physical production line speeds. A component "produced" faster than physically possible = tampering</li>
+<li><strong>D3 — Multi-Node Consistency</strong>: Same product's passport entries across different nodes (factory, warehouse, retailer) must align. Deviation = manipulation</li>
+</ul>
+<h3>2.2 ESG / Greenwashing Detection</h3>
+<ul>
+<li><strong>G1 — Claim-Physical Alignment</strong>: ESG declarations tested against energy consumption records, raw material inputs, and waste output data</li>
+<li><strong>G2 — Temporal Decoupling Detection</strong>: When sustainability claims improve dramatically but production processes remain unchanged = structural anomaly</li>
+<li><strong>G3 — Supply Chain Narrative Coherence</strong>: Multiple suppliers' ESG claims tested for unnatural narrative alignment (possible coordinated greenwashing)</li>
+</ul>
+<h3>2.3 Compliance Certification Infrastructure</h3>
+<ul>
+<li><strong>C1 — EU Market Access Verification</strong>: Passport completeness and structural integrity before market entry</li>
+<li><strong>C2 — Cross-Border Consistency</strong>: Same product's passport across EU member states tested for national variation anomalies</li>
+<li><strong>C3 — Lifecycle Audit Trail</strong>: From raw material → production → distribution → recycling — cryptographic chain-of-custody</li>
+</ul>
+<h2>3. Proprietary Indicators</h2>
+<table>
+<thead>
+<tr>
+<th>Indicator</th>
+<th>Formula (Conceptual)</th>
+<th>Threshold</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DPP_S (Structural Integrity)</td>
+<td>DPP_S = Σ(wᵢ · coherence_testᵢ) / max_anomalies</td>
+<td>&lt;0.70 PASS, &lt;0.40 INVESTIGATE</td>
+</tr>
+<tr>
+<td>ESG_A (Alignment Score)</td>
+<td>ESG_A = 1 -</td>
+<td>claim_value - physical_proxy</td>
+</tr>
+<tr>
+<td>TEMPO_R (Production Rhythm)</td>
+<td>TEMPO_R = entry_timestamp - physical_production_time</td>
+<td>&gt;2σ = tampering</td>
+</tr>
+</tbody>
+</table>
+<h2>4. Integration Points</h2>
+<ul>
+<li><strong>EU DPP Registry</strong>: Real-time webhook monitoring for new passport entries</li>
+<li><strong>ESG Data Providers</strong>: Bloomberg, MSCI, Sustainalytics cross-reference</li>
+<li><strong>Supply Chain ERP Systems</strong>: SAP, Oracle for production/consumption data</li>
+<li><strong>T2SAIM Data Integrity Agent</strong>: Cryptographic verification pipeline</li>
+</ul>
+<h2>5. Commercial Package Alignment</h2>
+<ul>
+<li><strong>Short-Term (0-12 mo)</strong>: Supply chain counterfeit detection radar</li>
+<li><strong>Medium-Term (12-36 mo)</strong>: Institutional ESG audit service</li>
+<li><strong>Long-Term (36+ mo)</strong>: EU regulatory standard positioning as digital transparency RegTech</li>
+</ul>
+<h2>6. Example Detection Scenario</h2>
+<p><em>"A textile manufacturer declares 40% water reduction in their ESG report. AGENT_DPP cross-references against municipal water supply records for that factory address. Consumption data shows &lt;2% reduction. The 38% gap is flagged as GREENWASH_HIGH — providing structural evidence for regulatory investigation."</em></p>
+<h2>7. Limitations / Epistemic Status</h2>
+<ul>
+<li>[VERIFIED] EU ESPR regulatory framework and timeline</li>
+<li>[ASSUMED] DPP data will be accessible via member state registries</li>
+<li>[UNVERIFIED] Cross-border passport consistency enforcement mechanisms</li>
+</ul>
+<footer><p>agent-dpp-esg · UK Sektor Istihbarati · 2026</p></footer>
+</div></body></html>

@@ -1,0 +1,2180 @@
+<!doctype html>
+<html lang="tr">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CORE_CORPUS_UK_ANALYSIS</title>
+<style>:root{--ink:#0f1a2e;--paper:#f7f4ec;--gold:#c9a84c;--navy:#1a2a4a}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--ink);color:#eaeaea;font-family:Georgia,'Times New Roman',serif;padding:20px;font-size:14px;line-height:1.7}
+.page{max-width:1100px;margin:0 auto;padding:30px}
+h1{color:var(--gold);border-bottom:3px solid var(--gold);padding-bottom:12px}
+h2{color:var(--gold);margin:30px 0 15px;border-bottom:1px solid var(--navy);padding-bottom:6px}
+h3{color:#00d9ff;margin:20px 0 10px}
+p{margin:8px 0;line-height:1.8}
+a{color:var(--gold)}
+table{width:100%;border-collapse:collapse;margin:12px 0}
+th{background:var(--navy);color:var(--gold);padding:8px;text-align:left}
+td{padding:6px 8px;border-bottom:1px solid rgba(26,42,74,0.5);font-size:12px}
+code{background:#0a0f1a;padding:2px 6px;border-radius:3px;color:#4caf50;font-family:monospace;font-size:12px}
+pre{background:#0a0f1a;padding:12px;border-radius:4px;color:#4caf50;font-family:monospace;font-size:12px;overflow-x:auto}
+ul{margin:8px 0;padding-left:20px}
+.back{display:block;margin:20px 0;color:#6b7280;font-family:monospace;font-size:12px}
+footer{text-align:center;margin-top:40px;padding-top:20px;border-top:1px solid var(--navy);color:#6b7280;font-size:11px}</style></head>
+<body><div class="page">
+<a class="back" href="index.html">Ana Sayfaya Don</a>
+<h1>T2SAIM v9.6 [SEALED] — UK Economic Sector Applicability Analysis</h1>
+<p><strong>Analysis Date:</strong> 2026-05-25
+<strong>Source:</strong> Corpus T2SAIM_v09_6_FULL_SPEC_SEALED.md (2328 lines, 148 KB)
+<strong>Cross-Reference:</strong> T2SAIM_YAPI_TASLARI_ADLI_EPISTEMOLOJI.md, JIM_SIMONS_TURNUKEY_METOTLAR.md, UK_PSYCHODYNAMIC_WORLD.md, AGENT_INDEX.md
+<strong>Author:</strong> Hermes Agent (Section 31)</p>
+<hr />
+<h2>EXECUTIVE SUMMARY</h2>
+<p>This document maps all 12 UK economic sectors against the complete T2SAIM v9.6 [SEALED] methodology. Each sector analysis specifies:
+- Which T2SAIM core modules apply (KE, ZTJ, SST, IUY, Pascal Coupling, EDS-32, MOD-4/5/6/7, SELDON J(θ), MS-VAR, DCCA)
+- Specific UK use cases with regulatory framework
+- Proprietary indicators with UK-calibrated thresholds
+- Available UK data sources
+- Commercialisation pathway
+- Revenue estimate per sector</p>
+<p>The KE synthesis formula governs all sectors:</p>
+<div class="codehilite"><pre><span></span><code>KE_A = 0.40·ZTJ + 0.30·IUY + 0.30·SST
+KE_final = KE_A + E·IDIS (extended layers)
+</code></pre></div>
+
+<hr />
+<h2>1. FINANCIAL SERVICES</h2>
+<p><strong>UK Regulators:</strong> FCA, PRA, Bank of England, Payment Systems Regulator (PSR)</p>
+<h3>Applicable T2SAIM Modules</h3>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Application</th>
+<th>Priority</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ZTJ (all 7 tests)</strong></td>
+<td>Market microstructure surveillance, trade timing anomalies</td>
+<td>HIGH</td>
+</tr>
+<tr>
+<td><strong>SST (M1-M4 + G-B + G-NET + G-HAW + G-VG)</strong></td>
+<td>Spoof/layering detection, wash trading, order-book forensics</td>
+<td>HIGH</td>
+</tr>
+<tr>
+<td><strong>EDS-32</strong></td>
+<td>32-dim state vector for FX/equity prediction, regime-aware stochastic kernel</td>
+<td>HIGH</td>
+</tr>
+<tr>
+<td><strong>IUY (Shannon + LZC)</strong></td>
+<td>Dealer/analyst communication analysis, compliance text forensics</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td><strong>MOD-4 (Pearl do-calculus)</strong></td>
+<td>L6 causal inference for coordinated FX fixing (WM/Reuters 4pm fix)</td>
+<td>HIGH</td>
+</tr>
+<tr>
+<td><strong>MS-VAR</strong></td>
+<td>Latent phase detection: preparation→exploitation→cover-up in front-running</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td><strong>MOD-6/7 (ECE/DCA)</strong></td>
+<td>Calibration discipline for fraud-scoring models</td>
+<td>HIGH</td>
+</tr>
+<tr>
+<td><strong>SELDON J(θ)</strong></td>
+<td>Supreme-tier for criminal FCA/fraud referrals</td>
+<td>HIGH</td>
+</tr>
+<tr>
+<td><strong>Pascal Coupling</strong></td>
+<td>Inter-bank stress propagation, liquidity crunch cascade detection</td>
+<td>MEDIUM</td>
+</tr>
+</tbody>
+</table>
+<h3>UK-Specific Use Cases</h3>
+<ol>
+<li>
+<p><strong>Spoofing &amp; Layering — LME/NYSE Liffe:</strong> M1 ghost order detection with sub-100ms threshold (R2 regime calibrated to LSE exchange latency profiles). M2 size asymmetry ratio &gt; 3.0 for institutional spoofing patterns. M3 layering uniformity gate for multi-tier order-book manipulation.</p>
+</li>
+<li>
+<p><strong>FX Fixing Manipulation — WM/Reuters 4pm London Window:</strong> ZTJ-1 caliper test applied to 60-second pre-fix order flow with sub-second regime threshold. L6 do-calculus DAG mapping institutional order flows to fixing outcome, with client flow as confounder (back-door admissible set Z). G-PH persistent homology for currency pair correlation network topology.</p>
+</li>
+<li>
+<p><strong>Wash Trading — Crypto/CFD Venues:</strong> M4 fatal gate for beneficial-ownership self-matching. Cross-custodian matching required.</p>
+</li>
+<li>
+<p><strong>Bank Account Fraud (BAF):</strong> Realism Gap anchor (d-prime ≈ 1.78, AUROC ≈ 0.8944). All UK banking fraud models must report gap relative to this BAF anchor.</p>
+</li>
+<li>
+<p><strong>Retail Banking — APP Fraud (Authorised Push Payment):</strong> ZTJ-2 survival/hazard analysis for account-takeover recurrence. IUY-LZC for behavioural sequence complexity. UK-specific: PSR liability-shift framework (50/50 reimbursement rule 2024).</p>
+</li>
+<li>
+<p><strong>Asset Management — Insider Trading:</strong> Stylchronometry (ZTJ-3) on analyst research document streams. Bai-Perron (ZTJ-6) for undisclosed regime breaks coinciding with large trades.</p>
+</li>
+</ol>
+<h3>Proprietary Indicators (UK-Calibrated Thresholds)</h3>
+<table>
+<thead>
+<tr>
+<th>Indicator</th>
+<th>Formula</th>
+<th>UK Threshold</th>
+<th>Calibration Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ghost Order Detection (M1)</td>
+<td>τ_M1(R) lifetime</td>
+<td>R1 &lt; 5s, R2 &lt; 100ms, R3 &lt; 1ms</td>
+<td>UK exchange latency (LSE/LME)</td>
+</tr>
+<tr>
+<td>Size Asymmetry (M2)</td>
+<td>AR(t) = max(Q_bid,Q_ask)/min(Q_bid,Q_ask)</td>
+<td>τ_M2 ≈ 3.0 (R2 normal)</td>
+<td>FCA trade surveillance data</td>
+</tr>
+<tr>
+<td>FX Fix Anomaly</td>
+<td>ZTJ-1 CV on pre-fix gaps</td>
+<td>CV &lt; 0.2 or &gt; 2.0</td>
+<td>WM/Reuters fix window microstructure</td>
+</tr>
+<tr>
+<td>BAF Realism Gap</td>
+<td>AUROC - 0.8944</td>
+<td>≤ 0.05 tolerance</td>
+<td>NeurIPS Bank Account Fraud suite</td>
+</tr>
+<tr>
+<td>Mahalanobis (CARD)</td>
+<td>d_M(x,c) = sqrt((x-μ_c)^T Σ_c^-1 (x-μ_c))</td>
+<td>τ_MAH = 3.0 (R2, χ² 99.7th %ile)</td>
+<td>UK card-not-present transactions</td>
+</tr>
+</tbody>
+</table>
+<h3>UK Data Sources</h3>
+<ul>
+<li><strong>BoE Sterling Monetary Framework</strong> — weekly liquidity data, gilt repo rates</li>
+<li><strong>FCA Market Watch</strong> — trade surveillance data, market abuse reports</li>
+<li><strong>LSE/LME tick data</strong> — order book (Level 2/3) via Refinitiv or Bloomberg</li>
+<li><strong>FPS/CHAPS payment system</strong> — monthly time series (payments_system_monthly.csv)</li>
+<li><strong>UK Finance</strong> — aggregated fraud statistics (APP fraud, card fraud, CHAPS)</li>
+<li><strong>PSR</strong> — payment system data, liability-shift metrics</li>
+<li><strong>Companies House</strong> — beneficial ownership register for M4 gate</li>
+</ul>
+<h3>Commercialisation Pathway</h3>
+<ol>
+<li><strong>Phase 1 (0-6mo):</strong> BAF banking fraud calibration — sell to top-10 UK retail banks as FCA compliance enhancement</li>
+<li><strong>Phase 2 (6-12mo):</strong> FX Fix surveillance — target LSE/FCA as market abuse detection technology</li>
+<li><strong>Phase 3 (12-24mo):</strong> Full exchange surveillance — LME/ICE for M1-M4 trade surveillance</li>
+<li><strong>Phase 4 (24-36mo):</strong> Supreme-tier SELDON deployment for criminal FCA/BoE referrals</li>
+</ol>
+<h3>Revenue Estimate</h3>
+<table>
+<thead>
+<tr>
+<th>Segment</th>
+<th>Annual Revenue (GBP)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Banking fraud (BAF/CARD)</td>
+<td>£8-12M</td>
+<td>5-7 top UK banks, £250K-£1M annual licences</td>
+</tr>
+<tr>
+<td>Exchange surveillance (BORSA)</td>
+<td>£4-6M</td>
+<td>LSE, LME, ICE, crypto venues</td>
+</tr>
+<tr>
+<td>FX fix surveillance</td>
+<td>£2-4M</td>
+<td>FCA, BoE, BIS</td>
+</tr>
+<tr>
+<td>Asset management compliance</td>
+<td>£1-2M</td>
+<td>Hedge fund/asset manager KYC</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Sector Total: £15-24M/yr</strong></p>
+<hr />
+<h2>2. MANUFACTURING/PRODUCTION</h2>
+<p><strong>UK Regulators:</strong> Competition &amp; Markets Authority (CMA), HSE, Environment Agency</p>
+<h3>Applicable T2SAIM Modules</h3>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Application</th>
+<th>Priority</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ZTJ-1 (Caliper)</strong></td>
+<td>Supply chain timing anomalies, just-in-time delivery forensics</td>
+<td>HIGH</td>
+</tr>
+<tr>
+<td><strong>ZTJ-4 (MF-DFA)</strong></td>
+<td>Multifractal production throughput analysis</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td><strong>SST G-NET</strong></td>
+<td>Supplier network topology, hub-concentration detection</td>
+<td>HIGH</td>
+</tr>
+<tr>
+<td><strong>SST G-B (Benford)</strong></td>
+<td>Invoice amount distribution, procurement anomaly detection</td>
+<td>HIGH</td>
+</tr>
+<tr>
+<td><strong>IUY (Shannon)</strong></td>
+<td>Documentation coherence (specifications, contracts, manuals)</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td><strong>MOD-4 (Pearl do-calc)</strong></td>
+<td>L6 causal inference for supply chain disruption attribution</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td><strong>L4 (CSI)</strong></td>
+<td>Commitment tracking: supplier delivery promises vs actuals</td>
+<td>HIGH</td>
+</tr>
+<tr>
+<td><strong>Pascal Coupling</strong></td>
+<td>Shock propagation: how factory closures cascade upstream</td>
+<td>HIGH</td>
+</tr>
+</tbody>
+</table>
+<h3>UK-Specific Use Cases</h3>
+<ol>
+<li>
+<p><strong>Automotive — Just-in-Time Supply Chain Anomaly:</strong> ZTJ-1 caliper test on delivery intervals. Fabricated JIT disruptions (inventory manipulation) produce CV outside 1.0±0.3 natural range. Supplier network G-NET detects unnatural hub concentration in tier-1/tier-2 mapping.</p>
+</li>
+<li>
+<p><strong>Aerospace — Counterfeit Parts Detection:</strong> G-B Benford test on invoice amounts from alternative suppliers. Counterfeit transactions often produce MAD &gt; 0.012 (Nigroini nonconforming band). IUY-Shannon on technical certificates — fabricated documents show H &lt; 4.0 bits/word.</p>
+</li>
+<li>
+<p><strong>Pharmaceutical — Batch Record Forensics:</strong> ZTJ-3 stylchronometry on batch production date sequences. Backdated batch records show ADF-reject stationarity (too consistent). SST G-HAW on adverse event reporting — fabrication shows absence of self-excitation.</p>
+</li>
+<li>
+<p><strong>Defence Manufacturing — MOD Supplier Integrity:</strong> L6 do-calculus for coordinated contract manipulation. CSI (L4) capital-weighted anti-evergreening guardrail for large infrastructure commitments.</p>
+</li>
+</ol>
+<h3>Proprietary Indicators (UK-Calibrated Thresholds)</h3>
+<table>
+<thead>
+<tr>
+<th>Indicator</th>
+<th>Formula</th>
+<th>UK Threshold</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>JIT Delivery Caliper</td>
+<td>CV(Δt) of delivery gaps</td>
+<td>CV &gt; 2.5 or &lt; 0.1</td>
+<td>UK automotive OEM data</td>
+</tr>
+<tr>
+<td>Benford Invoice Fraud</td>
+<td>MAD_B = (1/9)Σ</td>
+<td>P_obs(d)-P_B(d)</td>
+<td></td>
+</tr>
+<tr>
+<td>Supplier Network Hub</td>
+<td>H = max(k_i)/⟨k⟩ in G-NET</td>
+<td>H &gt; 5.0 (abnormal concentration)</td>
+<td>Companies House supply-chain filings</td>
+</tr>
+<tr>
+<td>Documentary LZC</td>
+<td>LZC of document sequences</td>
+<td>LZC &lt; 0.60 (fabricated)</td>
+<td>UK manufacturing contract databases</td>
+</tr>
+</tbody>
+</table>
+<h3>UK Data Sources</h3>
+<ul>
+<li><strong>Companies House</strong> — supply chain links, director networks</li>
+<li><strong>HMRC VAT/RTI</strong> — invoice-level procurement (anonymised)</li>
+<li><strong>SMMT (Society of Motor Manufacturers)</strong> — automotive production data</li>
+<li><strong>MHRA</strong> — pharmaceutical batch records (freedom of information)</li>
+<li><strong>ADS Group</strong> — aerospace/defence industry data</li>
+<li><strong>ONS Monthly Manufacturing Data</strong> — production, inventory, orders</li>
+</ul>
+<h3>Commercialisation Pathway</h3>
+<ol>
+<li><strong>Phase 1:</strong> Counterfeit parts detection (aerospace/defence) — sell to ADS Group, Babcock, BAE</li>
+<li><strong>Phase 2:</strong> Supply chain anomaly platform — CMA/Insolvency Service</li>
+<li><strong>Phase 3:</strong> Full manufacturing forensics — pharmaceutical MHRA batch integrity</li>
+</ol>
+<h3>Revenue Estimate</h3>
+<table>
+<thead>
+<tr>
+<th>Segment</th>
+<th>Annual (GBP)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aerospace counterfeit detection</td>
+<td>£3-5M</td>
+<td>BAE, Babcock, Rolls-Royce, supply chain</td>
+</tr>
+<tr>
+<td>Automotive supply chain</td>
+<td>£2-4M</td>
+<td>JLR, Nissan, Toyota UK, tier-1 suppliers</td>
+</tr>
+<tr>
+<td>Pharma batch integrity</td>
+<td>£2-3M</td>
+<td>Big pharma UK ops (GSK, AstraZeneca)</td>
+</tr>
+<tr>
+<td>Defence MOD contracts</td>
+<td>£2-3M</td>
+<td>MOD procurement integrity</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Sector Total: £9-15M/yr</strong></p>
+<hr />
+<h2>3. GOVERNMENT/PUBLIC SECTOR</h2>
+<p><strong>UK Frameworks:</strong> UK Fraud Act 2006, Public Contracts Regulations 2015, Cabinet Office</p>
+<h3>Applicable T2SAIM Modules</h3>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Application</th>
+<th>Priority</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ZTJ-6 (Bai-Perron)</strong></td>
+<td>Policy break detection: undisclosed narrative shifts</td>
+<td>HIGH</td>
+</tr>
+<tr>
+<td><strong>ZTJ-3 (Stylchronometry)</strong></td>
+<td>Document backdating, policy reversal timelines</td>
+<td>HIGH</td>
+</tr>
+<tr>
+<td><strong>L4 (CSI)</strong></td>
+<td>Commitment Stability Index — manifesto vs delivery</td>
+<td>HIGH</td>
+</tr>
+<tr>
+<td><strong>L5 (H_R)</strong></td>
+<td>Rule-Application Entropy — regulatory capture detection</td>
+<td>HIGH</td>
+</tr>
+<tr>
+<td><strong>SST G-NET + G-PH</strong></td>
+<td>Lobbying/PAC network analysis, conflict-of-interest detection</td>
+<td>HIGH</td>
+</tr>
+<tr>
+<td><strong>MOD-4 (Pearl do-calc)</strong></td>
+<td>Tax policy causal effect analysis, procurement bias</td>
+<td>HIGH</td>
+</tr>
+<tr>
+<td><strong>MOD-5 (Popper F(H))</strong></td>
+<td>Red-Team ACH for policy evaluation</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td><strong>SST G-B</strong></td>
+<td>Public spending data integrity (Benford on tenders)</td>
+<td>HIGH</td>
+</tr>
+<tr>
+<td><strong>Pascal Coupling</strong></td>
+<td>Cross-departmental policy shock propagation</td>
+<td>MEDIUM</td>
+</tr>
+</tbody>
+</table>
+<h3>UK-Specific Use Cases</h3>
+<ol>
+<li>
+<p><strong>Public Procurement — Ghost Tenders:</strong> SST G-B (Benford) on tender values from the Government Commercial Function. MAD &gt; 0.008 indicates structured manipulation of tender bands (threshold avoidance).</p>
+</li>
+<li>
+<p><strong>Fiscal Policy Narrative — Office for Budget Responsibility:</strong> ZTJ-6 Bai-Perron detecting undisclosed structural breaks in fiscal projections. Silent regime shifts where data-implied breaks don't match OBR-claimed narrative.</p>
+</li>
+<li>
+<p><strong>Civil Service Correspondence — Document Backdating:</strong> ZTJ-3 stylchronometry on FOI-disclosed letter sequences. ADF-rejected unit root (perfect stationarity) over 5+ year claimed intervals = batch production flag.</p>
+</li>
+<li>
+<p><strong>HMRC Tax Gap Analysis:</strong> SST G-B on self-assessment amount distributions. Structural deviations from Benford in specific SIC codes indicate organised tax evasion networks (Cabinet Office "tax gap" data).</p>
+</li>
+<li>
+<p><strong>Local Authority Spending — Transparency:</strong> IUY-Shannon on budget documents. Fabricated balanced budgets show H &lt; 3.5 bits/word (excessive sterility).</p>
+</li>
+<li>
+<p><strong>Regulatory Capture Detection (L5):</strong> H_R impact-gated entropy on FCA/Ofgem/Ofwat enforcement decisions. KL divergence &gt; 0.50 bits from organic baseline = selective enforcement flag.</p>
+</li>
+</ol>
+<h3>Proprietary Indicators (UK-Calibrated Thresholds)</h3>
+<table>
+<thead>
+<tr>
+<th>Indicator</th>
+<th>Formula</th>
+<th>UK Threshold</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Procurement Benford</td>
+<td>MAD_B on tender values</td>
+<td>&gt; 0.008 (manipulated)</td>
+<td>UK Government tender database</td>
+</tr>
+<tr>
+<td>Policy Narrative Breaks</td>
+<td>S_ZTJ,BP from Bai-Perron</td>
+<td>&gt; 0.20 (silent shift), &gt; 0.50 (escalation)</td>
+<td>OBR fiscal forecasts vs HMT data</td>
+</tr>
+<tr>
+<td>CSI Capital-Weighted</td>
+<td>CSI*(t) with w_i = C_i·T_i/Σ(C_j·T_j)</td>
+<td>&gt; 0.15 drop in 90d window</td>
+<td>Cabinet Office delivery tracker</td>
+</tr>
+<tr>
+<td>Selective Enforcement (L5)</td>
+<td>D_KL(P* ∥ Q) impact-gated</td>
+<td>&gt; 0.50 bits = SELECTIVE_ENFORCEMENT</td>
+<td>Regulator enforcement database</td>
+</tr>
+</tbody>
+</table>
+<h3>UK Data Sources</h3>
+<ul>
+<li><strong>Gov.uk Contracts Finder</strong> — all public procurement &gt; £10K</li>
+<li><strong>HMRC</strong> — tax receipts, PAYE real-time, VAT, corporation tax</li>
+<li><strong>OBR</strong> — fiscal forecast data, economic scenarios</li>
+<li><strong>ONS</strong> — GDP, inflation, public sector finances</li>
+<li><strong>WhatDoTheyKnow</strong> — FOI disclosure archive</li>
+<li><strong>Cabinet Office</strong> — government major projects data, delivery tracker</li>
+<li><strong>Regulator databases</strong> — FCA, Ofgem, Ofwat, Ofcom enforcement decisions</li>
+</ul>
+<h3>Commercialisation Pathway</h3>
+<ol>
+<li><strong>Phase 1:</strong> Tax evasion detection via Benford — HMRC pilot</li>
+<li><strong>Phase 2:</strong> Procurement integrity platform — Cabinet Office via G-Cloud</li>
+<li><strong>Phase 3:</strong> Policy narrative audit — OBR, NAO, PAC (Public Accounts Committee)</li>
+<li><strong>Phase 4:</strong> Full regulatory capture detection — CMA, competition enforcement</li>
+</ol>
+<h3>Revenue Estimate</h3>
+<table>
+<thead>
+<tr>
+<th>Segment</th>
+<th>Annual (GBP)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HMRC tax gap/fraud</td>
+<td>£5-8M</td>
+<td>HMRC fraud investigation, £5.5B gap addressable</td>
+</tr>
+<tr>
+<td>Procurement integrity</td>
+<td>£3-5M</td>
+<td>Cabinet Office, MOD, NHS procurement</td>
+</tr>
+<tr>
+<td>Policy/OBR audit</td>
+<td>£1-2M</td>
+<td>OBR, NAO, parliamentary committees</td>
+</tr>
+<tr>
+<td>Regulatory capture</td>
+<td>£1-2M</td>
+<td>Sector regulators (FCA, Ofgem, Ofcom)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Sector Total: £10-17M/yr</strong></p>
+<hr />
+<h2>4. RETAIL/CONSUMER</h2>
+<p><strong>UK Regulators:</strong> CMA, FCA (for credit), ICO (data protection)</p>
+<h3>Applicable T2SAIM Modules</h3>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Application</th>
+<th>Priority</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ZTJ-1 (Caliper)</strong></td>
+<td>Purchase timing anomalies, return pattern forensics</td>
+<td>HIGH</td>
+</tr>
+<tr>
+<td><strong>SST G-B (Benford)</strong></td>
+<td>Transaction amount distribution fraud detection</td>
+<td>HIGH</td>
+</tr>
+<tr>
+<td><strong>CARD Extensions (Mahalanobis)</strong></td>
+<td>Consumer behavioural biometric profiling</td>
+<td>HIGH</td>
+</tr>
+<tr>
+<td><strong>IUY (LZC)</strong></td>
+<td>Consumer review/feedback fabrications</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td><strong>ZTJ-5 (SDLE)</strong></td>
+<td>Card-not-present fraud cascade dynamics</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td><strong>SST G-HAW</strong></td>
+<td>Hawkes self-excitation for coordinated attack detection</td>
+<td>MEDIUM</td>
+</tr>
+</tbody>
+</table>
+<h3>UK-Specific Use Cases</h3>
+<ol>
+<li>
+<p><strong>Card Fraud (CARD domain):</strong> UK-specific CARD deployment with PSR liability-shift framework. Mahalanobis distance for cardholder behavioural biometrics (τ_MAH = 3.0). KL divergence pattern split for EMV chip vs magstripe vs CNP fraud differentiation. Two-Proportion Z-Test for pre/post 3DS2 fraud rate comparison.</p>
+</li>
+<li>
+<p><strong>Return Fraud — Retail:</strong> ZTJ-1 caliper test on return intervals. Organised return fraud rings produce batch-injected return patterns (CV &lt; 0.2).</p>
+</li>
+<li>
+<p><strong>Consumer Review Manipulation:</strong> IUY-LZC on review text. Fabricated reviews show LZC &lt; 0.60 (repetitive patterns). Stylometric clustering (IUY-style) reveals single-source multi-account review farms.</p>
+</li>
+<li>
+<p><strong>Loyalty Programme Fraud:</strong> SST G-B on points redemption amounts. Non-Benford distributions indicate account takeover or automated laundering.</p>
+</li>
+</ol>
+<h3>Proprietary Indicators (UK-Calibrated Thresholds)</h3>
+<table>
+<thead>
+<tr>
+<th>Indicator</th>
+<th>Formula</th>
+<th>UK Threshold</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mahalanobis Behavioural</td>
+<td>d_M(x,c) in ℝ^k</td>
+<td>τ_MAH = 3.0 (R2)</td>
+<td>UK card payment data (FCA/PSR)</td>
+</tr>
+<tr>
+<td>Return Caliper</td>
+<td>CV of return intervals (days)</td>
+<td>CV &lt; 0.2 (organised fraud)</td>
+<td>UK retail (John Lewis, M&amp;S patterns)</td>
+</tr>
+<tr>
+<td>Review LZC</td>
+<td>LZC(s) = c(s)log₂n/n</td>
+<td>&lt; 0.60 (synthetic)</td>
+<td>Trustpilot/Reviews.io</td>
+</tr>
+<tr>
+<td>Benford Transaction</td>
+<td>MAD_B on amount</td>
+<td>&gt; 0.012 (nonconforming)</td>
+<td>UK Finance aggregated data</td>
+</tr>
+</tbody>
+</table>
+<h3>UK Data Sources</h3>
+<ul>
+<li><strong>UK Finance</strong> — aggregated card fraud statistics by channel</li>
+<li><strong>FCA/PSR</strong> — payment system data, liability-shift statistics</li>
+<li><strong>Retailer consortium data</strong> — aggregated return metrics (BRC, BRC Retail Crime)</li>
+<li><strong>Trustpilot/Reviews.io</strong> — consumer review platform data</li>
+<li><strong>CIFAS</strong> — fraud prevention community data</li>
+</ul>
+<h3>Commercialisation Pathway</h3>
+<ol>
+<li><strong>Phase 1:</strong> CARD payment fraud — top-10 UK retail banks (already in spec as CARD domain)</li>
+<li><strong>Phase 2:</strong> Retail return fraud — major UK retailers (Tesco, Sainsbury's, M&amp;S, John Lewis)</li>
+<li><strong>Phase 3:</strong> Consumer review integrity — Trustpilot, CMA enforcement</li>
+</ol>
+<h3>Revenue Estimate</h3>
+<table>
+<thead>
+<tr>
+<th>Segment</th>
+<th>Annual (GBP)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Payment card fraud (CARD)</td>
+<td>£10-15M</td>
+<td>Top 10 UK banks + acquirers</td>
+</tr>
+<tr>
+<td>Retail return fraud</td>
+<td>£2-4M</td>
+<td>Top 20 UK retailers</td>
+</tr>
+<tr>
+<td>Review platform integrity</td>
+<td>£1-2M</td>
+<td>Trustpilot, CMA</td>
+</tr>
+<tr>
+<td>Loyalty programme fraud</td>
+<td>£1-2M</td>
+<td>Major UK loyalty schemes</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Sector Total: £14-23M/yr</strong></p>
+<hr />
+<h2>5. TECHNOLOGY/DIGITAL</h2>
+<p><strong>UK Regulators:</strong> ICO, Ofcom, CMA Digital Markets Unit</p>
+<h3>Applicable T2SAIM Modules</h3>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Application</th>
+<th>Priority</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>L7 (VP_I)</strong></td>
+<td>Platform manipulation, coordinated inauthentic behaviour</td>
+<td>HIGH</td>
+</tr>
+<tr>
+<td><strong>IUY (all engines)</strong></td>
+<td>Content fabrication, synthetic account detection</td>
+<td>HIGH</td>
+</tr>
+<tr>
+<td><strong>SST G-NET</strong></td>
+<td>Bot network topology, amplification infrastructure</td>
+<td>HIGH</td>
+</tr>
+<tr>
+<td><strong>ZTJ-1 (Caliper)</strong></td>
+<td>Post timing regularity (coordinated posting)</td>
+<td>HIGH</td>
+</tr>
+<tr>
+<td><strong>ZTJ-7 (RQA)</strong></td>
+<td>Determinism in engagement sequences</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td><strong>SST G-HAW</strong></td>
+<td>Hawkes self-excitation for viral cascade manipulation</td>
+<td>HIGH</td>
+</tr>
+<tr>
+<td><strong>MOD-4 (Pearl do-calc)</strong></td>
+<td>Causal inference for engagement manipulation</td>
+<td>MEDIUM</td>
+</tr>
+</tbody>
+</table>
+<h3>UK-Specific Use Cases</h3>
+<ol>
+<li>
+<p><strong>Social Media Manipulation — UK Elections/Social Media:</strong> VP_I (L7) graph reaction-diffusion with echo-chamber isolation guardrail. Astroturfed Veritas detection via LZC gate for synthetic accounts. Ref: UK Online Safety Act 2023.</p>
+</li>
+<li>
+<p><strong>Tech Platform Fraud — App Store Ratings/Payment:</strong> IUY-LZC for fake review clusters. Stylometric clustering detects single-source multi-account farms.</p>
+</li>
+<li>
+<p><strong>Cloud/Data Fraud — Infrastructure:</strong> ZTJ-1 caliper for API call timing. SST G-NET for suspicious topology in service-to-service auth patterns.</p>
+</li>
+<li>
+<p><strong>AI Content Detection — Lie Detector for AI:</strong> ZTJ-3 stylchronometry for AI-generated document streams. LLM-generated text shows artificially high stationarity (too consistent across long claimed intervals).</p>
+</li>
+</ol>
+<h3>Proprietary Indicators (UK-Calibrated Thresholds)</h3>
+<table>
+<thead>
+<tr>
+<th>Indicator</th>
+<th>Formula</th>
+<th>UK Threshold</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VP_I Graph-based</td>
+<td>L7 graph reaction-diffusion</td>
+<td>D_P/D_V &gt; 2.0 (echo chamber isolation)</td>
+<td>UK platform API data</td>
+</tr>
+<tr>
+<td>Synthetic Account LZC</td>
+<td>LZC of posting history</td>
+<td>&lt; 0.60 (fabricated)</td>
+<td>Twitter/X UK sample</td>
+</tr>
+<tr>
+<td>Coordinated Post Timings</td>
+<td>ZTJ-1 CV of gaps</td>
+<td>CV &lt; 0.2 (bot network)</td>
+<td>UK general election social media data</td>
+</tr>
+<tr>
+<td>Content Stationarity</td>
+<td>ZTJ-3 ADF on style features over time</td>
+<td>ADF rejects (stationary) over &gt; 1yr claimed</td>
+<td>Ofcom PSB content archive</td>
+</tr>
+</tbody>
+</table>
+<h3>UK Data Sources</h3>
+<ul>
+<li><strong>Ofcom</strong> — Online Safety Act enforcement data, platform transparency reports</li>
+<li><strong>Electoral Commission</strong> — digital campaign spending, ad library data</li>
+<li><strong>UK social media platform API</strong> — X, Meta, TikTok, LinkedIn</li>
+<li><strong>ICO</strong> — data breach notifications, algorithmic transparency</li>
+<li><strong>CMA Digital Markets Unit</strong> — platform market studies</li>
+</ul>
+<h3>Commercialisation Pathway</h3>
+<ol>
+<li><strong>Phase 1:</strong> Election integrity monitoring — Electoral Commission, Ofcom</li>
+<li><strong>Phase 2:</strong> Platform compliance (Online Safety Act) — sell to Meta, Google, TikTok UK</li>
+<li><strong>Phase 3:</strong> AI content detection — cross-sector (journalism, legal, education)</li>
+</ol>
+<h3>Revenue Estimate</h3>
+<table>
+<thead>
+<tr>
+<th>Segment</th>
+<th>Annual (GBP)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Election/disinformation monitoring</td>
+<td>£3-5M</td>
+<td>Ofcom, Electoral Commission, DCMS</td>
+</tr>
+<tr>
+<td>Platform compliance (Online Safety Act)</td>
+<td>£5-8M</td>
+<td>Top 5 platform UK ops</td>
+</tr>
+<tr>
+<td>AI content authenticity</td>
+<td>£2-4M</td>
+<td>Media, legal, education sectors</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Sector Total: £10-17M/yr</strong></p>
+<hr />
+<h2>6. DEFENCE/SECURITY</h2>
+<p><strong>UK Framework:</strong> Official Secrets Act, UK Security Vetting, MOD procurement</p>
+<h3>Applicable T2SAIM Modules</h3>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Application</th>
+<th>Priority</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>MOD-4 (Pearl do-calc)</strong></td>
+<td>State actor intervention detection, sanctions evasion</td>
+<td>HIGH</td>
+</tr>
+<tr>
+<td><strong>ZTJ-5 (SDLE)</strong></td>
+<td>Multi-scale adversarial behaviour in cyber operations</td>
+<td>HIGH</td>
+</tr>
+<tr>
+<td><strong>SST G-NET + G-PH</strong></td>
+<td>Intelligence/signal network topology anomaly</td>
+<td>HIGH</td>
+</tr>
+<tr>
+<td><strong>IUY (all engines)</strong></td>
+<td>PSYOPS detection, narrative warfare analysis</td>
+<td>HIGH</td>
+</tr>
+<tr>
+<td><strong>L6 (ACE) + L7 (VP_I)</strong></td>
+<td>Coordinated influence operations</td>
+<td>HIGH</td>
+</tr>
+<tr>
+<td><strong>MS-VAR</strong></td>
+<td>Preparation→Exploitation→Cover-up phase detection</td>
+<td>HIGH</td>
+</tr>
+<tr>
+<td><strong>Vetos 1.1-1.3</strong></td>
+<td>Chain-of-custody, physical impossibility (impossible travel) checks</td>
+<td>HIGH</td>
+</tr>
+</tbody>
+</table>
+<h3>UK-Specific Use Cases</h3>
+<ol>
+<li>
+<p><strong>Sanctions Evasion Detection:</strong> MOD-4 Pearl do-calculus for DAG construction of beneficial ownership chains. L6 ACE anomaly flags hidden control structures. SST G-PH persistent homology for trade pattern topology changes pre/post sanctions.</p>
+</li>
+<li>
+<p><strong>Cyber — Insider Threat:</strong> ZTJ-1 caliper on access log inter-event gaps (human vs automated access). ZTJ-5 SDLE for anomalous user behaviour at multiple time scales. MS-VAR for latent phase detection (reconnaissance → weaponisation → exfiltration).</p>
+</li>
+<li>
+<p><strong>Intelligence Analysis — MI5/MI6/GCHQ:</strong> IUY-stylometric clustering for classifying HUMINT/SIGINT reporting. ZTJ-3 stylchronometry for assessing intelligence continuity. Vetos 1.1-1.3 for chain-of-custody and impossible-travel in agent network tracking.</p>
+</li>
+<li>
+<p><strong>Defence Contract Fraud:</strong> SST G-B on MOD contractor invoice amounts. CSI (L4) capital-weighted for megaproject commitment tracking (Type 26 frigate, Dreadnought class).</p>
+</li>
+</ol>
+<h3>Proprietary Indicators (UK-Calibrated Thresholds)</h3>
+<table>
+<thead>
+<tr>
+<th>Indicator</th>
+<th>Formula</th>
+<th>UK Threshold</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Impossible Travel</td>
+<td>d(s_i,s_j)/</td>
+<td>t_j-t_i</td>
+<td>&gt; v_max</td>
+</tr>
+<tr>
+<td>Access Log Caliper</td>
+<td>CV of login intervals</td>
+<td>CV &lt; 0.1 (scheduled/automated)</td>
+<td>UK government IT (NCSC)</td>
+</tr>
+<tr>
+<td>Sanctions Network PH</td>
+<td>W_p(PD_obs, PD_ref)</td>
+<td>&gt; τ_PH(R)</td>
+<td>HMT sanctions data</td>
+</tr>
+<tr>
+<td>Narrative VP_I (PSYOPS)</td>
+<td>V_prop/V_organic ratio</td>
+<td>&gt; 5.0 (coordinated campaign)</td>
+<td>UK StratCom</td>
+</tr>
+</tbody>
+</table>
+<h3>UK Data Sources</h3>
+<ul>
+<li><strong>MOD</strong> — open procurement data, contract award notices</li>
+<li><strong>HMT Sanctions</strong> — Office of Financial Sanctions Implementation (OFSI) data</li>
+<li><strong>NCSC</strong> — cyber threat intelligence (some public)</li>
+<li><strong>Companies House</strong> — beneficial ownership (PSC register)</li>
+<li><strong>UK StratCom</strong> — strategic communications data</li>
+<li><strong>GCHQ open intelligence</strong> — public reporting</li>
+</ul>
+<h3>Commercialisation Pathway</h3>
+<ol>
+<li><strong>Phase 1:</strong> Sanctions evasion detection — HMT OFSI, MOD commercial</li>
+<li><strong>Phase 2:</strong> Insider threat/anomaly detection — NCSC, UK intelligence community</li>
+<li><strong>Phase 3:</strong> PSYOPS detection — UK StratCom, Defence Academy</li>
+</ol>
+<h3>Revenue Estimate</h3>
+<table>
+<thead>
+<tr>
+<th>Segment</th>
+<th>Annual (GBP)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sanctions detection</td>
+<td>£3-5M</td>
+<td>HMT, MOD, major banks OFSI compliance</td>
+</tr>
+<tr>
+<td>Insider threat (government)</td>
+<td>£2-4M</td>
+<td>NCSC, MOD, UK intelligence</td>
+</tr>
+<tr>
+<td>Cyber anomaly detection</td>
+<td>£2-3M</td>
+<td>UK government, CNI operators</td>
+</tr>
+<tr>
+<td>PSYOPS/narrative warfare</td>
+<td>£1-2M</td>
+<td>UK StratCom, Defence</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Sector Total: £8-14M/yr</strong></p>
+<hr />
+<h2>7. HEALTHCARE/NHS</h2>
+<p><strong>UK Regulators:</strong> Care Quality Commission (CQC), NHS England, MHRA, DHSC</p>
+<h3>Applicable T2SAIM Modules</h3>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Application</th>
+<th>Priority</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ZTJ-1 (Caliper)</strong></td>
+<td>Appointment scheduling, waiting list anomalies</td>
+<td>HIGH</td>
+</tr>
+<tr>
+<td><strong>ZTJ-4 (MF-DFA)</strong></td>
+<td>Patient flow multifractal analysis (A&amp;E, elective)</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td><strong>SST G-B (Benford)</strong></td>
+<td>Prescription/payment amount anomalies</td>
+<td>HIGH</td>
+</tr>
+<tr>
+<td><strong>SST G-NET</strong></td>
+<td>Patient referral networks, GP-to-specialist topology</td>
+<td>HIGH</td>
+</tr>
+<tr>
+<td><strong>IUY (Shannon)</strong></td>
+<td>Clinical documentation coherence</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td><strong>MOD-4 (Pearl do-calc)</strong></td>
+<td>Treatment outcome causal inference</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td><strong>L4 (CSI)</strong></td>
+<td>NHS trust commitment tracking (waiting list pledges)</td>
+<td>HIGH</td>
+</tr>
+</tbody>
+</table>
+<h3>UK-Specific Use Cases</h3>
+<ol>
+<li>
+<p><strong>NHS Waiting List Manipulation — RTT Referral-to-Treatment:</strong> ZTJ-1 caliper on waiting list addition/removal timing. Fabricated reductions produce CV &lt; 0.1 (too regular, indicates batch backdating). SST G-B on waiting list numbers — Benford violation indicates structured data manipulation.</p>
+</li>
+<li>
+<p><strong>Prescription Fraud — GPs/Pharmacies:</strong> SST G-B on prescription item amounts. NHS fraud typically produces MAD &gt; 0.012 on prescribing patterns. ZTJ-5 SDLE for multi-scale anomaly in pharmacy claim patterns.</p>
+</li>
+<li>
+<p><strong>Clinical Trial Data Integrity — MHRA:</strong> IUY-Shannon on patient diary data. Fabricated entries show H &lt; 3.5 bits/word (excessive sterility). ZTJ-3 stylchronometry on site-based document sequences — batch production detection.</p>
+</li>
+<li>
+<p><strong>NHS Procurement — Supply Chain:</strong> SST G-NET for supplier concentration detection (unnatural hub structures). L4 CSI for capital-weighted commitment tracking on major NHS IT/Infrastructure contracts.</p>
+</li>
+</ol>
+<h3>Proprietary Indicators (UK-Calibrated Thresholds)</h3>
+<table>
+<thead>
+<tr>
+<th>Indicator</th>
+<th>Formula</th>
+<th>UK Threshold</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RTT Waiting List Caliper</td>
+<td>CV of list update intervals</td>
+<td>CV &lt; 0.2 (manipulated)</td>
+<td>NHS England data</td>
+</tr>
+<tr>
+<td>Prescription Benford</td>
+<td>MAD_B on Rx item counts</td>
+<td>&gt; 0.012 (fraud flag)</td>
+<td>NHSBSA prescribing data</td>
+</tr>
+<tr>
+<td>Clinical Diary Shannon</td>
+<td>H_bits on patient diary text</td>
+<td>&lt; 3.5 bits (fabricated)</td>
+<td>MHRA trial data</td>
+</tr>
+<tr>
+<td>Referral Network Hub</td>
+<td>H = max(k_i)/⟨k⟩ in G-NET</td>
+<td>&gt; 3.0 (abnormal)</td>
+<td>NHS GP-specialist referrals</td>
+</tr>
+</tbody>
+</table>
+<h3>UK Data Sources</h3>
+<ul>
+<li><strong>NHS England</strong> — RTT waiting lists, A&amp;E attendances, admitted patient care</li>
+<li><strong>NHSBSA</strong> — prescribing data, pharmacy claims, dental payments</li>
+<li><strong>MHRA</strong> — clinical trial registrations, adverse event reports</li>
+<li><strong>CQC</strong> — inspection ratings, compliance data</li>
+<li><strong>ONS</strong> — health statistics, mortality, life expectancy</li>
+<li><strong>NHS Supply Chain</strong> — procurement data</li>
+</ul>
+<h3>Commercialisation Pathway</h3>
+<ol>
+<li><strong>Phase 1:</strong> NHS waiting list forensics — NHS England Counter Fraud Authority (NHSCFA)</li>
+<li><strong>Phase 2:</strong> Prescription fraud detection — NHSBSA, NHSCFA</li>
+<li><strong>Phase 3:</strong> Clinical trial integrity — MHRA, pharmaceutical companies</li>
+<li><strong>Phase 4:</strong> NHS procurement integrity — NHS Supply Chain</li>
+</ol>
+<h3>Revenue Estimate</h3>
+<table>
+<thead>
+<tr>
+<th>Segment</th>
+<th>Annual (GBP)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NHS waiting list fraud</td>
+<td>£3-5M</td>
+<td>NHSCFA, NHS England</td>
+</tr>
+<tr>
+<td>Prescription fraud</td>
+<td>£2-4M</td>
+<td>NHSBSA, NHSCFA</td>
+</tr>
+<tr>
+<td>Clinical trial integrity</td>
+<td>£2-3M</td>
+<td>MHRA, UK pharma</td>
+</tr>
+<tr>
+<td>NHS procurement</td>
+<td>£1-2M</td>
+<td>NHS Supply Chain</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Sector Total: £8-14M/yr</strong></p>
+<hr />
+<h2>8. ENERGY/ENVIRONMENT</h2>
+<p><strong>UK Regulators:</strong> Ofgem, North Sea Transition Authority (NSTA), Environment Agency</p>
+<h3>Applicable T2SAIM Modules</h3>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Application</th>
+<th>Priority</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ZTJ-1 (Caliper)</strong></td>
+<td>Energy trading timing anomalies, renewable generation patterns</td>
+<td>HIGH</td>
+</tr>
+<tr>
+<td><strong>SST M2/M3</strong></td>
+<td>Gas/electricity market manipulation (layering, spoofing)</td>
+<td>HIGH</td>
+</tr>
+<tr>
+<td><strong>SST G-B (Benford)</strong></td>
+<td>Carbon credit/allowance trade amount anomalies</td>
+<td>HIGH</td>
+</tr>
+<tr>
+<td><strong>MOD-4 (Pearl do-calc)</strong></td>
+<td>Market manipulation causal inference (NBP, UK ETS)</td>
+<td>HIGH</td>
+</tr>
+<tr>
+<td><strong>MS-VAR</strong></td>
+<td>Latent phase detection in energy market abuse</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td><strong>ZTJ-4 (MF-DFA)</strong></td>
+<td>Wind/solar generation multifractal anomaly detection</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td><strong>Pascal Coupling</strong></td>
+<td>Energy-price→cost-of-living shock propagation</td>
+<td>MEDIUM</td>
+</tr>
+</tbody>
+</table>
+<h3>UK-Specific Use Cases</h3>
+<ol>
+<li>
+<p><strong>Gas Market Manipulation — NBP (National Balancing Point):</strong> SST M1-M4 gate battery applied to ICE NBP gas futures order book. Ghost orders (M1), layering (M3), wash trading (M4). OFGEM/Clearing Europe referrals.</p>
+</li>
+<li>
+<p><strong>Carbon Market (UK ETS) — Auction/Secondary Market:</strong> SST G-B on UK ETS allowance trade amounts. G-HAW self-excitation for coordinated cascade detection. MOD-4 do-calculus for DAG linking Ofgem policy announcements to allowance price movements.</p>
+</li>
+<li>
+<p><strong>Renewable Subsidy Fraud — RO (Renewables Obligation)/CfD:</strong> ZTJ-1 caliper on generation meter readings. Fabricated generation produces uniform intervals (CV &lt; 0.2). IUY-Shannon on operator documentation.</p>
+</li>
+<li>
+<p><strong>Energy Supplier Adherence — Price Cap/Wholesale Cost:</strong> L4 CSI for supplier commitment tracking (price promises). L5 H_R for uneven application of price-cap rules across customer segments.</p>
+</li>
+</ol>
+<h3>Proprietary Indicators (UK-Calibrated Thresholds)</h3>
+<table>
+<thead>
+<tr>
+<th>Indicator</th>
+<th>Formula</th>
+<th>UK Threshold</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NBP Ghost Order (M1)</td>
+<td>τ_M1(R) lifetime gas contracts</td>
+<td>R1 &lt; 5s, R2 &lt; 100ms</td>
+<td>ICE NBP order book</td>
+</tr>
+<tr>
+<td>Carbon Market Benford</td>
+<td>MAD_B on UK ETS allowance trades</td>
+<td>&gt; 0.008 (manipulated)</td>
+<td>ICE UK ETS futures</td>
+</tr>
+<tr>
+<td>Generation Caliper</td>
+<td>CV of meter reading intervals</td>
+<td>&lt; 0.2 (fabricated generation)</td>
+<td>ROC/CfD registry data</td>
+</tr>
+<tr>
+<td>Gas Price Cascade</td>
+<td>G-HAW α/β ratio</td>
+<td>&gt; 1.0 (explosive)</td>
+<td>NBP spot market</td>
+</tr>
+</tbody>
+</table>
+<h3>UK Data Sources</h3>
+<ul>
+<li><strong>ICE/NBP</strong> — gas futures and spot market data</li>
+<li><strong>ICE UK ETS</strong> — carbon allowance auction and secondary market</li>
+<li><strong>Ofgem</strong> — energy market data, supplier compliance, price cap data</li>
+<li><strong>NSTA</strong> — North Sea production, licensing data</li>
+<li><strong>National Grid ESO</strong> — generation mix, renewable output</li>
+<li><strong>DESNZ (BEIS)</strong> — renewables obligation, CfD registry</li>
+<li><strong>EMR (Electricity Market Reform)</strong> — capacity market data</li>
+</ul>
+<h3>Commercialisation Pathway</h3>
+<ol>
+<li><strong>Phase 1:</strong> NBP gas market abuse detection — Ofgem, ICE</li>
+<li><strong>Phase 2:</strong> UK ETS carbon market integrity — DESNZ, ICE</li>
+<li><strong>Phase 3:</strong> Renewable subsidy fraud — DESNZ, National Grid</li>
+</ol>
+<h3>Revenue Estimate</h3>
+<table>
+<thead>
+<tr>
+<th>Segment</th>
+<th>Annual (GBP)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gas market surveillance (NBP)</td>
+<td>£3-5M</td>
+<td>ICE/Ofgem</td>
+</tr>
+<tr>
+<td>Carbon market (UK ETS)</td>
+<td>£2-3M</td>
+<td>DESNZ, ICE</td>
+</tr>
+<tr>
+<td>Renewables subsidy fraud</td>
+<td>£1-3M</td>
+<td>DESNZ, National Grid</td>
+</tr>
+<tr>
+<td>Supplier compliance</td>
+<td>£1-2M</td>
+<td>Ofgem (price cap, market abuse)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Sector Total: £7-13M/yr</strong></p>
+<hr />
+<h2>9. REAL ESTATE/CONSTRUCTION</h2>
+<p><strong>UK Regulators:</strong> RICS, HMRC (Stamp Duty, SDLT), CMA</p>
+<h3>Applicable T2SAIM Modules</h3>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Application</th>
+<th>Priority</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>SST G-B (Benford)</strong></td>
+<td>Transaction price anomalies, SDLT avoidance</td>
+<td>HIGH</td>
+</tr>
+<tr>
+<td><strong>SST G-NET</strong></td>
+<td>Developer/broker network topology</td>
+<td>HIGH</td>
+</tr>
+<tr>
+<td><strong>ZTJ-1 (Caliper)</strong></td>
+<td>Transaction timing anomalies (bulk conveyancing)</td>
+<td>HIGH</td>
+</tr>
+<tr>
+<td><strong>IUY (Shannon)</strong></td>
+<td>Contract/documentation fabrications</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td><strong>MOD-4 (Pearl do-calc)</strong></td>
+<td>Property market intervention/artificial inflation detection</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td><strong>L4 (CSI)</strong></td>
+<td>Developer commitment tracking (planning promises)</td>
+<td>MEDIUM</td>
+</tr>
+</tbody>
+</table>
+<h3>UK-Specific Use Cases</h3>
+<ol>
+<li>
+<p><strong>SDLT Avoidance — Property Transaction Structuring:</strong> SST G-B on property transaction prices. Systematic MAD_B &gt; 0.008 indicates structured price manipulation to stay below SDLT thresholds (£125K, £250K, £925K, £1.5M bands). ZTJ-1 caliper on transaction clustering around threshold dates.</p>
+</li>
+<li>
+<p><strong>Help-to-Buy/Shared Ownership Fraud:</strong> SST G-B on HTB equity loan amounts. Non-Benford distributions indicate misrepresentation of property values. L4 CSI for government commitment tracking (housing delivery).</p>
+</li>
+<li>
+<p><strong>Construction Procurement — CMA/Cartel Detection:</strong> SST G-NET for unnatural hub concentration in construction supply-chain networks (bid-rigging pattern). ZTJ-7 RQA for determinism in contract win patterns.</p>
+</li>
+<li>
+<p><strong>Planning Permission — Land Banking:</strong> ZTJ-6 Bai-Perron detecting unannounced regime shifts in permission grant rates. L5 H_R for selective application of planning rules across developers.</p>
+</li>
+</ol>
+<h3>Proprietary Indicators (UK-Calibrated Thresholds)</h3>
+<table>
+<thead>
+<tr>
+<th>Indicator</th>
+<th>Formula</th>
+<th>UK Threshold</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SDLT Benford</td>
+<td>MAD_B on transaction prices</td>
+<td>&gt; 0.008 (threshold gaming)</td>
+<td>HMRC SDLT data</td>
+</tr>
+<tr>
+<td>Transaction Clustering</td>
+<td>CV of sale dates per developer</td>
+<td>CV &lt; 0.2 (bulk conveyancing)</td>
+<td>Land Registry</td>
+</tr>
+<tr>
+<td>Construction Network</td>
+<td>H = hub concentration index</td>
+<td>&gt; 5.0 (cartel risk)</td>
+<td>Companies House contractor links</td>
+</tr>
+<tr>
+<td>Planning Gate L5</td>
+<td>D_KL(P* ∥ Q) for planning decisions</td>
+<td>&gt; 0.50 bits (selective enforcement)</td>
+<td>Local authority planning data</td>
+</tr>
+</tbody>
+</table>
+<h3>UK Data Sources</h3>
+<ul>
+<li><strong>HM Land Registry</strong> — property transaction prices, ownership records</li>
+<li><strong>HMRC</strong> — SDLT returns, property transaction data</li>
+<li><strong>ONS</strong> — house price index, regional property data</li>
+<li><strong>MHCLG</strong> — housing delivery data, planning permissions</li>
+<li><strong>Companies House</strong> — developer/contractor network data</li>
+<li><strong>RICS</strong> — surveyed property data, professional standards</li>
+</ul>
+<h3>Commercialisation Pathway</h3>
+<ol>
+<li><strong>Phase 1:</strong> SDLT avoidance detection — HMRC</li>
+<li><strong>Phase 2:</strong> Construction cartel detection — CMA</li>
+<li><strong>Phase 3:</strong> Planning/land banking — MHCLG, local government</li>
+</ol>
+<h3>Revenue Estimate</h3>
+<table>
+<thead>
+<tr>
+<th>Segment</th>
+<th>Annual (GBP)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SDLT fraud (HMRC)</td>
+<td>£3-5M</td>
+<td>HMRC property fraud team</td>
+</tr>
+<tr>
+<td>Construction cartel detection</td>
+<td>£2-3M</td>
+<td>CMA</td>
+</tr>
+<tr>
+<td>Developer/planning</td>
+<td>£1-2M</td>
+<td>MHCLG, LAs</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Sector Total: £6-10M/yr</strong></p>
+<hr />
+<h2>10. EDUCATION</h2>
+<p><strong>UK Regulators:</strong> Ofsted, Office for Students (OfS), DfE</p>
+<h3>Applicable T2SAIM Modules</h3>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Application</th>
+<th>Priority</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ZTJ-3 (Stylchronometry)</strong></td>
+<td>Student enrolment/attendance record temporal forensics</td>
+<td>HIGH</td>
+</tr>
+<tr>
+<td><strong>SST G-B (Benford)</strong></td>
+<td>Exam grade distributions, funding amount anomalies</td>
+<td>HIGH</td>
+</tr>
+<tr>
+<td><strong>IUY (Shannon)</strong></td>
+<td>Student essay/assignment fabrications (AI detection)</td>
+<td>HIGH</td>
+</tr>
+<tr>
+<td><strong>KCT (from YAPI_TASLARI)</strong></td>
+<td>Knowledge consistency test for academic credentials</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td><strong>SST G-NET</strong></td>
+<td>University funding network topology</td>
+<td>MEDIUM</td>
+</tr>
+</tbody>
+</table>
+<h3>UK-Specific Use Cases</h3>
+<ol>
+<li>
+<p><strong>University Admissions — Grade Inflation:</strong> SST G-B on degree classification distributions (First, 2:1, 2:2). Structural deviation &gt; MAD 0.008 from natural distribution indicates systematic grade manipulation. ZTJ-3 on assessment submission patterns over time.</p>
+</li>
+<li>
+<p><strong>Student Finance — SLC Fraud:</strong> SST G-B on student loan amount distributions. Non-Benford in specific categories indicates false maintenance claim patterns. ZTJ-1 caliper on enrolment date irregularities.</p>
+</li>
+<li>
+<p><strong>Academic Integrity — AI-Generated Coursework:</strong> IUY-Shannon entropy &lt; 4.0 bits (excessively sterile text). ZTJ-3 stylchronometry for zero drift across document sequences (AI batch production). LZC &lt; 0.60 for synthetic text flag.</p>
+</li>
+<li>
+<p><strong>International Student Visa Compliance:</strong> ZTJ-Veto 1.2 for impossible-travel (same student at two UK universities simultaneously). PHRED analysis from YAPI_TASLARI for network topology of agent-sponsored students.</p>
+</li>
+</ol>
+<h3>Proprietary Indicators (UK-Calibrated Thresholds)</h3>
+<table>
+<thead>
+<tr>
+<th>Indicator</th>
+<th>Formula</th>
+<th>UK Threshold</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Grade Benford</td>
+<td>MAD_B on grade distributions</td>
+<td>&gt; 0.008 (structural)</td>
+<td>HESA graduate data</td>
+</tr>
+<tr>
+<td>AI Text Shannon</td>
+<td>H_bits on student text</td>
+<td>&lt; 4.0 bits (fabricated)</td>
+<td>UK university sample corpora</td>
+</tr>
+<tr>
+<td>Admissions Caliper</td>
+<td>CV of enrolment dates</td>
+<td>&lt; 0.2 (batch processing)</td>
+<td>UCAS data</td>
+</tr>
+<tr>
+<td>Statement Stationarity</td>
+<td>ZTJ-3 ADF on personal statements</td>
+<td>ADF rejects (too consistent)</td>
+<td>UCAS personal statements</td>
+</tr>
+</tbody>
+</table>
+<h3>UK Data Sources</h3>
+<ul>
+<li><strong>HESA</strong> — higher education student data, grades, demographics</li>
+<li><strong>UCAS</strong> — university application and admission data</li>
+<li><strong>DfE</strong> — school performance data, pupil characteristics</li>
+<li><strong>OfS</strong> — office for students, quality assessment data</li>
+<li><strong>SLC</strong> — student loan company, payment and enrolment data</li>
+<li><strong>Jisc</strong> — UK academic IT/data collaboration</li>
+</ul>
+<h3>Commercialisation Pathway</h3>
+<ol>
+<li><strong>Phase 1:</strong> Grade inflation detection — OfS, DfE, QAA</li>
+<li><strong>Phase 2:</strong> AI academic integrity — UK universities (Russell Group)</li>
+<li><strong>Phase 3:</strong> Student finance fraud — SLC</li>
+</ol>
+<h3>Revenue Estimate</h3>
+<table>
+<thead>
+<tr>
+<th>Segment</th>
+<th>Annual (GBP)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Grade/academic integrity</td>
+<td>£2-4M</td>
+<td>OfS, QAA, UK universities</td>
+</tr>
+<tr>
+<td>AI-generated content detection</td>
+<td>£3-5M</td>
+<td>Russell Group + other UK HEIs</td>
+</tr>
+<tr>
+<td>Student finance fraud</td>
+<td>£2-3M</td>
+<td>SLC</td>
+</tr>
+<tr>
+<td>International admissions</td>
+<td>£1-2M</td>
+<td>Home Office, UKVI</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Sector Total: £8-14M/yr</strong></p>
+<hr />
+<h2>11. LEGAL/PROFESSIONAL SERVICES</h2>
+<p><strong>UK Regulators:</strong> SRA, Law Society, FRC (Audit), ICAEW, BSB</p>
+<h3>Applicable T2SAIM Modules</h3>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Application</th>
+<th>Priority</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>IUY (all engines)</strong></td>
+<td>Legal document coherence, contract fabrication</td>
+<td>HIGH</td>
+</tr>
+<tr>
+<td><strong>ZTJ-3 (Stylchronometry)</strong></td>
+<td>Document backdating, discovery material forensics</td>
+<td>HIGH</td>
+</tr>
+<tr>
+<td><strong>ZTJ-6 (Bai-Perron)</strong></td>
+<td>Narrative breaks in legal arguments/corporate disclosure</td>
+<td>HIGH</td>
+</tr>
+<tr>
+<td><strong>MOD-4 (Pearl do-calc)</strong></td>
+<td>Causal inference for liability attribution</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td><strong>SELDON J(θ)</strong></td>
+<td>Court-ready forensic standard for expert testimony</td>
+<td>HIGH</td>
+</tr>
+<tr>
+<td><strong>Counterfactual Damage X</strong></td>
+<td>Structural damage quantification</td>
+<td>HIGH</td>
+</tr>
+<tr>
+<td><strong>SST G-NET</strong></td>
+<td>Law firm/solicitor referral network anomaly</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td><strong>Vetos 1.1-1.3</strong></td>
+<td>Evidence chain-of-custody, impossible-travel for alibi</td>
+<td>HIGH</td>
+</tr>
+</tbody>
+</table>
+<h3>UK-Specific Use Cases</h3>
+<ol>
+<li>
+<p><strong>Disclosure/Discovery Forensics — Civil/Criminal Litigation:</strong> ZTJ-3 stylchronometry on disclosed document corpora. Batch-produced documents show zero stylistic drift over claimed long intervals (ADF stationarity rejection = fabrication flag). IUY-Shannon on affidavit/expert report language.</p>
+</li>
+<li>
+<p><strong>Audit — FRC Enforcement:</strong> SST G-B on audit fee structures. Non-Benford fee distributions indicate structured fee manipulation (audit tendering collusion). IUY-stylometric clustering comparing auditor independence reports against actual conduct.</p>
+</li>
+<li>
+<p><strong>Contract Backdating — SRA/BSB Disciplinary:</strong> ZTJ-Veto 1.1 temporal arrow violation. ZTJ-3 on document timestamps vs content dates. PHRED analysis for impossible metadata (NTFS SI/FN timestamp cross-check from YAPI_TASLARI).</p>
+</li>
+<li>
+<p><strong>Legal AI/LLM Use — Solicitor Professional Standards:</strong> IUY-LZC on legal submissions. AI-generated legal arguments show LZC &lt; 0.60 (repetitive). Shannon entropy outside 4.0-5.5 bit natural range.</p>
+</li>
+<li>
+<p><strong>SELDON Supreme-Tier Deployment:</strong> Full J(θ) optimisation, ECE &lt; 0.02, X_counter archived, Popper F(H) ≥ 0.80, κ ≥ 0.80 inter-analyst. Court-ready under UK Fraud Act 2006 and CPR Part 35.</p>
+</li>
+</ol>
+<h3>Proprietary Indicators (UK-Calibrated Thresholds)</h3>
+<table>
+<thead>
+<tr>
+<th>Indicator</th>
+<th>Formula</th>
+<th>UK Threshold</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Document Stationarity</td>
+<td>ZTJ-3 ADF on style features</td>
+<td>ADF rejects for &gt; 1yr claimed</td>
+<td>UK High Court disclosure data</td>
+</tr>
+<tr>
+<td>Legal Text Shannon</td>
+<td>H_bits on legal documents</td>
+<td>&lt; 4.0 or &gt; 5.5 bits (abnormal)</td>
+<td>BAILII caselaw corpus</td>
+</tr>
+<tr>
+<td>Audit Fee Benford</td>
+<td>MAD_B on audit fee amounts</td>
+<td>&gt; 0.008 (collusion)</td>
+<td>FRC audit inspection</td>
+</tr>
+<tr>
+<td>NTFS Backdating Detection</td>
+<td>SI_timestamp &gt; FN_timestamp</td>
+<td>Mismatch = Backdating flag</td>
+<td>Windows forensic metadata (YAPI_TASLARI)</td>
+</tr>
+</tbody>
+</table>
+<h3>UK Data Sources</h3>
+<ul>
+<li><strong>BAILII</strong> — British and Irish Legal Information Institute (all UK caselaw)</li>
+<li><strong>FRC</strong> — Audit Quality Review, audit inspection reports</li>
+<li><strong>SRA</strong> — solicitor regulation and disciplinary data</li>
+<li><strong>Companies House</strong> — corporate filing data, audit fees</li>
+<li><strong>UK courts</strong> — disclosure materials (case-specific)</li>
+<li><strong>National Archives</strong> — historic documents and parliamentary records</li>
+<li><strong>ICAEW/CIOT</strong> — professional body data</li>
+</ul>
+<h3>Commercialisation Pathway</h3>
+<ol>
+<li><strong>Phase 1:</strong> Document backdating forensics — UK law firms (Magic Circle, Silver Circle), SRA</li>
+<li><strong>Phase 2:</strong> Audit/FRC forensics — FRC audit quality, ICAEW</li>
+<li><strong>Phase 3:</strong> SELDON Supreme-court deployments — expert witness practices, litigation funders</li>
+<li><strong>Phase 4:</strong> AI legal content detection — Bar Standards Board, law firm compliance</li>
+</ol>
+<h3>Revenue Estimate</h3>
+<table>
+<thead>
+<tr>
+<th>Segment</th>
+<th>Annual (GBP)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Document forensics (law firms)</td>
+<td>£3-5M</td>
+<td>Magic Circle, international law firms</td>
+</tr>
+<tr>
+<td>Audit quality (FRC)</td>
+<td>£2-3M</td>
+<td>FRC, top-6 audit firms</td>
+</tr>
+<tr>
+<td>SELDON expert testimony</td>
+<td>£2-4M</td>
+<td>Case-by-case high-value litigation</td>
+</tr>
+<tr>
+<td>AI legal content detection</td>
+<td>£1-2M</td>
+<td>SRA, BSB, law firms</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Sector Total: £8-14M/yr</strong></p>
+<hr />
+<h2>12. AGRICULTURE/FOOD</h2>
+<p><strong>UK Regulators:</strong> DEFRA, FSA, AHDB, Rural Payments Agency (RPA)</p>
+<h3>Applicable T2SAIM Modules</h3>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Application</th>
+<th>Priority</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ZTJ-6 (Bai-Perron)</strong></td>
+<td>Food supply chain structural break detection</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td><strong>SST G-B (Benford)</strong></td>
+<td>Subsidy payment anomalies (BPS, ELMS)</td>
+<td>HIGH</td>
+</tr>
+<tr>
+<td><strong>SST G-NET</strong></td>
+<td>Food supply chain network topology</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td><strong>ZTJ-1 (Caliper)</strong></td>
+<td>Food safety inspection timing anomalies</td>
+<td>HIGH</td>
+</tr>
+<tr>
+<td><strong>IUY (Shannon)</strong></td>
+<td>Food labelling/origin documentation coherence</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td><strong>MOD-4 (Pearl do-calc)</strong></td>
+<td>Brexit trade flow causal effect analysis</td>
+<td>MEDIUM</td>
+</tr>
+</tbody>
+</table>
+<h3>UK-Specific Use Cases</h3>
+<ol>
+<li>
+<p><strong>CAP/BPS Subsidy Fraud — Rural Payments Agency:</strong> SST G-B on Basic Payment Scheme amounts. Non-Benford distribution indicates land area misrepresentation, multiple-claim fraud. ZTJ-1 on land parcel registration timing.</p>
+</li>
+<li>
+<p><strong>Food Fraud — Horsemeat 2.0 / Origin Labelling:</strong> IUY-Shannon on supply chain documentation. Fabricated chain-of-custody documents show H &lt; 4.0 bits. ZTJ-3 stylchronometry on assurance certificates from different points in the chain.</p>
+</li>
+<li>
+<p><strong>Food Safety — FSA Inspection Timing:</strong> ZTJ-1 caliper on inspection intervals. Expected schedule produces CV near 0; manipulated scheduling (inspection avoidance) produces CV &gt; 2.5.</p>
+</li>
+<li>
+<p><strong>Brexit Trade Flow Impact — DEFRA:</strong> MOD-4 do-calculus. Causal effect of post-Brexit trade friction on food imports/exports. Counterfactual Damage X for structural deviation of UK food trade from pre-2016 trend.</p>
+</li>
+</ol>
+<h3>Proprietary Indicators (UK-Calibrated Thresholds)</h3>
+<table>
+<thead>
+<tr>
+<th>Indicator</th>
+<th>Formula</th>
+<th>UK Threshold</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BPS Subsidy Benford</td>
+<td>MAD_B on payment amounts</td>
+<td>&gt; 0.012 (fraud flag)</td>
+<td>RPA payment data</td>
+</tr>
+<tr>
+<td>Inspection Caliper</td>
+<td>CV of inspection interval</td>
+<td>&lt; 0.1 (too regular) or &gt; 2.5 (avoidance)</td>
+<td>FSA inspection data</td>
+</tr>
+<tr>
+<td>Labelling Shannon</td>
+<td>H_bits on origin documentation</td>
+<td>&lt; 4.0 bits (fabricated)</td>
+<td>FSA food fraud database</td>
+</tr>
+<tr>
+<td>Trade Causal Effect</td>
+<td>ACE(do(Brexit)) on food trade</td>
+<td></td>
+<td>HMRC trade data, DEFRA</td>
+</tr>
+</tbody>
+</table>
+<h3>UK Data Sources</h3>
+<ul>
+<li><strong>RPA</strong> — CAP/BPS payment data, land parcel registry</li>
+<li><strong>DEFRA</strong> — food chain data, trade statistics, surveys</li>
+<li><strong>FSA</strong> — food safety inspections, food fraud alerts</li>
+<li><strong>AHDB</strong> — agriculture and horticulture data</li>
+<li><strong>HMRC</strong> — food trade data (imports/exports, post-Brexit)</li>
+<li><strong>ONS</strong> — agriculture accounts, farm business data</li>
+</ul>
+<h3>Commercialisation Pathway</h3>
+<ol>
+<li><strong>Phase 1:</strong> Subsidy fraud detection — RPA, DEFRA</li>
+<li><strong>Phase 2:</strong> Food fraud detection — FSA, DEFRA</li>
+<li><strong>Phase 3:</strong> Food safety compliance — FSA, major food retailers</li>
+</ol>
+<h3>Revenue Estimate</h3>
+<table>
+<thead>
+<tr>
+<th>Segment</th>
+<th>Annual (GBP)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Subsidy fraud (BPS/ELMS)</td>
+<td>£2-4M</td>
+<td>RPA, DEFRA</td>
+</tr>
+<tr>
+<td>Food fraud detection</td>
+<td>£2-3M</td>
+<td>FSA, DEFRA, industry</td>
+</tr>
+<tr>
+<td>Food safety compliance</td>
+<td>£1-2M</td>
+<td>FSA, food retailers</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Sector Total: £5-9M/yr</strong></p>
+<hr />
+<h2>AGGREGATE MARKET ANALYSIS</h2>
+<h3>All-Sector Revenue Summary</h3>
+<table>
+<thead>
+<tr>
+<th>Sector</th>
+<th>Low Estimate (GBP)</th>
+<th>High Estimate (GBP)</th>
+<th>Key Target</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. Financial Services</td>
+<td>£15M</td>
+<td>£24M</td>
+<td>FCA, BoE, Top-10 Banks</td>
+</tr>
+<tr>
+<td>2. Manufacturing/Production</td>
+<td>£9M</td>
+<td>£15M</td>
+<td>ADS, SMMT, BAE/MOD</td>
+</tr>
+<tr>
+<td>3. Government/Public Sector</td>
+<td>£10M</td>
+<td>£17M</td>
+<td>HMRC, Cabinet Office, NAO</td>
+</tr>
+<tr>
+<td>4. Retail/Consumer</td>
+<td>£14M</td>
+<td>£23M</td>
+<td>Top-10 Banks (CARD), Retailers</td>
+</tr>
+<tr>
+<td>5. Technology/Digital</td>
+<td>£10M</td>
+<td>£17M</td>
+<td>Ofcom, Electoral Commission</td>
+</tr>
+<tr>
+<td>6. Defence/Security</td>
+<td>£8M</td>
+<td>£14M</td>
+<td>MOD, NCSC, HMT</td>
+</tr>
+<tr>
+<td>7. Healthcare/NHS</td>
+<td>£8M</td>
+<td>£14M</td>
+<td>NHSCFA, NHSBSA, MHRA</td>
+</tr>
+<tr>
+<td>8. Energy/Environment</td>
+<td>£7M</td>
+<td>£13M</td>
+<td>Ofgem, ICE, DESNZ</td>
+</tr>
+<tr>
+<td>9. Real Estate/Construction</td>
+<td>£6M</td>
+<td>£10M</td>
+<td>HMRC, Land Registry, CMA</td>
+</tr>
+<tr>
+<td>10. Education</td>
+<td>£8M</td>
+<td>£14M</td>
+<td>OfS, DfE, UCAS, SLC</td>
+</tr>
+<tr>
+<td>11. Legal/Professional Services</td>
+<td>£8M</td>
+<td>£14M</td>
+<td>SRA, FRC, Magic Circle</td>
+</tr>
+<tr>
+<td>12. Agriculture/Food</td>
+<td>£5M</td>
+<td>£9M</td>
+<td>RPA, DEFRA, FSA</td>
+</tr>
+<tr>
+<td><strong>TOTAL</strong></td>
+<td><strong>£108M</strong></td>
+<td><strong>£184M</strong></td>
+<td><strong>UK-Wide T2SAIM Deployment</strong></td>
+</tr>
+</tbody>
+</table>
+<h3>Strategic Priority Rankings</h3>
+<p><strong>Tier 1 — Immediate Deployment (Year 1, £30-50M opportunity):</strong>
+1. Financial Services (CARD/BAF + BORSA) — most mature domain instantiation, existing calibration
+2. Retail/Consumer (CARD extension) — second mature domain, UK-specific PSR framework
+3. Government (HMRC tax, procurement) — direct government need, Fraud Act 2006 context
+4. Healthcare/NHS (waiting list, prescription) — NHSCFA mandates, strong political will</p>
+<p><strong>Tier 2 — Year 2-3 Deployment (£40-70M opportunity):</strong>
+5. Manufacturing (aerospace/defence supply chain)
+6. Energy (NBP gas, UK ETS carbon)
+7. Technology/Digital (Online Safety Act compliance)
+8. Legal/Professional Services (SELDON court-ready)
+9. Education (AI academic integrity)</p>
+<p><strong>Tier 3 — Year 3-5 Deployment (£38-64M opportunity):</strong>
+10. Real Estate/Construction (SDLT, cartel detection)
+11. Agriculture/Food (subsidy fraud, food fraud)
+12. Defence/Security (sanctions, cyber, intelligence)</p>
+<h3>Cross-Sector Technology Bundles</h3>
+<table>
+<thead>
+<tr>
+<th>Bundle</th>
+<th>Modules</th>
+<th>Sectors</th>
+<th>Annual (GBP)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Financial Surveillance</strong></td>
+<td>ZTJ + SST (M-series) + EDS-32</td>
+<td>Finance, Energy, Retail</td>
+<td>£25-40M</td>
+</tr>
+<tr>
+<td><strong>Document/Text Forensics</strong></td>
+<td>IUY + ZTJ-3 + KCT</td>
+<td>Legal, Gov, Education, NHS</td>
+<td>£18-32M</td>
+</tr>
+<tr>
+<td><strong>Supply Chain Integrity</strong></td>
+<td>SST G-NET/G-B + L4 CSI</td>
+<td>Manufacturing, Agri, NHS</td>
+<td>£12-22M</td>
+</tr>
+<tr>
+<td><strong>Influence/Campaign Detection</strong></td>
+<td>L7 VP_I + MOD-4 + MS-VAR</td>
+<td>Tech, Defence, Gov</td>
+<td>£12-22M</td>
+</tr>
+<tr>
+<td><strong>SELDON Supreme Court</strong></td>
+<td>Full stack + J(θ) + ECE/DCA</td>
+<td>Legal, Finance, Gov</td>
+<td>£8-15M</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>METHODOLOGY REFERENCE</h2>
+<h3>T2SAIM Core Modules Legend</h3>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Full Name</th>
+<th>Layer</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>KE</strong></td>
+<td>Knowledge Entropy (Anomali Yoğunluğu)</td>
+<td>Synthesis</td>
+<td>Composite anomaly score: KE_A = 0.40·ZTJ + 0.30·IUY + 0.30·SST</td>
+</tr>
+<tr>
+<td><strong>ZTJ</strong></td>
+<td>Zaman-Topolojik Jüri (Temporal-Topological Jury)</td>
+<td>L1</td>
+<td>7 temporal tests: Caliper, Survival/Hazard, Stylchronometry, MF-DFA, SDLE, Bai-Perron, RQA</td>
+</tr>
+<tr>
+<td><strong>SST</strong></td>
+<td>Sistemsel Sapmalar Toplamı (Systemic Deviations Sum)</td>
+<td>L2</td>
+<td>M-series (M1-M4 market micro) + G-series (Benford, Network, PH, Hawkes, HVG)</td>
+</tr>
+<tr>
+<td><strong>IUY</strong></td>
+<td>İçsel Uyumsuzluk Yoğunluğu (Internal Inconsistency Density)</td>
+<td>L3</td>
+<td>Shannon entropy, Lempel-Ziv complexity, Stylometric consistency</td>
+</tr>
+<tr>
+<td><strong>MOD-4</strong></td>
+<td>Pearl Do-Calculus (Causal Inference)</td>
+<td>L6</td>
+<td>ACE computation, back-door criterion, counterfactual intervention analysis</td>
+</tr>
+<tr>
+<td><strong>MOD-5</strong></td>
+<td>Popper Falsifiability Metric F(H)</td>
+<td>Red-Team</td>
+<td>ACH matrix, falsification score, pseudo-scientific hypothesis filter</td>
+</tr>
+<tr>
+<td><strong>MOD-6/7</strong></td>
+<td>ECE + DCA Calibration</td>
+<td>Cross-cutting</td>
+<td>Expected Calibration Error, Decision Curve Analysis, Daubert calibration tiers</td>
+</tr>
+<tr>
+<td><strong>SELDON J(θ)</strong></td>
+<td>4-Term Forensic Objective</td>
+<td>SELDON</td>
+<td>Sep + FP penalty + Var + Sens; Supreme-tier court-ready standard</td>
+</tr>
+<tr>
+<td><strong>EDS-32</strong></td>
+<td>32-Dimensional State Prediction Kernel</td>
+<td>Finance</td>
+<td>Stochastic kernel for FX/equity/commodity prediction (6-block state vector)</td>
+</tr>
+<tr>
+<td><strong>Pascal Coupling</strong></td>
+<td>Time-Varying Coupling Matrix</td>
+<td>Macro</td>
+<td>α(t)·M_pressure + β(t)·M_cascade + γ(t)·M_vulnerability — socio-economic shock propagation</td>
+</tr>
+<tr>
+<td><strong>MS-VAR</strong></td>
+<td>Markov-Switching VAR</td>
+<td>L1</td>
+<td>Latent phase detection: Normal→Preparation→Exploitation/Cover-up</td>
+</tr>
+<tr>
+<td><strong>DCCA</strong></td>
+<td>Detrended Cross-Correlation</td>
+<td>Synthesis</td>
+<td>Non-stationary layer correlation routing (ADF/KPSS gated)</td>
+</tr>
+<tr>
+<td><strong>CARD</strong></td>
+<td>Mahalanobis + Z-Test + Loss</td>
+<td>CARD</td>
+<td>Behavioural biometrics (τ_MAH=3.0), Two-Proportion Z-Test, Liability-Shift Loss</td>
+</tr>
+<tr>
+<td><strong>L4</strong></td>
+<td>Commitment Stability Index (CSI)</td>
+<td>L4</td>
+<td>Capital-weighted anti-evergreening commitment tracking</td>
+</tr>
+<tr>
+<td><strong>L5</strong></td>
+<td>Rule-Application Entropy (H_R)</td>
+<td>L5</td>
+<td>Impact-gated entropy + KL divergence against organic baseline</td>
+</tr>
+<tr>
+<td><strong>L7</strong></td>
+<td>Veritas-vs-PsyOp Index (VP_I)</td>
+<td>L7</td>
+<td>Graph reaction-diffusion, LZC-gated synthetic detection, echo-chamber guardrail</td>
+</tr>
+<tr>
+<td><strong>IDIS</strong></td>
+<td>Institutional Decay Index</td>
+<td>L4-L7</td>
+<td>Composite of extended layers; combined with Acemoglu E ∊ (0, 0.15]</td>
+</tr>
+</tbody>
+</table>
+<h3>Daubert 3-Tier Mapping</h3>
+<table>
+<thead>
+<tr>
+<th>Tier</th>
+<th>KE_A</th>
+<th>CP-UB FPR</th>
+<th>ECE</th>
+<th>F(H)</th>
+<th>Permitted Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Candidate</td>
+<td>≥ 0.40</td>
+<td>≤ 5.0%</td>
+<td>&lt; 0.10</td>
+<td>≥ 0.40</td>
+<td>Investigation trigger, regulatory notification</td>
+</tr>
+<tr>
+<td>Strong</td>
+<td>≥ 0.60</td>
+<td>≤ 1.0%</td>
+<td>&lt; 0.05</td>
+<td>≥ 0.60</td>
+<td>Regulatory enforcement, civil litigation support</td>
+</tr>
+<tr>
+<td>Supreme</td>
+<td>≥ 0.80</td>
+<td>≤ 4.2×10⁻⁵</td>
+<td>&lt; 0.02</td>
+<td>≥ 0.80</td>
+<td>Court-ready testimony, criminal/civil proceedings</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Report generated:</strong> 2026-05-25
+<strong>Source documents:</strong>
+- <code>Corpus T2SAIM_v09_6_FULL_SPEC_SEALED.md</code> (2328 lines, v9.6 SEALED)
+- <code>T2SAIM_YAPI_TASLARI_ADLI_EPISTEMOLOJI.md</code> (90 KB, forensics epistemology)
+- <code>UK_PSYCHODYNAMIC_WORLD.md</code> (49 KB, Pascal Coupling for UK)
+- <code>JIM_SIMONS_TURNUKEY_METOTLAR.md</code> (Renaissance reverse-engineering, quant finance)
+- <code>00_AGENT_INDEX.md</code>, <code>00_MASTER_INDEX.md</code> (corpus structure)
+- <code>VALIDATION_MANIFEST.md</code> (sealed validations)</p>
+<p><strong>Classification:</strong> T2SAIM-CANONICAL [PRIVATE — TRADE SECRET]
+<strong>Veritas Per Se:</strong> This report maps T2SAIM methodology to UK sectors. It does not constitute legal, investment, or commercial advice. Decision authority = Tarco.</p>
+<footer><p>CORE_CORPUS_UK_ANALYSIS · UK Sektor Istihbarati · 2026</p></footer>
+</div></body></html>

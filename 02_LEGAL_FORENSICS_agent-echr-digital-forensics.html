@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="tr">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>agent-echr-digital-forensics</title>
+<style>:root{--ink:#0f1a2e;--paper:#f7f4ec;--gold:#c9a84c;--navy:#1a2a4a}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--ink);color:#eaeaea;font-family:Georgia,'Times New Roman',serif;padding:20px;font-size:14px;line-height:1.7}
+.page{max-width:1100px;margin:0 auto;padding:30px}
+h1{color:var(--gold);border-bottom:3px solid var(--gold);padding-bottom:12px}
+h2{color:var(--gold);margin:30px 0 15px;border-bottom:1px solid var(--navy);padding-bottom:6px}
+h3{color:#00d9ff;margin:20px 0 10px}
+p{margin:8px 0;line-height:1.8}
+a{color:var(--gold)}
+table{width:100%;border-collapse:collapse;margin:12px 0}
+th{background:var(--navy);color:var(--gold);padding:8px;text-align:left}
+td{padding:6px 8px;border-bottom:1px solid rgba(26,42,74,0.5);font-size:12px}
+code{background:#0a0f1a;padding:2px 6px;border-radius:3px;color:#4caf50;font-family:monospace;font-size:12px}
+pre{background:#0a0f1a;padding:12px;border-radius:4px;color:#4caf50;font-family:monospace;font-size:12px;overflow-x:auto}
+ul{margin:8px 0;padding-left:20px}
+.back{display:block;margin:20px 0;color:#6b7280;font-family:monospace;font-size:12px}
+footer{text-align:center;margin-top:40px;padding-top:20px;border-top:1px solid var(--navy);color:#6b7280;font-size:11px}</style></head>
+<body><div class="page">
+<a class="back" href="index.html">Ana Sayfaya Don</a>
+<h1>AGENT_ECHR — AIHM Başvuru Dosyaları Dijital Analiz Modülü</h1>
+<p><strong>Kaynak:</strong> T2SAIM Commercialization Framework v03 (§6.3 — Judicial Integrity and Human Rights Risk Mapping)
+<strong>Hedef Kullanıcılar:</strong> Avukatlar, STK'lar, İnsan Hakları savunucuları, AIHM başvuru danışmanları
+<strong>Temel İhtiyaç:</strong> AIHM'e yapılan başvurularda sunulan dijital delillerin, olay kronolojisinin, iç hukuk yolunun tüketilmesi sürecinin, ve adil yargılanma ihlali iddialarının yapısal tutarlılık testi</p>
+<h2>1. Misyon</h2>
+<p>AIHM (Avrupa İnsan Hakları Mahkemesi) başvuru sürecinde başvuran tarafça sunulan dijital dosyaların, delillerin ve iddiaların <strong>yapısal bütünlüğünü</strong> test etmek. AGENT_ECHR başvuranın lehine veya aleyhine değil — dosyanın <strong>epistemik sağlamlığını</strong> ölçer.</p>
+<h2>2. Analiz Mimarisi</h2>
+<h3>2.1 Başvuru Dosyası Bütünlük Testi (Application File Integrity)</h3>
+<ul>
+<li><strong>A1 — Dijital Delil Zaman Damgası Doğrulaması</strong>: Başvuruya eklenen dijital delillerin (ekran görüntüsü, ses kaydı, video, e-posta) yaratılma/değiştirilme zaman damgalarının olay kronolojisiyle uyumu</li>
+<li><strong>A2 — Metadata Temizliği Testi</strong>: Dijital dosyaların manipülasyon izi (Exif silinmesi, ara kayıt, kırpma/sıkıştırma anomalileri)</li>
+<li><strong>A3 — Çoklu Kaynak Çapraz Doğrulama</strong>: Aynı olaya ilişkin farklı kaynaklardan gelen delillerin birbiriyle uyumu</li>
+</ul>
+<h3>2.2 İç Hukuk Yolu Tüketme Analizi (Exhaustion of Domestic Remedies)</h3>
+<ul>
+<li><strong>E1 — İç Hukuk Kronolojisi Haritası</strong>: Başvuranın iddia ettiği iç hukuk başvuru zincirinin zaman çizelgesi. AIHM kriterlerine göre "iç hukuk yolu tüketilmiş mi?"</li>
+<li><strong>E2 — İç Hukuk Boşluğu Tespiti</strong>: Başvuranın atladığı, kullanmadığı veya etkisiz olduğu iddia edilen iç hukuk yollarının yapısal analizi</li>
+<li><strong>E3 — Süre Uyum Testi</strong>: İç hukuk sürecinin AIHM'in öngördüğü makul süre kriterlerine uyumu</li>
+</ul>
+<h3>2.3 AIHM İçtihatına Göre Kabul Edilebilirlik Ön Değerlendirmesi (Admissibility Pre-Assessment)</h3>
+<ul>
+<li><strong>K1 — İçtihat Eşleştirme</strong>: Başvuru iddialarının AIHM içtihatındaki emsal kararlarla yapısal benzerlik skoru</li>
+<li><strong>K2 — Açıkça Dayanaksızlık Tespiti (Manifestly Ill-founded)</strong>: AIHM'in "açıkça dayanaksız" kabul etme eğilimindeki iddia kalıplarının tespiti</li>
+<li><strong>K3 — Önemli Eşik Testi (Significant Disadvantage)</strong>: AIHM'in "önemli zarar" eşiğini geçme potansiyeli analizi</li>
+</ul>
+<h3>2.4 Adil Yargılanma İhlali İddiası Doğrulama (Art. 6 ECHR)</h3>
+<ul>
+<li><strong>F1 — Yargılama Süresi Analizi</strong>: İç hukuk yargılama sürelerinin AIHM standardına uyumu</li>
+<li><strong>F2 — Delil Erişim Testi</strong>: Başvuranın delillere erişim hakkı ihlali iddiasının yapısal analizi</li>
+<li><strong>F3 — Bağımsızlık ve Tarafsızlık Göstergeleri</strong>: Mahkeme yapısı, hakim atamaları, karar desenleri</li>
+</ul>
+<h3>2.5 Toplu Başvuru Desen Analizi (Pattern Analysis)</h3>
+<ul>
+<li><strong>P1 — Koordineli Başvuru Tespiti</strong>: Aynı olay/dönem/dekanla ilgili birden fazla başvurunun yapısal benzerlik analizi</li>
+<li><strong>P2 — STK / Avukat Ağı Haritası</strong>: Aynı hukuk ekibinin birden fazla başvurudaki rolü</li>
+<li><strong>P3 — Ülke Bazlı İhlal Desenleri</strong>: Aynı ülkeden gelen başvurulardaki tekrarlayan ihlal türleri</li>
+</ul>
+<h2>3. Proprietary Indicators</h2>
+<table>
+<thead>
+<tr>
+<th>İndikatör</th>
+<th>Tanım</th>
+<th>Eşik</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TIMESTAMP_R</td>
+<td>delil_zamanı - olay_zamanı</td>
+<td>&lt;0 = TAMPERING, &lt; -7days = SUSPICIOUS</td>
+</tr>
+<tr>
+<td>METADATA_C</td>
+<td>metadata bütünlük skoru</td>
+<td>&lt;0.5 = MANIPULATED</td>
+</tr>
+<tr>
+<td>DOMESTIC_R</td>
+<td>iç hukuk yolu tüketme oranı</td>
+<td>&lt;0.8 = NOT_EXHAUSTED</td>
+</tr>
+<tr>
+<td>PRECEDENT_S</td>
+<td>AIHM içtihat benzerlik skoru</td>
+<td>&gt;0.75 = STRONG_PRECEDENT</td>
+</tr>
+<tr>
+<td>MANIFEST_F</td>
+<td>açıkça dayanaksızlık risk skoru</td>
+<td>&gt;0.7 = HIGH_REJECTION_RISK</td>
+</tr>
+<tr>
+<td>COORD_P</td>
+<td>koordineli başvuru olasılığı</td>
+<td>&gt;0.8 = COORDINATED</td>
+</tr>
+</tbody>
+</table>
+<h2>4. İş Akışı (Pipeline)</h2>
+<div class="codehilite"><pre><span></span><code><span class="n">Başvuru</span><span class="w"> </span><span class="n">Dosyası</span><span class="w"> </span><span class="p">(</span><span class="n">PDF</span><span class="o">/</span><span class="n">DOC</span><span class="o">/</span><span class="n">IMG</span><span class="o">/</span><span class="n">Audio</span><span class="p">)</span>
+<span class="w">  </span><span class="err">│</span>
+<span class="w">  </span><span class="err">├──</span><span class="w"> </span><span class="n">A1</span><span class="o">-</span><span class="n">A3</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="n">Metadata</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">Zaman</span><span class="w"> </span><span class="n">Damgası</span><span class="w"> </span><span class="n">Testi</span>
+<span class="w">  </span><span class="err">│</span>
+<span class="w">  </span><span class="err">├──</span><span class="w"> </span><span class="n">E1</span><span class="o">-</span><span class="n">E3</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="n">İç</span><span class="w"> </span><span class="n">Hukuk</span><span class="w"> </span><span class="n">Yolu</span><span class="w"> </span><span class="n">Haritası</span>
+<span class="w">  </span><span class="err">│</span>
+<span class="w">  </span><span class="err">├──</span><span class="w"> </span><span class="n">K1</span><span class="o">-</span><span class="n">K3</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="n">AIHM</span><span class="w"> </span><span class="n">İçtihat</span><span class="w"> </span><span class="n">Kabul</span><span class="w"> </span><span class="n">Edilebilirlik</span>
+<span class="w">  </span><span class="err">│</span>
+<span class="w">  </span><span class="err">├──</span><span class="w"> </span><span class="n">F1</span><span class="o">-</span><span class="n">F3</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="n">Art</span><span class="p">.</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="n">Adil</span><span class="w"> </span><span class="n">Yargılanma</span><span class="w"> </span><span class="n">Analizi</span>
+<span class="w">  </span><span class="err">│</span>
+<span class="w">  </span><span class="err">└──</span><span class="w"> </span><span class="n">P1</span><span class="o">-</span><span class="n">P3</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="n">Desen</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">Koordinasyon</span><span class="w"> </span><span class="n">Tespiti</span>
+<span class="w">        </span><span class="err">│</span>
+<span class="w">        </span><span class="err">└──</span><span class="w"> </span><span class="n">Nihai</span><span class="w"> </span><span class="nl">Rapor</span><span class="p">:</span><span class="w"> </span><span class="o">[</span><span class="n">VERIFIED</span><span class="o">]</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="o">[</span><span class="n">FLAGGED</span><span class="o">]</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="o">[</span><span class="n">INCONCLUSIVE</span><span class="o">]</span>
+</code></pre></div>
+
+<h2>5. Entegrasyon Noktaları</h2>
+<ul>
+<li><strong>AIHM HUDOC Veritabanı</strong>: İçtihat sorgulama ve emsal karar eşleştirme</li>
+<li><strong>ECHR CEDH API</strong>: Başvuru durumu ve karar takibi</li>
+<li><strong>Ülke İnsan Hakları Raporları</strong>: COE, UN, ABD State Department</li>
+<li><strong>İç Hukuk Veritabanları</strong>: Ulusal yüksek mahkeme kararları</li>
+<li><strong>AGENT_JUNET</strong>: Yargısal ağ analizi ile çapraz besleme</li>
+<li><strong>AGENT_TEMPORAL</strong>: Zaman damgası ve kronoloji doğrulama</li>
+<li><strong>AGENT_MEGAFILE</strong>: Büyük ölçekli dosya temizleme ve adli dilbilim</li>
+</ul>
+<h2>6. Kullanım Senaryosu</h2>
+<p><em>"Bir başvuran, AIHM'e Türkiye'den adil yargılanma hakkı ihlali iddiasıyla başvuruyor. Beraberinde 2,000 sayfa dijital delil sunuyor. AGENT_ECHR:</em></p>
+<ul>
+<li><em>Delil metadata'larını tarar → 15 dosyanın yaratılma tarihi olaydan 6 ay önce [TAMPERING FLAGGED]</em></li>
+<li><em>İç hukuk kronolojisini haritalar → 3 iç hukuk yolunun atlandığını tespit eder [NOT_EXHAUSTED]</em></li>
+<li><em>İddiaları HUDOC içtihatıyla eşleştirir → 2 emsal karar bulur [PRECEDENT_S=0.82]</em></li>
+<li><em>Nihai rapor: 'Kabul edilebilirlik riski YÜKSEK — delil bütünlüğü sorunları var, iç hukuk yolu tam tüketilmemiş. Ancak içtihat desteği GÜÇLÜ.'"</em></li>
+</ul>
+<h2>7. Epistemik Durum</h2>
+<ul>
+<li>[VERIFIED] AIHM içtihat yapısı ve kabul edilebilirlik kriterleri</li>
+<li>[VERIFIED] Dijital delil metadata analizi yöntemleri</li>
+<li>[ASSUMED] HUDOC API üzerinden toplu içtihat sorgulama mümkün</li>
+<li>[ASSUMED] İç hukuk yolu tüketme değerlendirmesi AIHM kriterlerine uygun</li>
+<li>[UNVERIFIED] Gerçek başvuru verileriyle (canlı dava dosyası) test edilmedi</li>
+</ul>
+<footer><p>agent-echr-digital-forensics · UK Sektor Istihbarati · 2026</p></footer>
+</div></body></html>

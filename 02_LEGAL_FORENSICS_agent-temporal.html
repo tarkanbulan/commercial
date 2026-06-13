@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="tr">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>agent-temporal</title>
+<style>:root{--ink:#0f1a2e;--paper:#f7f4ec;--gold:#c9a84c;--navy:#1a2a4a}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--ink);color:#eaeaea;font-family:Georgia,'Times New Roman',serif;padding:20px;font-size:14px;line-height:1.7}
+.page{max-width:1100px;margin:0 auto;padding:30px}
+h1{color:var(--gold);border-bottom:3px solid var(--gold);padding-bottom:12px}
+h2{color:var(--gold);margin:30px 0 15px;border-bottom:1px solid var(--navy);padding-bottom:6px}
+h3{color:#00d9ff;margin:20px 0 10px}
+p{margin:8px 0;line-height:1.8}
+a{color:var(--gold)}
+table{width:100%;border-collapse:collapse;margin:12px 0}
+th{background:var(--navy);color:var(--gold);padding:8px;text-align:left}
+td{padding:6px 8px;border-bottom:1px solid rgba(26,42,74,0.5);font-size:12px}
+code{background:#0a0f1a;padding:2px 6px;border-radius:3px;color:#4caf50;font-family:monospace;font-size:12px}
+pre{background:#0a0f1a;padding:12px;border-radius:4px;color:#4caf50;font-family:monospace;font-size:12px;overflow-x:auto}
+ul{margin:8px 0;padding-left:20px}
+.back{display:block;margin:20px 0;color:#6b7280;font-family:monospace;font-size:12px}
+footer{text-align:center;margin-top:40px;padding-top:20px;border-top:1px solid var(--navy);color:#6b7280;font-size:11px}</style></head>
+<body><div class="page">
+<a class="back" href="index.html">Ana Sayfaya Don</a>
+<h1>AGENT_TEMPORAL — Temporal Integrity &amp; Evidence Chain Analysis</h1>
+<p><strong>Source:</strong> T2SAIM Commercialization Framework v03 (§6.2 — Digital Evidence Chain)
+<strong>Scale:</strong> 8.5M+ row communication record processing</p>
+<h2>1. Mission</h2>
+<p>Digital evidence integrity verification: testing whether evidence was created BEFORE the event it purports to contain, or produced at technically impossible speeds.</p>
+<h2>2. Detection Architecture</h2>
+<h3>2.1 Temporal Integrity Testing</h3>
+<ul>
+<li><strong>T1 — Pre-Creation Detection</strong>: Evidence creation timestamp vs. event timestamp. If evidence created before event = tampering</li>
+<li><strong>T2 — Production Speed Testing</strong>: Document/time analysis. A 4000-page case file produced at physically impossible speeds = fabrication</li>
+<li><strong>T3 — Chronological Coherence</strong>: Event sequence must follow physical causality chain</li>
+</ul>
+<h3>2.2 High-Volume Communication Record Analysis</h3>
+<ul>
+<li><strong>C1 — Structural Map Generation</strong>: 8.5M+ rows processed to create communication topology</li>
+<li><strong>C2 — Physical Co-Location Testing</strong>: Proprietary indicators determining whether subjects were physically co-located at alleged crime time</li>
+<li><strong>C3 — Communication Burst Detection</strong>: Unnatural communication clustering before/after events</li>
+</ul>
+<h3>2.3 Chain-of-Custody</h3>
+<ul>
+<li>Cryptographic hash chain for every data fragment</li>
+<li>Tampering claims → technically grounded findings</li>
+<li>Full provenance tracking</li>
+</ul>
+<h2>3. Proprietary Indicators</h2>
+<table>
+<thead>
+<tr>
+<th>Indicator</th>
+<th>Description</th>
+<th>Threshold</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T_CREATE</td>
+<td>evidence_time - event_time</td>
+<td>&lt;0 = TAMPERING</td>
+</tr>
+<tr>
+<td>T_SPEED</td>
+<td>bytes / production_time</td>
+<td>&gt;human_max = FABRICATION</td>
+</tr>
+<tr>
+<td>COLOCATE</td>
+<td>spatial probability from communication metadata</td>
+<td>&gt;0.85 = CO_LOCATED</td>
+</tr>
+</tbody>
+</table>
+<footer><p>agent-temporal · UK Sektor Istihbarati · 2026</p></footer>
+</div></body></html>

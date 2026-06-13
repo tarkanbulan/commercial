@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="tr">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>agent-megafile</title>
+<style>:root{--ink:#0f1a2e;--paper:#f7f4ec;--gold:#c9a84c;--navy:#1a2a4a}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--ink);color:#eaeaea;font-family:Georgia,'Times New Roman',serif;padding:20px;font-size:14px;line-height:1.7}
+.page{max-width:1100px;margin:0 auto;padding:30px}
+h1{color:var(--gold);border-bottom:3px solid var(--gold);padding-bottom:12px}
+h2{color:var(--gold);margin:30px 0 15px;border-bottom:1px solid var(--navy);padding-bottom:6px}
+h3{color:#00d9ff;margin:20px 0 10px}
+p{margin:8px 0;line-height:1.8}
+a{color:var(--gold)}
+table{width:100%;border-collapse:collapse;margin:12px 0}
+th{background:var(--navy);color:var(--gold);padding:8px;text-align:left}
+td{padding:6px 8px;border-bottom:1px solid rgba(26,42,74,0.5);font-size:12px}
+code{background:#0a0f1a;padding:2px 6px;border-radius:3px;color:#4caf50;font-family:monospace;font-size:12px}
+pre{background:#0a0f1a;padding:12px;border-radius:4px;color:#4caf50;font-family:monospace;font-size:12px;overflow-x:auto}
+ul{margin:8px 0;padding-left:20px}
+.back{display:block;margin:20px 0;color:#6b7280;font-family:monospace;font-size:12px}
+footer{text-align:center;margin-top:40px;padding-top:20px;border-top:1px solid var(--navy);color:#6b7280;font-size:11px}</style></head>
+<body><div class="page">
+<a class="back" href="index.html">Ana Sayfaya Don</a>
+<h1>AGENT_MEGAFILE — Mega-File Decontamination &amp; Forensic Linguistics</h1>
+<p><strong>Source:</strong> T2SAIM Commercialization Framework v03 (§6.1 — Exposing Fabricated Cases)
+<strong>Use Case:</strong> Organized crime, corruption, politically motivated prosecution "omnibus trials" (1000s of pages drowning truth in noise)</p>
+<h2>1. Mission</h2>
+<p>Analyze legal texts and investigation files at terabyte scale. Expose fabricated cases through structural indicators. Filter noise from evidence at scale.</p>
+<h2>2. Detection Architecture</h2>
+<h3>2.1 Single-Source Detection / Forensic Linguistics</h3>
+<ul>
+<li><strong>L1 — Linguistic Sterility Detection</strong>: Reports from entirely different institutions carrying identical linguistic errors, template phrases, or metadata traces = single orchestrating source</li>
+<li><strong>L2 — Template Phrase Mapping</strong>: Cross-document n-gram matching to identify common fabrication templates</li>
+<li><strong>L3 — Metadata Forensics</strong>: Author, editor, creation-time clusters across nominally independent documents</li>
+</ul>
+<h3>2.2 Mega-File Decontamination</h3>
+<ul>
+<li><strong>D1 — Noise Filtering</strong>: Remove irrelevant/privacy-violating data from hundreds of thousands of pages</li>
+<li><strong>D2 — Core Evidence Extraction</strong>: Isolate probative material from procedural noise</li>
+<li><strong>D3 — Structural Map Generation</strong>: Document relationship topology — who wrote what, when, in what sequence</li>
+</ul>
+<h2>3. Proprietary Indicators</h2>
+<table>
+<thead>
+<tr>
+<th>Indicator</th>
+<th>Description</th>
+<th>Threshold</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LS_SCORE (Linguistic Sterility)</td>
+<td>Cross-document error/meta identity</td>
+<td>&gt;0.70 FABRICATED</td>
+</tr>
+<tr>
+<td>TEMPLATE_MATCH</td>
+<td>Shared template phrase ratio</td>
+<td>&gt;60% = SINGLE_SOURCE</td>
+</tr>
+<tr>
+<td>DOC_CLUSTER</td>
+<td>Metadata origin clustering</td>
+<td>1 cluster for N documents = ARTIFICIAL</td>
+</tr>
+</tbody>
+</table>
+<h2>4. Court Integration</h2>
+<ul>
+<li>ICC "Project Harmony" and "OTPLink" platform compatibility</li>
+<li>EPPO investigation support (1,927 active investigations, €19.2B damages)</li>
+<li>Cryptographic hash chain-of-custody for evidence integrity</li>
+</ul>
+<footer><p>agent-megafile · UK Sektor Istihbarati · 2026</p></footer>
+</div></body></html>
